@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Aukcion</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" type="image/png" href="inc/assets/icon/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<!-- WRAPPER start -->
+	<div class="wrapper">
+		<!-- HEADER start  -->
+		<header class="header">
+			<div class="container">
+				<div class="header-menu">
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<a href="/" class="logo">
+						<img src="img/logo.svg">
+					</a>
+					<div class="navigation">
+						<nav class="site-nav menu">
+							<ul class="nav-menu">
+								<li class="nav-menu__item">
+									<a href="aukcion.html">Аукцион</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="sale.html">Продать авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="lising.html">Лизинг</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="about.html">О нас</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="faq.html">FAQ</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="personal-nav">
+							<ul class="nav-menu right-menu">
+								<li class="nav-menu__item">
+									<a href="#">
+										<span class="icon-u_favorite"></span>
+									</a>
+								</li>
+								<li class="nav-menu__item user-profile">
+									<a href="#">
+										<span class="icon-u_user-circle"></span>
+										<span>Профиль</span>
+									</a>
+								</li>
+								<li class="nav-menu__item language">
+									<a href="#">
+										<span>Рус</span>
+										<span class="icon-u_angle-down"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header-search">
+					<form action="/" class="form-search icon-u_search">
+						<input type="text" placeholder="Я ищу ..." name="search">
+						<button type="submit" class="btn btn-seacrh">Найти</button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<!-- HEADER end  -->
+		<!-- MAIN start  -->
+		<main class="main">
+			<!-- CONTENT start  -->
+			<div class="content">
+				<section class="breadcrumb">
+					<div class="container">
+						<ul class="breadcrumb-wrap">
+							<li>
+								<a href="#"><span class="icon-u_home-alt"></span></a>
+								<span class="icon-u_angle-down"></span>
+							</li>
+							<li><span>Сегодняшний аукцион</span></li>
+						</ul>
+					</div>
+				</section>
+				<section class="title-item">
+					<div class="container">
+						<div class="title-item__b">
+							<h1>Сегодняшний аукцион</h1>
+							<h3>72 автомобиля</h3>
+						</div>
+					</div>
+				</section>
+				<section id="aukcion-section" class="aukcion-section">
+					<div class="container">
+						<div id="filter-result" class="filter-wrap">
+							<div class="filter-result-txt">
+								Найдено 8 автомобилей
+							</div>
+							<div class="filter-result">
+								<div class="btn btn-filter">Фильтры</div>
+								<div class="filter-result-v">
+									<div id="filter-tags" class="filter-tags"></div>
+								</div>
+								<div class="filter-sort-box">
+									<div id="sort-mode" class="sort-mode">
+										<select name="sortmode" id="sortmode">
+											<option>Показывать 12</option>
+											<option>Показывать 24</option>
+											<option>Показывать 36</option>
+										</select>
+									</div>
+									<div id="sort-items" class="sort-items">
+										<select name="sortitems" id="sortitems">
+											<option>За замовчуванням</option>
+											<option>От А до Z</option>
+											<option>От Z до А</option>
+											<option>По збільшенню ціни</option>
+											<option>По зменшенню ціни</option>
+											<option>Популярності</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="aukcion-wrapper">
+							<div id="a-sidebar" class="a-sidebar">
+								<div id="a-filter" class="a-filter">
+									<div class="a-filter__main-titile">
+										<h2>Фильтр</h2>
+										<button type="button" class="filter-clear">Сбросить все</button>
+									</div>
+
+									<div class="filter-item f-brand">
+										<div class="filter-title">Марки авто</div>
+										<div class="filter-list f-tags">
+											<input id="f-brand" placeholder="Введите марку авто">
+										</div>
+									</div>
+									<div class="filter-item f-subbrand">
+										<div class="filter-title">Модель авто</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-brand-camry"><span class="name">Camry</span><span class="i-count">(5
+													авто)</span>
+												<input type="checkbox" name="chx-brand-camry" id="chx-brand-camry">
+											</label>
+											<label for="chx-brand-avensis"><span class="name">Avensis</span><span
+													class="i-count">(3 авто)</span>
+												<input type="checkbox" name="chx-brand-avensis" id="chx-brand-avensis">
+											</label>
+											<label for="chx-brand-prius"><span class="name">Prius</span><span class="i-count">(5
+													авто)</span>
+												<input type="checkbox" name="chx-brand-prius" id="chx-brand-prius">
+											</label>
+											<label for="chx-brand-911turbo"><span class="name">911 Turbo</span><span
+													class="i-count">(3 авто)</span>
+												<input type="checkbox" name="chx-brand-911turbo" id="chx-brand-911turbo">
+											</label>
+											<label for="chx-brand-macan"><span class="name">Macan</span><span class="i-count">(3
+													авто)</span>
+												<input type="checkbox" name="chx-brand-macan" id="chx-brand-macan">
+											</label>
+											<div class="fmoreButton">Показать еще (312)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-brand-camry2"><span class="name">Camry</span><span
+														class="i-count">(5 авто)</span>
+													<input type="checkbox" name="chx-brand-camry2" id="chx-brand-camry2">
+												</label>
+												<label for="chx-brand-camry3"><span class="name">Camry</span><span
+														class="i-count">(5 авто)</span>
+													<input type="checkbox" name="chx-brand-camry3" id="chx-brand-camry3">
+												</label>
+												<label for="chx-brand-camry4"><span class="name">Camry</span><span
+														class="i-count">(5 авто)</span>
+													<input type="checkbox" name="chx-brand-camry4" id="chx-brand-camry4">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item f-bodytype">
+										<div class="filter-title">Тип кузова</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-bodytype-camry">
+												<span class="name">Седан</span>
+												<input type="checkbox" name="chx-bodytype-camry" id="chx-bodytype-camry">
+											</label>
+											<label for="chx-bodytype-avensis">
+												<span class="name">Универсал</span>
+												<input type="checkbox" name="chx-bodytype-avensis" id="chx-bodytype-avensis">
+											</label>
+											<label for="chx-bodytype-prius">
+												<span class="name">Хатчбек</span>
+												<input type="checkbox" name="chx-bodytype-prius" id="chx-bodytype-prius">
+											</label>
+											<label for="chx-bodytype-911turbo">
+												<span class="name">Пикап</span>
+												<input type="checkbox" name="chx-bodytype-911turbo" id="chx-bodytype-911turbo">
+											</label>
+											<label for="chx-bodytype-macan">
+												<span class="name">Кроссовер</span>
+												<input type="checkbox" name="chx-bodytype-macan" id="chx-bodytype-macan">
+											</label>
+											<div class="fmoreButton">Показать еще (7)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-bodytype-camry2">
+													<span class="name">Седан</span>
+													<input type="checkbox" name="chx-bodytype-camry2" id="chx-bodytype-camry2">
+												</label>
+												<label for="chx-bodytype-camry3">
+													<span class="name">Седан</span>
+													<input type="checkbox" name="chx-bodytype-camry3" id="chx-bodytype-camry3">
+												</label>
+												<label for="chx-bodytype-camry4">
+													<span class="name">Седан</span>
+													<input type="checkbox" name="chx-bodytype-camry4" id="chx-bodytype-camry4">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item f-year">
+										<div class="filter-title">Год выпуска</div>
+										<div class="filter-list f-select group-f">
+											<select name="number1" id="number1">
+												<option>1995</option>
+												<option>1996</option>
+												<option>1997</option>
+												<option>1998</option>
+												<option>1999</option>
+												<option>2000</option>
+												<option>2001</option>
+												<option>2002</option>
+												<option>2003</option>
+												<option>2004</option>
+												<option>2005</option>
+												<option>2006</option>
+											</select>
+											<select name="number2" id="number2">
+												<option>1995</option>
+												<option>1996</option>
+												<option>1997</option>
+												<option>1998</option>
+												<option>1999</option>
+												<option>2000</option>
+												<option>2001</option>
+												<option>2002</option>
+												<option>2003</option>
+												<option>2004</option>
+												<option>2005</option>
+												<option>2006</option>
+											</select>
+										</div>
+									</div>
+									<div class="filter-item f-price">
+										<div class="filter-title">Цена авто (USD)</div>
+										<div class="filter-list f-range group-f">
+											<input type="text" id="amount0" class="slide-group-input" style="margin-right:7px">
+											<input type="text" id="amount1" class="slide-group-input">
+											<div id="slider-range"></div>
+										</div>
+									</div>
+									<div class="filter-item f-privod">
+										<div class="filter-title">Привод</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-privod-1">
+												<span class="name">Передний привод</span>
+												<span class="i-count">(1223 авто)</span>
+												<input type="checkbox" name="chx-privod-1" id="chx-privod-1">
+											</label>
+											<label for="chx-privod-2">
+												<span class="name">Задний привод</span>
+												<span class="i-count">(821 авто)</span>
+												<input type="checkbox" name="chx-privod-2" id="chx-privod-2">
+											</label>
+											<label for="chx-privod-3">
+												<span class="name">Полный привод</span>
+												<span class="i-count">(1214 авто)</span>
+												<input type="checkbox" name="chx-privod-3" id="chx-privod-3">
+											</label>
+											<label for="chx-privod-0">
+												<span class="name">Не указан</span>
+												<span class="i-count">(9 авто)</span>
+												<input type="checkbox" name="chx-privod-0" id="chx-privod-0">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item f-transmisia">
+										<div class="filter-title">Трансмиссия</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-transmisia-1">
+												<span class="name">Передний привод</span>
+												<span class="i-count">(1223 авто)</span>
+												<input type="checkbox" name="chx-transmisia-1" id="chx-transmisia-1">
+											</label>
+											<label for="chx-transmisia-2">
+												<span class="name">Задний привод</span>
+												<span class="i-count">(821 авто)</span>
+												<input type="checkbox" name="chx-transmisia-2" id="chx-transmisia-2">
+											</label>
+											<label for="chx-transmisia-3">
+												<span class="name">Полный привод</span>
+												<span class="i-count">(1214 авто)</span>
+												<input type="checkbox" name="chx-transmisia-3" id="chx-transmisia-3">
+											</label>
+											<label for="chx-transmisia-0">
+												<span class="name">Не указан</span>
+												<span class="i-count">(9 авто)</span>
+												<input type="checkbox" name="chx-transmisia-0" id="chx-transmisia-0">
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-result-info">
+									<div class="filter-result-txt">
+										Найдено 8 автомобилей
+									</div>
+									<button class="filter-close">Закрыть</button>
+								</div>
+							</div>
+							<div class="a-main">
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>BMW 328 MSPORT, 2012</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">28 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>Porsche Macan S 2.9 PDK, 2021</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">78 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>Mercedes-AMG G63 G-Ttonic 4Matic Base 2021</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">218 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">2 дня 16 часа 44 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>BMW 328 MSPORT, 2012</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">28 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>Porsche Macan S 2.9 PDK, 2021</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">78 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>Mercedes-AMG G63 G-Ttonic 4Matic Base 2021</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">218 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">2 дня 16 часа 44 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="choice-help">
+									<div class="choice-help__b">
+										<h1>Помочь выбрать авто?</h1>
+										<p>Оставь заявку и получи бесплатную консультацию от нашего специалиста по подбору и
+											рассчету
+											автомобила</p>
+										<a href="#"><span>Подобрать авто</span></a>
+									</div>
+									<img src="img/c6a944e6a35d6d543da68be1fe0f5682.png" alt="">
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>BMW 328 MSPORT, 2012</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">28 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="item-loop">
+									<a href="#" class="item-loop__link">
+										<div class="item-loop__img">
+											<div class="swiper-item-gallery">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+													</div>
+												</div>
+												<div class="item-gallery-button">
+													<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+													</div>
+													<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+													</div>
+												</div>
+											</div>
+											<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+										</div>
+										<div class="item-loop__txtblock">
+											<h3>BMW 328 MSPORT, 2012</h3>
+											<div class="il-param">
+												<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+												<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+												<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+												<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+											</div>
+											<div class="il-price">
+												<span class="il-price__full">28 400$</span>
+												<span class="il-price__description">текущая ставка</span>
+											</div>
+											<div class="il-price__action on-sell">
+												<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+												<span class="il-time">1 дня 11 часа 23 минуты</span>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="qa-loop" class="partners">
+					<div class="container">
+						<h1>Ближайшие торги</h1>
+						<div class="swiper__buttons">
+							<div class="btn__swiper icon-u_arrow-left btn__swiper-prev"></div>
+							<div class="btn__swiper icon-u_arrow-right btn__swiper-next"></div>
+						</div>
+						<div class="swiper-container partners__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<a href="#" class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
+													</div>
+												</div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>BMW 328 MSPORT, 2012</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+												</div>
+												<div class="il-price">
+													<span class="il-price__full">1400$/мес</span>
+													<span class="il-price__description">28 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<a href="#" class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
+													</div>
+												</div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Porsche Macan S 2.9 PDK, 2021</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+												</div>
+												<div class="il-price">
+													<span class="il-price__full">2120$/мес</span>
+													<span class="il-price__description">68 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<a href="#" class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
+													</div>
+												</div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Mercedes-AMG G63 G-Ttonic 4Matic Base 2021</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+												</div>
+												<div class="il-price">
+													<span class="il-price__full">6800$/мес</span>
+													<span class="il-price__description">200 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<a href="#" class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
+													</div>
+												</div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Volkswagen Golf VII 2013</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
+												</div>
+												<div class="il-price">
+													<span class="il-price__full">700$/мес</span>
+													<span class="il-price__description">8 400$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- CONTENT end -->
+			<!-- POPUP  -->
+			<div class="popup">
+				<div class="popup__body">
+					<div class="popup__content"></div>
+				</div>
+			</div>
+			<!-- POPUP END  -->
+		</main>
+		<!-- MAIN end -->
+		<!-- FOOTER start  -->
+		<footer class="foоter">
+			<div class="container">
+				<div class="foоter-main">
+					<div class="footer__info">
+						<div class="footer__caption">
+							<a href="#"><img src="img/logo.svg" alt=""></a>
+							<p>Сервис покупки в лизинг подержанных авто.</p>
+						</div>
+						<nav class="footer-nav">
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Аукцион</a></li>
+									<li><a href="#">Текущий аукцион</a></li>
+									<li><a href="#">Календарь торгов</a></li>
+									<li><a href="#">Каталог авто</a></li>
+									<li><a href="#">Проданные авто</a></li>
+									<li><a href="#">Правила проведения аукциона</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Хапай</a></li>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Продать авто</a></li>
+									<li><a href="#">Лизинг</a></li>
+									<li><a href="#">Блог</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b footer-helpdesk">
+								<p>Остались вопросы?</p>
+								<div class="number">
+									<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+								</div>
+								<div class="email">
+									<a target="_blank" href="mailto:info@hapai.ua">info@hapai.ua</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="footer-bottom">
+						<div class="copyright">© 2022 Хапай. Усі права захищенно</div>
+						<div class="regulation">
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER end -->
+	</div>
+	<!-- WRAPPER end -->
+	<!-- SCRIPTS start  -->
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
