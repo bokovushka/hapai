@@ -5,63 +5,77 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Item</title>
-	<link rel="icon" type="image/png" sizes="192x192" href="inc/assets/icon/favicon.png">
-	<link rel="stylesheet" href="inc/assets/css/jquery-ui.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-	<link rel="stylesheet" href="inc/assets/css/style.css">
-	<link rel="stylesheet" href="inc/assets/css/main.css">
-	<link rel="stylesheet" href="inc/assets/css/menu.css">
-	<link rel="stylesheet" href="inc/assets/css/font.css">
-	<link rel="stylesheet" href="inc/assets/css/swiper.css">
-	<link rel="stylesheet" href="inc/assets/css/template.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="shortcut icon" type="image/png" href="img/logo.svg">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
 </head>
 
 <body>
 	<!-- WRAPPER start -->
 	<div class="wrapper">
 		<!-- HEADER start  -->
-		<header id="masthead" class="site-header">
+		<header class="header">
 			<div class="container">
-				<div class="branding">
-					<button id="nav-toggle" class="burger-menu">
-						<span class="line1"></span>
-						<span class="line2"></span>
-						<span class="line3"></span>
-					</button>
+				<div class="header-menu">
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<a href="/" class="logo">
-						<img src="inc/assets/images/hapai.svg">
+						<img src="img/logo.svg">
 					</a>
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<ul id="primary-menu" class="menu menu-items">
-							<li class="menu-item"> <a href="https://conversion.swtesthost.space/aukcion.html">Аукцион</a>
-							</li>
-							<li class="menu-item"> <a href="https://conversion.swtesthost.space/sale.html">Продать авто</a>
-							</li>
-							<li class="menu-item"> <a href="https://conversion.swtesthost.space/lising.html">Лизинг</a>
-							</li>
-							<li class="menu-item"> <a href="https://conversion.swtesthost.space/about.html">О нас</a>
-							</li>
-							<li class="menu-item"> <a href="https://conversion.swtesthost.space/faq.html">FAQ</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="personal-navigation">
-						<ul id="right-menu" class="menu menu-items">
-							<li class="menu-btn favorite-btn"> <a href="/#" class="btn-icon"><i class="icon-star"></i></a>
-							</li>
-							<li class="menu-btn profile-btn"> <a href="/#"
-									class="btn-text-icon icon-profile"><span>Профиль</span></a>
-							</li>
-							<li class="menu-btn lang-btn"> <a href="/#" class="btn-drop icon-down-a">Рус</a>
-							</li>
-						</ul>
+					<div class="navigation">
+						<nav class="site-nav menu">
+							<ul class="nav-menu">
+								<li class="nav-menu__item">
+									<a href="aukcion.html">Аукцион</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="sale.html">Продать авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="lising.html">Лизинг</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="about.html">О нас</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="faq.html">FAQ</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="personal-nav">
+							<ul class="nav-menu right-menu">
+								<li class="nav-menu__item">
+									<a href="#">
+										<span class="icon-u_favorite"></span>
+									</a>
+								</li>
+								<li class="nav-menu__item user-profile">
+									<a href="#">
+										<span class="icon-u_user-circle"></span>
+										<span>Профиль</span>
+									</a>
+								</li>
+								<li class="nav-menu__item language">
+									<a href="#">
+										<span>Рус</span>
+										<span class="icon-u_angle-down"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="header-search">
-					<form action="/" class="form-search icon-find">
+					<form action="/" class="form-search icon-u_search">
 						<input type="text" placeholder="Я ищу ..." name="search">
-						<button type="submit" class="btn btn-style-1">Найти</button>
+						<button type="submit" class="btn btn-seacrh">Найти</button>
 					</form>
 				</div>
 			</div>
@@ -74,19 +88,20 @@
 				<section class="breadcrumb">
 					<div class="container">
 						<ul class="breadcrumb-wrap">
-							<li><a href="/" class="icon-home"></a>
+							<li>
+								<a href="#"><span class="icon-u_home-alt"></span></a>
 							</li>
-							<li><a href="/">Сегодняшний аукцион</a>
-							</li>
-							<li><span>Porsche Macan S, 2016</span>
-							</li>
+							<li>Сегодняшний аукцион</li>
+							<li>Porsche Macan S, 2016</li>
 						</ul>
 					</div>
 				</section>
 				<section class="title-item">
 					<div class="container">
-						<h1>Porsche Macan S 2.9 PDK, 2021</h1>
-						<a class="btn btn-favor"><i class="icon-star"></i></a>
+						<div class="title-item__b">
+							<h1>Porsche Macan S 2.9 PDK, 2021</h1>
+							<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+						</div>
 					</div>
 				</section>
 				<section id="item-card" class="item-card">
@@ -99,13 +114,38 @@
 								</div>
 								<div class="ic-img-loop">
 									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image6.jpg">
-											<img src="inc/assets/images/image6.jpg" />
+										<a data-fancybox="gallery" href="img/42f67ed5f9e3f01222c85d2f4382a1ea.png">
+											<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" />
 										</a>
 									</div>
 									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image63.jpg">
-											<img src="inc/assets/images/image63.jpg" />
+										<a data-fancybox="gallery" href="img/212c7db7c6bf4f76770422a67e2b6a2a.png">
+											<img src="img/212c7db7c6bf4f76770422a67e2b6a2a.png" />
+										</a>
+									</div>
+									<div class="ic-img">
+										<a data-fancybox="gallery" href="img/0b8767ecc7f5db395c8a1fa6ae6c4238.png">
+											<img src="img/0b8767ecc7f5db395c8a1fa6ae6c4238.png" />
+										</a>
+									</div>
+									<div class="ic-img">
+										<a data-fancybox="gallery" href="img/b12a59acb7cce794d7890172da58a374.png">
+											<img src="img/b12a59acb7cce794d7890172da58a374.png" />
+										</a>
+									</div>
+									<div class="ic-img">
+										<a data-fancybox="gallery" href="img/6ff7db6687c7a1a73e88a4c54e52322d.png">
+											<img src="img/6ff7db6687c7a1a73e88a4c54e52322d.png" />
+										</a>
+									</div>
+									<div class="ic-img">
+										<a data-fancybox="gallery" href="img/5187b01b4d3e64884dfb57deadffec95.png">
+											<img src="img/5187b01b4d3e64884dfb57deadffec95.png" />
+										</a>
+									</div>
+									<div class="ic-img">
+										<a data-fancybox="gallery" href="img/3d4853875e693ac89e27a5562fcec6d7.png">
+											<img src="img/3d4853875e693ac89e27a5562fcec6d7.png" />
 										</a>
 									</div>
 									<div class="ic-img">
@@ -126,43 +166,13 @@
 									<div class="ic-img">
 										<a data-fancybox="gallery" href="inc/assets/images/image67.jpg">
 											<img src="inc/assets/images/image67.jpg" />
-										</a>
-									</div>
-									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image63.jpg">
-											<img src="inc/assets/images/image63.jpg" />
-										</a>
-									</div>
-									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image64.jpg">
-											<img src="inc/assets/images/image64.jpg" />
-										</a>
-									</div>
-									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image65.jpg">
-											<img src="inc/assets/images/image65.jpg" />
-										</a>
-									</div>
-									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image66.jpg">
-											<img src="inc/assets/images/image66.jpg" />
-										</a>
-									</div>
-									<div class="ic-img">
-										<a data-fancybox="gallery" href="inc/assets/images/image67.jpg">
-											<img src="inc/assets/images/image67.jpg" />
-										</a>
-									</div>
-									<div class="ic-img ic-video swiper-slide">
-										<a class="hidden" data-fancybox="gallery"
-											href="https://www.youtube.com/watch?v=5AwdkGKmZ0I">
-
 										</a>
 									</div>
 									<div class="ic-img">
 										<a href="#gallery-1">
 											<!--ссылка на открытие первого изображения -->
-											<img src="inc/assets/images/image63.jpg" />
+											<img src="img/3d4853875e693ac89e27a5562fcec6d7.png" />
+											<h4>Смотреть все фото</h4>
 											<!--картинка дублирует первую -->
 										</a>
 									</div>
@@ -203,12 +213,13 @@
 										</div>
 										<div class="feature-row">
 											<div class="feature-col">VIN</div>
-											<div class="feature-col2"><span class="help-tool">WAUANCF5хKAхххх37</span><i
-													class="icon-info"></i>WAUANCF5хKAхххх37</div>
+											<div class="feature-col2"><span class="help-tool">WAUANCF5хKAхххх37</span>
+												<i class="icon-info icon-u_info-circle"></i>WAUANCF5хKAхххх37
+											</div>
 										</div>
 										<div class="geo-row">
 											<div class="geo-box">
-												<div class="geo-card"> <i class="icon-point"></i>
+												<div class="geo-card"> <i class="icon-point icon-u_location-point"></i>
 													<span class="geo-title">
 														Авто находится:
 													</span>
@@ -223,7 +234,8 @@
 										<div class="ac-head">
 											<div class="ac-title">Активный аукцион</div>
 											<div class="ac-title2">Автоставка</div>
-											<div class="ac-code">2690134<i class="icon-info"></i><span class="help-tool"></span>
+											<div class="ac-code">2690134<i class="icon-info icon-u_info-circle"></i>
+												<span class="help-tool"></span>
 											</div>
 											<div class="ac-code2">Выключена
 											</div>
@@ -242,7 +254,7 @@
 												покупателем</p>
 										</div>
 										<div class="ac-time">
-											<div class="ac-time-active icon-time">56 мин. 24 сек. осталось</div>
+											<div class="ac-time-active icon-time icon-u_clock">56 мин. 24 сек. осталось</div>
 											<div id="auction-bar" class="auction-bar"></div>
 										</div>
 										<div class="ac-quantity">
@@ -267,14 +279,14 @@
 											</div>
 											<div id="showbtn" class="price-autobid">
 												<a id="autobid" class="btn btn-style-2">Автоставка</a>
-												<a class="btn btn-icon"><i class="icon-info"></i></a>
+												<a class="btn btn-icon"><i class="icon-info icon-u_info-circle"></i></a>
 											</div>
 											<div id="showbtn1" class="price-autobid showbtn">
-												<a class="btn btn-icon exit-ac"><i class="icon-arrowleft"></i></a>
+												<a class="btn btn-icon exit-ac"><i class="icon-arrowleft icon-u_arrow-left"></i></a>
 												<a id="autobidon" class="btn btn-style-1">Включить автоставку</a>
 											</div>
 											<div id="showbtn2" class="price-autobid">
-												<a class="btn btn-icon exit-ac"><i class="icon-arrowleft"></i></a>
+												<a class="btn btn-icon exit-ac"><i class="icon-arrowleft icon-u_arrow-left"></i></a>
 												<a id="autobidsave" class="btn btn-style-1">Сохранить</a>
 											</div>
 										</div>
@@ -299,7 +311,7 @@
 											участия не принимала!</p>
 									</div>
 								</div>
-								<div class="ic-quality"> <i class="icon-check"></i>
+								<div class="ic-quality"> <i class="icon-check icon-u_check"></i>
 									<div class="icq-card">
 										<div class="icq-head">Этот автомобиль сертифицирован Хапай</div>
 										<p>Каждый продаваемый нами автомобиль проходит тщательный ремонт в соответствии с нашими
@@ -419,10 +431,10 @@
 												<li><a href="#tabs-2">Экстерьер</a></li>
 											</ul>
 											<div id="tabs-1">
-												<img src="inc/assets/images/imageview.png">
+												<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
 											</div>
 											<div id="tabs-2">
-												<img src="inc/assets/images/imageview.png">
+												<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
 											</div>
 											<div class="tab-view-legend">
 												<span class="circle-tool"> </span>- кликните на кружок для подробной информации
@@ -437,256 +449,189 @@
 				</section>
 				<section id="qa-loop" class="partners">
 					<div class="container">
-						<div class="head-title2">Рекомендуемое для вас
-						</div>
+						<h1>Ближайшие торги</h1>
 						<div class="swiper__buttons">
-							<button type="button" class="btn__swiper icon-arrowleft btn__swiper-prev"></button>
-							<button type="button" class="btn__swiper icon-arrowright btn__swiper-next"></button>
+							<div class="btn__swiper icon-u_arrow-left btn__swiper-prev"></div>
+							<div class="btn__swiper icon-u_arrow-right btn__swiper-next"></div>
 						</div>
 						<div class="swiper-container partners__swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<div class="item-loop"><a href="/" class="il-link"></a>
-
-										<div class="item-loop-img">
-											<div class="swiper-item-gallery">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item1.jpg" alt="">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/6a0b6571022115bc53f59b0c31103a54.png" alt="">
+														</div>
 													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item1.jpg" alt="">
-													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item1.jpg" alt="">
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
 													</div>
 												</div>
-												<div class="item-gallery-button">
-													<div class="btn-item-swiper icon-left btn__swiper-prev"></div>
-													<div class="btn-item-swiper icon-right btn__swiper-next"></div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>BMW 328 MSPORT, 2012</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
 												</div>
-											</div>
-											<a class="btn btn-favor"><i class="icon-star"></i></a>
-										</div>
-
-										<div class="item-loop-textblock">
-
-											<h3 class="item-loop-title">
-												BMW X3 2012
-											</h3>
-											<div class="il-param">
-												<span class="icon-speed">
-													44 тыс. км
-												</span>
-												<span class="icon-point">
-													Івано-Франківськ
-												</span>
-												<span class="icon-akp">
-													Автомат
-												</span>
-												<span class="icon-oil">
-													Бензин, 3 л
-												</span>
-											</div>
-											<div class="il-price">
-												<span class="ilp-part">
-													1 700$/мес
-												</span>
-												<span class="ilp-full">
-													16 500$
-												</span>
-											</div>
-											<div class="il-action start-sell">
-												<span class="icon-time">
-													До начала аукциона осталось:
-												</span>
-												<span class="il-time">
-													4 часа 23 минуты
-												</span>
+												<div class="il-price">
+													<span class="il-price__full">1400$/мес</span>
+													<span class="il-price__description">28 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="item-loop"><a href="/" class="il-link"></a>
-
-										<div class="item-loop-img">
-											<div class="swiper-item-gallery">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item2.jpg" alt="">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+														</div>
 													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item2.jpg" alt="">
-													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item2.jpg" alt="">
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
 													</div>
 												</div>
-												<div class="item-gallery-button">
-													<div class="btn-item-swiper icon-left btn__swiper-prev"></div>
-													<div class="btn-item-swiper icon-right btn__swiper-next"></div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Porsche Macan S 2.9 PDK, 2021</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
 												</div>
-											</div>
-											<a class="btn btn-favor" data-status="favorite"><i class="icon-star"></i></a>
-										</div>
-
-										<div class="item-loop-textblock">
-
-											<h3 class="item-loop-title">
-												Lamborghini Urus 4.0 AMT 4WD 2021
-											</h3>
-											<div class="il-param">
-												<span class="icon-speed">
-													44 тыс. км
-												</span>
-												<span class="icon-point">
-													Івано-Франківськ
-												</span>
-												<span class="icon-akp">
-													Автомат
-												</span>
-												<span class="icon-oil">
-													Бензин, 3 л
-												</span>
-											</div>
-											<div class="il-price">
-												<span class="ilp-part">
-													420 000$
-												</span>
-												<span class="ilp-full">
-													текущая ставка
-												</span>
-											</div>
-											<div class="il-action on-sell">
-												<span class="icon-time">
-													До конца аукциона осталось:
-												</span>
-												<span class="il-time">
-													2 часа 44 минуты
-												</span>
+												<div class="il-price">
+													<span class="il-price__full">2120$/мес</span>
+													<span class="il-price__description">68 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="item-loop"><a href="/" class="il-link"></a>
-										<div class="item-loop-img">
-											<div class="swiper-item-gallery">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item3.jpg" alt="">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/174d141805f3a278680e71c350663ea4.png" alt="">
+														</div>
 													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item3.jpg" alt="">
-													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item3.jpg" alt="">
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
 													</div>
 												</div>
-												<div class="item-gallery-button">
-													<div class="btn-item-swiper icon-left btn__swiper-prev"></div>
-													<div class="btn-item-swiper icon-right btn__swiper-next"></div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Mercedes-AMG G63 G-Ttonic 4Matic Base 2021</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
 												</div>
-											</div>
-											<a class="btn btn-favor"><i class="icon-star"></i></a>
-										</div>
-
-										<div class="item-loop-textblock">
-
-											<h3 class="item-loop-title">
-												Volkswagen Passat B8 2018
-											</h3>
-											<div class="il-param">
-												<span class="icon-speed">
-													44 тыс. км
-												</span>
-												<span class="icon-point">
-													Івано-Франківськ
-												</span>
-												<span class="icon-akp">
-													Автомат
-												</span>
-												<span class="icon-oil">
-													Бензин, 3 л
-												</span>
-											</div>
-											<div class="il-price">
-												<span class="ilp-part">
-													1 700$/мес
-												</span>
-												<span class="ilp-full">
-													16 500$
-												</span>
-											</div>
-											<div class="il-action start-sell">
-												<span class="icon-time">
-													До начала аукциона осталось:
-												</span>
-												<span class="il-time">
-													4 часа 23 минуты
-												</span>
+												<div class="il-price">
+													<span class="il-price__full">6800$/мес</span>
+													<span class="il-price__description">200 000$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="item-loop"><a href="/" class="il-link"></a>
-										<div class="item-loop-img">
-											<div class="swiper-item-gallery">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item4.jpg" alt="">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
+														<div class="swiper-slide">
+															<img src="img/5b938cea3e73122dc6d6b6e798e0d0de.png" alt="">
+														</div>
 													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item4.jpg" alt="">
-													</div>
-													<div class="swiper-slide">
-														<img src="inc/assets/images/item4.jpg" alt="">
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev">
+														</div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next">
+														</div>
 													</div>
 												</div>
-												<div class="item-gallery-button">
-													<div class="btn-item-swiper icon-left btn__swiper-prev"></div>
-													<div class="btn-item-swiper icon-right btn__swiper-next"></div>
+												<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+											</div>
+											<div class="item-loop__txtblock">
+												<h3>Volkswagen Golf VII 2013</h3>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>44 тыс. км</p>
+													<p><span class="icon-point icon-u_location-point"></span>Івано-Франківськ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 3 л</p>
 												</div>
-											</div>
-											<a class="btn btn-favor"><i class="icon-star"></i></a>
-										</div>
-
-										<div class="item-loop-textblock">
-
-											<h3 class="item-loop-title">
-												Dodge Journey Crossroad 2017
-											</h3>
-											<div class="il-param">
-												<span class="icon-speed">
-													44 тыс. км
-												</span>
-												<span class="icon-point">
-													Івано-Франківськ
-												</span>
-												<span class="icon-akp">
-													Автомат
-												</span>
-												<span class="icon-oil">
-													Бензин, 3 л
-												</span>
-											</div>
-											<div class="il-price">
-												<span class="ilp-part">
-													1 700$/мес
-												</span>
-												<span class="ilp-full">
-													16 500$
-												</span>
-											</div>
-											<div class="il-action start-sell">
-												<span class="icon-time">
-													До начала аукциона осталось:
-												</span>
-												<span class="il-time">
-													4 часа 23 минуты
-												</span>
+												<div class="il-price">
+													<span class="il-price__full">700$/мес</span>
+													<span class="il-price__description">8 400$</span>
+												</div>
+												<div class="il-price__action start-sell">
+													<p><span class="icon-time icon-u_clock"></span>До конца аукциона осталось:</p>
+													<span class="il-time">1 дня 11 часа 23 минуты</span>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -707,19 +652,67 @@
 		</main>
 		<!-- MAIN end -->
 		<!-- FOOTER start  -->
-		<!-- <footer class="footer">
+		<footer class="foоter">
 			<div class="container">
-				<div class="footer__content"></div>
+				<div class="foоter-main">
+					<div class="footer__info">
+						<div class="footer__caption">
+							<a href="#"><img src="img/logo.svg" alt=""></a>
+							<p>Сервис покупки в лизинг подержанных авто.</p>
+						</div>
+						<nav class="footer-nav">
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Аукцион</a></li>
+									<li><a href="#">Текущий аукцион</a></li>
+									<li><a href="#">Календарь торгов</a></li>
+									<li><a href="#">Каталог авто</a></li>
+									<li><a href="#">Проданные авто</a></li>
+									<li><a href="#">Правила проведения аукциона</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Хапай</a></li>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Продать авто</a></li>
+									<li><a href="#">Лизинг</a></li>
+									<li><a href="#">Блог</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b footer-helpdesk">
+								<p>Остались вопросы?</p>
+								<div class="number">
+									<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+								</div>
+								<div class="email">
+									<a target="_blank" href="mailto:info@hapai.ua">info@hapai.ua</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="footer-bottom">
+						<div class="copyright">© 2022 Хапай. Усі права захищенно</div>
+						<div class="regulation">
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-		</footer> -->
+		</footer>
 		<!-- FOOTER end -->
 	</div>
 	<!-- WRAPPER end -->
 	<!-- SCRIPTS start  -->
-	<script src="inc/assets/js/jquery-ui.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-	<script src="inc/assets/js/main.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/fancybox.umd.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		Fancybox.bind('[data-fancybox="gallery"]', {
 			animated: false,

@@ -41,16 +41,16 @@ menuBtn.addEventListener('click', function () {
 })
 
 //filter button
-let filterBtn = document.querySelector('.btn-filter');
-let sidebar = document.querySelector('.a-sidebar');
-let filterClose = document.querySelector('.filter-close');
-filterBtn.addEventListener('click', function () {
-	this.classList.toggle('active');
-	sidebar.classList.add("active");
-})
-filterClose.addEventListener('click', function () {
-	sidebar.classList.remove("active");
-})
+// let filterBtn = document.querySelector('.btn-filter');
+// let sidebar = document.querySelector('.a-sidebar');
+// let filterClose = document.querySelector('.filter-close');
+// filterBtn.addEventListener('click', function () {
+// 	this.classList.toggle('active');
+// 	sidebar.classList.add("active");
+// })
+// filterClose.addEventListener('click', function () {
+// 	sidebar.classList.remove("active");
+// })
 
 // табы
 
@@ -129,8 +129,8 @@ $("#auction-bar").progressbar({
 
 $.widget("ui.spinner", $.ui.spinner, {
 	_buttonHtml: function () {
-		return '<span class="input-group-prepend"><a class="btn ui-spinner-button ui-spinner-down icon-minus" type="button"></a></span><div class="spinner-card"><span class="spinner-show"><span class="price-value">10000</span> $</span><span class="spinner-show2"><span class="sub-price-value">290000</span> грн.</span></div>'
-			+ '<span class="input-group-append"><a class="btn ui-spinner-button ui-spinner-up icon-plus" type="button"></a></span>';
+		return '<span class="input-group-prepend"><a class="btn ui-spinner-button ui-spinner-down icon-minus icon-u_minus" type="button"></a></span><div class="spinner-card"><span class="spinner-show"><span class="price-value">10000</span> $</span><span class="spinner-show2"><span class="sub-price-value">290000</span> грн.</span></div>'
+			+ '<span class="input-group-append"><a class="btn ui-spinner-button ui-spinner-up icon-plus icon-fi_plus" type="button"></a></span>';
 	},
 	_uiSpinnerHtml: function () {
 		return '<div class="ui-spinner input-group"></div>';
@@ -192,7 +192,7 @@ new Swiper(".partners__swiper", {
 			slidesPerView: 1.2,
 		}
 	},
-	// loop: true,
+	loop: true,
 })
 
 // карусель на карточках товара
@@ -205,24 +205,24 @@ var mySwiper = new Swiper('.swiper-item-gallery', {
 		prevEl: '.item-gallery-button .btn-item-swiper.btn__swiper-prev',
 	},
 });
-// if (window.innerWidth < 1200) {
-// 	var swipercontainer = $('.ic-gallery');
-// 	var swiperwrapper = $('.ic-img-loop');
-// 	var swiperslide = $('.ic-img');
-// 	$('.ic-gallery').addClass('swiper-container');
-// 	$('.ic-img-loop').addClass('swiper-wrapper');
-// 	$('.ic-img').addClass('swiper-slide');
-// 	var mySwiper2 = new Swiper('.ic-gallery', {
-// 		direction: 'horizontal',
-// 		slidesPerView: 1,
-// 		spaceBetween: 0,
-// 		loop: 0,
-// 		navigation: {
-// 			prevEl: ".ic-gallery .item-gallery-button .btn__swiper-prev",
-// 			nextEl: ".ic-gallery .item-gallery-button .btn__swiper-next"
-// 		},
-// 	});
-// }
+if (window.innerWidth < 1200) {
+	var swipercontainer = $('.ic-gallery');
+	var swiperwrapper = $('.ic-img-loop');
+	var swiperslide = $('.ic-img');
+	$('.ic-gallery').addClass('swiper-container');
+	$('.ic-img-loop').addClass('swiper-wrapper');
+	$('.ic-img').addClass('swiper-slide');
+	var mySwiper2 = new Swiper('.ic-gallery', {
+		direction: 'horizontal',
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: 0,
+		navigation: {
+			prevEl: ".ic-gallery .item-gallery-button .btn__swiper-prev",
+			nextEl: ".ic-gallery .item-gallery-button .btn__swiper-next"
+		},
+	});
+}
 
 // фильтр
 

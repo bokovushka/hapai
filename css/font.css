@@ -43,6 +43,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-u_check:before {
+  content: "\e92b";
+}
+
+.icon-u_minus:before {
+  content: "\e929";
+}
+
+.icon-fi_plus:before {
+  content: "\e92a";
+}
+
 .icon-u_search:before {
   content: "\e928";
 }
