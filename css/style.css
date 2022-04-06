@@ -784,6 +784,7 @@ body, .btn, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .fil
 body {
   font-family: "RF Dewi";
   color: #000000;
+  background-color: #ffffff;
   font-weight: 400;
   font-style: normal;
   min-width: 360px;
