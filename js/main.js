@@ -174,7 +174,6 @@ new Swiper(".partners__swiper", {
 		nextEl: "#qa-loop .swiper__buttons .btn__swiper-next"
 	},
 	spaceBetween: 8,
-	nested: true,
 	// loopedSlides: 4,
 	breakpoints: {
 		1280: {
@@ -187,7 +186,7 @@ new Swiper(".partners__swiper", {
 			slidesPerView: 2,
 		},
 		640: {
-			slidesPerView: 1.7,
+			slidesPerView: 1,
 		},
 		360: {
 			slidesPerView: 1.2,
@@ -200,6 +199,7 @@ new Swiper(".partners__swiper", {
 
 var mySwiper = new Swiper('.swiper-item-gallery', {
 	direction: 'horizontal',
+	// nested: true,
 	navigation: {
 		nextEl: '.item-gallery-button .btn-item-swiper.btn__swiper-next',
 		prevEl: '.item-gallery-button .btn-item-swiper.btn__swiper-prev',
