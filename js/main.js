@@ -42,7 +42,7 @@ $(document).ready(function () {
 	})
 });
 
-//filter button
+// filter button
 $(document).ready(function () {
 	let filterBtn = document.querySelector('.btn-filter');
 	let sidebar = document.querySelector('.a-sidebar');
@@ -221,7 +221,7 @@ var mySwiper = new Swiper('.swiper-item-gallery', {
 		prevEl: '.item-gallery-button .btn-item-swiper.btn__swiper-prev',
 	},
 });
-if (window.innerWidth < 1200) {
+if (window.innerWidth < 993) {
 	var swipercontainer = $('.ic-gallery');
 	var swiperwrapper = $('.ic-img-loop');
 	var swiperslide = $('.ic-img');
