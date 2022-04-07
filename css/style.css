@@ -3341,6 +3341,7 @@ input[type="text"] {
   }
   .ic-img-loop {
     margin-left: 0;
+    max-height: 400px;
   }
   .ic-gallery {
     max-width: 100%;
@@ -3353,6 +3354,12 @@ input[type="text"] {
   }
   .ic-gallery .ic-img:last-child {
     display: none;
+  }
+  .ic-img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
   }
 }
 
@@ -3480,6 +3487,9 @@ input[type="text"] {
   .circle-info.circle-info-1 span {
     left: 32px;
     top: -4px;
+  }
+  .ic-img img {
+    height: 244px;
   }
 }
 
