@@ -788,7 +788,7 @@ body, p, .btn, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .
 }
 
 h6, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .footer__caption p, .footer-nav__b li, .footer-helpdesk p, .footer-bottom,
-.footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info, .auction-notification, .autobid-in-up, .spinner-show2 {
+.footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info .circle-number, .circle-info span, .auction-notification, .autobid-in-up, .spinner-show2 {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1954,7 +1954,6 @@ input[type="text"] {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(50% - 20px);
           flex: 1 1 calc(50% - 20px);
-  overflow: hidden;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   background: #ffffff;
@@ -2435,6 +2434,35 @@ input[type="text"] {
 }
 
 .circle-info {
+  position: absolute;
+  cursor: pointer;
+}
+
+.circle-info.circle-info-1 {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.circle-info.circle-info-1 span {
+  right: 32px;
+  top: -4px;
+}
+
+.circle-info.circle-info-2 {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.circle-info.circle-info-3 {
+  bottom: 8px;
+  right: 22px;
+}
+
+.circle-info .circle-number {
   font-weight: 700;
   color: #ffffff;
   background-color: #6667ab;
@@ -2450,27 +2478,28 @@ input[type="text"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.circle-info.circle-active span {
+  display: block;
+}
+
+.circle-info span {
+  display: none;
   position: absolute;
-  cursor: pointer;
-}
-
-.circle-info.circle-info-1 {
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.circle-info.circle-info-2 {
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-.circle-info.circle-info-3 {
-  bottom: 8px;
-  right: 22px;
+  font-weight: 400;
+  color: #000000;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #6667ab;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 140px;
+  margin: 4px;
 }
 
 .auction-card {
