@@ -30,29 +30,45 @@ function updateCheckboxes() {
 
 // меню
 
-let menuBtn = document.querySelector('.menu-btn');
-let menu = document.querySelector('.menu');
-let language = document.querySelector('.language');
+$(document).ready(function () {
+	let menuBtn = document.querySelector('.menu-btn');
+	let menu = document.querySelector('.menu');
+	let language = document.querySelector('.language');
 
-menuBtn.addEventListener('click', function () {
-	menuBtn.classList.toggle('active');
-	menu.classList.toggle('active');
-	language.classList.toggle('active');
-})
+	menuBtn.addEventListener('click', function () {
+		menuBtn.classList.toggle('active');
+		menu.classList.toggle('active');
+		language.classList.toggle('active');
+	})
+});
 
 //filter button
-// let filterBtn = document.querySelector('.btn-filter');
-// let sidebar = document.querySelector('.a-sidebar');
-// let filterClose = document.querySelector('.filter-close');
-// filterBtn.addEventListener('click', function () {
-// 	this.classList.toggle('active');
-// 	sidebar.classList.add("active");
-// })
-// filterClose.addEventListener('click', function () {
-// 	sidebar.classList.remove("active");
-// })
+$(document).ready(function () {
+	let filterBtn = document.querySelector('.btn-filter');
+	let sidebar = document.querySelector('.a-sidebar');
+	let filterClose = document.querySelector('.filter-close');
+	filterBtn.addEventListener('click', function () {
+		this.classList.toggle('active');
+		sidebar.classList.add("active");
+	})
+	filterClose.addEventListener('click', function () {
+		sidebar.classList.remove("active");
+	})
+});
 
 // табы
+var circleInfo = document.getElementsByClassName("circle-info");
+var circle_active = document.getElementsByClassName('circle-active');
+for (i = 0; circleInfo.length > i; i++) {
+	circleInfo[i].onclick = function () {
+		var currentActive = circle_active[0];
+		if (currentActive)
+			currentActive.classList.remove("circle-active");
+
+		if (currentActive !== this)
+			this.classList.add("circle-active");
+	};
+}
 
 $('.item-tab-content .tab-card').hide();
 $('.item-tabs .item-tab').click(function () {
