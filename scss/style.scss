@@ -1841,7 +1841,7 @@ input[type="text"] {
 	.ic-img-loop {
 		flex-wrap: wrap;
 	}
-	.item-gallery-button {
+	.ic-gallery .item-gallery-button {
 		display: none;
 	}
 	.ic-img {
@@ -2182,6 +2182,7 @@ input[type="text"] {
 	.auction-card {
 		margin: 0 auto;
 		margin-top: 20px;
+		margin-bottom: 32px;
 	}
 	.circle-info.circle-info-1 span {
 		left: 32px;
@@ -2189,6 +2190,13 @@ input[type="text"] {
 	}
 	.ic-img img {
 		height: 244px;
+	}
+	.feature {
+		order: 1;
+		padding: 12px 0;
+	}
+	.geo-row {
+		margin-top: 12px;
 	}
 }
 @media only screen and (max-width: 479px) {

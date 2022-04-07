@@ -3093,7 +3093,7 @@ input[type="text"] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .item-gallery-button {
+  .ic-gallery .item-gallery-button {
     display: none;
   }
   .ic-img {
@@ -3483,6 +3483,7 @@ input[type="text"] {
   .auction-card {
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 32px;
   }
   .circle-info.circle-info-1 span {
     left: 32px;
@@ -3490,6 +3491,15 @@ input[type="text"] {
   }
   .ic-img img {
     height: 244px;
+  }
+  .feature {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 12px 0;
+  }
+  .geo-row {
+    margin-top: 12px;
   }
 }
 
