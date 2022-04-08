@@ -256,9 +256,10 @@ input[type="text"] {
 	}
 	.btn-favor {
 		bottom: 0;
-		padding: 4px;
+		margin: 4px;
 		border: 1px solid #e5e5e5;
 		border-radius: 4px;
+		right: 0;
 	}
 }
 
@@ -2065,6 +2066,7 @@ input[type="text"] {
 	.ic-gallery {
 		max-width: 100%;
 		margin: 0 auto;
+		margin-bottom: 20px;
 	}
 	.item-gallery-button {
 		display: flex;
@@ -2073,9 +2075,8 @@ input[type="text"] {
 		display: none;
 	}
 	.ic-img img {
-		width: 100%;
 		object-fit: cover;
-		height: 400px;
+		max-height: 400px;
 	}
 }
 @media only screen and (max-width: 991px) {
@@ -2187,6 +2188,7 @@ input[type="text"] {
 		left: 32px;
 		top: -4px;
 	}
+	.ic-img-loop,
 	.ic-img img {
 		height: 244px;
 	}
