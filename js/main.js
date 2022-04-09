@@ -43,18 +43,18 @@ $(document).ready(function () {
 });
 
 // filter button
-// $(document).ready(function () {
-// 	let filterBtn = document.querySelector('.btn-filter');
-// 	let sidebar = document.querySelector('.a-sidebar');
-// 	let filterClose = document.querySelector('.filter-close');
-// 	filterBtn.addEventListener('click', function () {
-// 		this.classList.toggle('active');
-// 		sidebar.classList.add("active");
-// 	})
-// 	filterClose.addEventListener('click', function () {
-// 		sidebar.classList.remove("active");
-// 	})
-// });
+$(document).ready(function () {
+	let filterBtn = document.querySelector('.btn-filter');
+	let sidebar = document.querySelector('.a-sidebar');
+	let filterClose = document.querySelector('.filter-close');
+	filterBtn.addEventListener('click', function () {
+		this.classList.toggle('active');
+		sidebar.classList.add("active");
+	})
+	filterClose.addEventListener('click', function () {
+		sidebar.classList.remove("active");
+	})
+});
 
 // табы
 var circleInfo = document.getElementsByClassName("circle-info");
