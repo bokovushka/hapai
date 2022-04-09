@@ -43,18 +43,18 @@ $(document).ready(function () {
 });
 
 // filter button
-$(document).ready(function () {
-	let filterBtn = document.querySelector('.btn-filter');
-	let sidebar = document.querySelector('.a-sidebar');
-	let filterClose = document.querySelector('.filter-close');
-	filterBtn.addEventListener('click', function () {
-		this.classList.toggle('active');
-		sidebar.classList.add("active");
-	})
-	filterClose.addEventListener('click', function () {
-		sidebar.classList.remove("active");
-	})
-});
+// $(document).ready(function () {
+// 	let filterBtn = document.querySelector('.btn-filter');
+// 	let sidebar = document.querySelector('.a-sidebar');
+// 	let filterClose = document.querySelector('.filter-close');
+// 	filterBtn.addEventListener('click', function () {
+// 		this.classList.toggle('active');
+// 		sidebar.classList.add("active");
+// 	})
+// 	filterClose.addEventListener('click', function () {
+// 		sidebar.classList.remove("active");
+// 	})
+// });
 
 // табы
 var circleInfo = document.getElementsByClassName("circle-info");
@@ -185,12 +185,7 @@ $(document).ready(function () {
 // карусель рекомендуемое
 
 new Swiper(".partners__swiper", {
-	navigation: {
-		prevEl: "#qa-loop .swiper__buttons .btn__swiper-prev",
-		nextEl: "#qa-loop .swiper__buttons .btn__swiper-next"
-	},
 	spaceBetween: 8,
-	// loopedSlides: 4,
 	breakpoints: {
 		1280: {
 			slidesPerView: 4,
@@ -208,19 +203,25 @@ new Swiper(".partners__swiper", {
 			slidesPerView: 1.2,
 		}
 	},
-	loop: true,
+	navigation: {
+		prevEl: "#qa-loop .swiper__buttons .icon-u_arrow-left",
+		nextEl: "#qa-loop .swiper__buttons .icon-u_arrow-right"
+	},
 })
 
 // карусель на карточках товара
 
 var mySwiper = new Swiper('.swiper-item-gallery', {
 	direction: 'horizontal',
-	// nested: true,
+	nested: true,
+	grabCursor: true,
 	navigation: {
-		nextEl: '.item-gallery-button .btn-item-swiper.btn__swiper-next',
-		prevEl: '.item-gallery-button .btn-item-swiper.btn__swiper-prev',
+		nextEl: '.item-gallery-button .btn-item-swiper.icon-right',
+		prevEl: '.item-gallery-button .btn-item-swiper.icon-left',
 	},
 });
+
+
 if (window.innerWidth < 993) {
 	var swipercontainer = $('.ic-gallery');
 	var swiperwrapper = $('.ic-img-loop');
@@ -232,7 +233,6 @@ if (window.innerWidth < 993) {
 		direction: 'horizontal',
 		slidesPerView: 1,
 		spaceBetween: 0,
-		loop: 0,
 		navigation: {
 			prevEl: ".ic-gallery .item-gallery-button .btn__swiper-prev",
 			nextEl: ".ic-gallery .item-gallery-button .btn__swiper-next"
