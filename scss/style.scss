@@ -115,7 +115,12 @@ h6 {
 }
 .nav-menu__item {
 	margin: 0 8px;
-	a {
+	.language__ch {
+		font-size: $fz16;
+		line-height: 22px;
+		font-weight: $fw600;
+	}
+	.nav-menu__link {
 		display: flex;
 		align-items: center;
 		color: $color-b;
@@ -124,15 +129,50 @@ h6 {
 		font-weight: $fw600;
 		padding: 16px;
 	}
+	ul {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		padding-top: 50px;
+		cursor: pointer;
+		li {
+			color: $color-w;
+			background: $color-b;
+			@extend %txt;
+			border-radius: 4px;
+			padding: 14px;
+			cursor: pointer;
+			a {
+				color: $color-w;
+			}
+			&:hover {
+				background: #4f4599;
+			}
+		}
+	}
+	&:hover {
+		.icon-u_angle-down {
+			transform: rotate(-180deg);
+		}
+		ul {
+			display: block;
+		}
+	}
 }
 .right-menu {
 	margin: 0;
 	.nav-menu__item {
+		display: flex;
+		align-items: center;
 		margin: 0;
 		&:last-child a {
 			padding-right: 0;
 		}
 	}
+}
+.language-m {
+	display: none;
 }
 .icon-u_favorite,
 .icon-u_user-circle,
@@ -263,8 +303,8 @@ input[type="text"] {
 	}
 }
 
-//aukcion-section
-.aukcion-wrapper {
+//auction-section
+.auction-wrapper {
 	display: flex;
 	position: relative;
 	margin: 0 auto;
@@ -296,7 +336,7 @@ input[type="text"] {
 		height: auto;
 		margin: 0;
 		background: $color-w;
-		padding: 14px 8px 13px 12px;
+		padding: 12px;
 		&:hover,
 		&:focus {
 			background: $color-f;
@@ -307,6 +347,12 @@ input[type="text"] {
 			}
 		}
 	}
+}
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 12px;
+	font-size: $fz14;
+	line-height: 17px;
 }
 .ui-selectmenu-text {
 	position: relative;
@@ -662,6 +708,7 @@ input[type="text"] {
 	right: 8px;
 	bottom: 8px;
 	z-index: 2;
+	cursor: pointer;
 }
 .btn-favor[data-status="favorite"] i::before {
 	content: "\e91a";
@@ -773,7 +820,7 @@ input[type="text"] {
 
 //choice-help
 .choice-help {
-	background: #000 url(../img/bg-aukcion.jpeg) no-repeat center;
+	background: #000 url(../img/bg-auction.jpeg) no-repeat center;
 	background-size: cover;
 	padding: 40px;
 	color: $color-w;
@@ -874,13 +921,19 @@ input[type="text"] {
 	max-width: 256px;
 	li {
 		margin-bottom: 8px;
-		font-weight: $fw700;
+
 		@extend %txt-small;
 		&:last-child {
 			margin-bottom: 0;
 		}
 		a {
-			color: #777777;
+			color: $color-b;
+		}
+		&:hover {
+			font-weight: $fw700;
+			a {
+				color: #777777;
+			}
 		}
 	}
 }
@@ -1799,13 +1852,69 @@ input[type="text"] {
 	color: #a9a9a9;
 	@extend %txt-small;
 }
+//popup
+body.lock {
+	overflow: hidden;
+}
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		.popup__content {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__content {
+	background: $color-w;
+	color: $color-b;
+	max-width: 800px;
+	padding: 30px;
+	position: relative;
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+	transform: translate(0px, -100%);
+	h1 {
+		margin: 0 30px 30px 0;
+	}
+}
+.popup__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
 
+	.icon-fi_x {
+		font-size: 32px;
+		color: $color-b;
+	}
+}
+//popup end
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
 	.nav-menu__item {
 		margin: 0 4px;
-		a {
+		.nav-menu__link {
 			padding: 12px;
 		}
 	}
@@ -1877,6 +1986,22 @@ input[type="text"] {
 		padding: 0px 12px;
 	}
 	//mobile menu
+	.header-menu {
+		&.active {
+			.language-m {
+				display: flex !important;
+				align-items: center;
+				position: absolute;
+				z-index: 3;
+				top: 20px;
+				right: 15px;
+				margin: 0;
+			}
+		}
+	}
+	.nav-menu__item ul {
+		padding-top: 30px;
+	}
 	.menu-btn {
 		width: 100%;
 		max-width: 24px;
@@ -1903,6 +2028,7 @@ input[type="text"] {
 		}
 		//hamburger icon open
 		&.active {
+			position: fixed;
 			span {
 				&:nth-of-type(1) {
 					display: none;
@@ -1940,6 +2066,9 @@ input[type="text"] {
 		&.active {
 			//active menu
 			transform: translateX(0);
+			.right-menu {
+				position: absolute;
+			}
 		}
 	}
 	.navigation {
@@ -1954,17 +2083,6 @@ input[type="text"] {
 	.filter-result-txt {
 		display: none;
 	}
-	.language {
-		transform: translateX(-1060px);
-		transition: transform 0.5s;
-		z-index: 3;
-		&.active {
-			z-index: 3;
-			transform: translateX(0);
-			position: relative;
-			left: -68px;
-		}
-	}
 	.user-profile {
 		span:last-child {
 			display: none;
@@ -1975,12 +2093,19 @@ input[type="text"] {
 	}
 	.right-menu {
 		position: relative;
-		right: -68px;
+		right: -12px;
 		top: 0;
 		&:nth-child(2) a {
 			padding-right: 0;
 		}
 	}
+	.language {
+		display: none !important;
+	}
+	.icon-u_user-circle {
+		margin-right: 0;
+	}
+
 	.filter-result .btn {
 		display: block;
 		max-width: 204px;
@@ -2161,9 +2286,6 @@ input[type="text"] {
 			margin-bottom: 12px;
 		}
 	}
-	.language {
-		transform: translateX(-708px);
-	}
 	.choice-help {
 		margin: 32px 0;
 		img {
@@ -2216,9 +2338,6 @@ input[type="text"] {
 	.btn-seacrh {
 		max-width: 104px;
 	}
-	.language {
-		transform: translateX(-548px);
-	}
 	.filter-result .btn {
 		max-width: 164px;
 	}
@@ -2237,9 +2356,6 @@ input[type="text"] {
 	}
 }
 @media only screen and (max-width: 360px) {
-	.language {
-		transform: translateX(-428px);
-	}
 }
 @media (min-width: 1024px) and (max-width: 1239px) {
 }

@@ -34,11 +34,13 @@ $(document).ready(function () {
 	let menuBtn = document.querySelector('.menu-btn');
 	let menu = document.querySelector('.menu');
 	let language = document.querySelector('.language');
+	let header_active = document.querySelector('.header-menu');
 
 	menuBtn.addEventListener('click', function () {
 		menuBtn.classList.toggle('active');
 		menu.classList.toggle('active');
 		language.classList.toggle('active');
+		header_active.classList.toggle('active');
 	})
 });
 
@@ -186,6 +188,7 @@ $(document).ready(function () {
 
 new Swiper(".partners__swiper", {
 	spaceBetween: 8,
+	grabCursor: true,
 	breakpoints: {
 		1280: {
 			slidesPerView: 4,

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Aukcion</title>
+	<title>Auction</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link rel="shortcut icon" type="image/png" href="img/logo.svg">
@@ -32,40 +32,50 @@
 						<nav class="site-nav menu">
 							<ul class="nav-menu">
 								<li class="nav-menu__item">
-									<a href="aukcion.html">Аукцион</a>
+									<a href="auction.html" class="nav-menu__link">Аукцион</a>
 								</li>
 								<li class="nav-menu__item">
-									<a href="sale.html">Продать авто</a>
+									<a href="sale.html" class="nav-menu__link">Продать авто</a>
 								</li>
 								<li class="nav-menu__item">
-									<a href="lising.html">Лизинг</a>
+									<a href="lising.html" class="nav-menu__link">Лизинг</a>
 								</li>
 								<li class="nav-menu__item">
-									<a href="about.html">О нас</a>
+									<a href="about.html" class="nav-menu__link">О нас</a>
 								</li>
 								<li class="nav-menu__item">
-									<a href="faq.html">FAQ</a>
+									<a href="faq.html" class="nav-menu__link">FAQ</a>
 								</li>
 							</ul>
+							<div class="nav-menu__item language language-m">
+								<div class="language__ch">Рус</div>
+								<span class="icon-u_angle-down"></span>
+								<ul class="submenu">
+									<li><a href="##">Ру</a></li>
+									<li><a href="##">Укр</a></li>
+								</ul>
+							</div>
 						</nav>
 						<div class="personal-nav">
 							<ul class="nav-menu right-menu">
 								<li class="nav-menu__item">
-									<a href="#">
+									<a href="##" class="nav-menu__link">
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
 								<li class="nav-menu__item user-profile">
-									<a href="#">
+									<a href="##" class="nav-menu__link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
 								</li>
 								<li class="nav-menu__item language">
-									<a href="#">
-										<span>Рус</span>
-										<span class="icon-u_angle-down"></span>
-									</a>
+									<div class="language__ch">Рус</div>
+									<span class="icon-u_angle-down"></span>
+									<ul class="submenu">
+										<li><a href="##">Ру</a></li>
+										<li><a href="##">Укр</a></li>
+									</ul>
 								</li>
 							</ul>
 						</div>
@@ -102,7 +112,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="aukcion-section" class="aukcion-section">
+				<section id="auction-section" class="auction-section">
 					<div class="container">
 						<div id="filter-result" class="filter-wrap">
 							<div class="filter-result-txt">
@@ -134,7 +144,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="aukcion-wrapper">
+						<div class="auction-wrapper">
 							<div id="a-sidebar" class="a-sidebar">
 								<div id="a-filter" class="a-filter">
 									<div class="a-filter__main-titile">
@@ -881,13 +891,6 @@
 				</section>
 			</div>
 			<!-- CONTENT end -->
-			<!-- POPUP  -->
-			<div class="popup">
-				<div class="popup__body">
-					<div class="popup__content"></div>
-				</div>
-			</div>
-			<!-- POPUP END  -->
 		</main>
 		<!-- MAIN end -->
 		<!-- FOOTER start  -->
@@ -935,8 +938,8 @@
 						<div class="copyright">© 2022 Хапай. Усі права захищенно</div>
 						<div class="regulation">
 							<ul>
-								<li><a href="#">Условия использования</a></li>
-								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#popup1" class="popup-link">Условия использования</a></li>
+								<li><a href="#popup2" class="popup-link">Политика конфиденциальности</a></li>
 							</ul>
 						</div>
 					</div>
@@ -946,10 +949,37 @@
 		<!-- FOOTER end -->
 	</div>
 	<!-- WRAPPER end -->
+	<!-- POPUP  -->
+	<div id="popup1" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Lorem ipsum dolor sit 11111</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
+					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
+					fugit ea illum, perferendis cupiditate?
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="popup2" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Lorem ipsum dolor sit 11111</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
+					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
+					fugit ea illum, perferendis cupiditate?
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- POPUP END  -->
 	<!-- SCRIPTS start  -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/popups.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
