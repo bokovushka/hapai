@@ -59,18 +59,21 @@ $(document).ready(function () {
 });
 
 // табы
-var circleInfo = document.getElementsByClassName("circle-info");
-var circle_active = document.getElementsByClassName('circle-active');
-for (i = 0; circleInfo.length > i; i++) {
-	circleInfo[i].onclick = function () {
-		var currentActive = circle_active[0];
-		if (currentActive)
-			currentActive.classList.remove("circle-active");
+$(document).ready(function () {
+	var circleInfo = document.getElementsByClassName("circle-info");
+	var circle_active = document.getElementsByClassName('circle-active');
+	for (i = 0; circleInfo.length > i; i++) {
+		circleInfo[i].onclick = function () {
+			var currentActive = circle_active[0];
+			if (currentActive)
+				currentActive.classList.remove("circle-active");
 
-		if (currentActive !== this)
-			this.classList.add("circle-active");
-	};
-}
+			if (currentActive !== this)
+				this.classList.add("circle-active");
+		};
+	}
+});
+
 
 $('.item-tab-content .tab-card').hide();
 $('.item-tabs .item-tab').click(function () {
@@ -244,9 +247,7 @@ if (window.innerWidth < 993) {
 }
 
 // фильтр
-
 $(document).ready(function () {
-
 
 	$(".fmoreButton").on("click", function () {
 		$(this).next().css("display", "block");
@@ -451,18 +452,23 @@ jQuery.fn.putCursorAtEnd = function () {
 
 })();
 
-
 // height = max height
-function setEqualHeight(columns) {
-	var tallestcolumn = 0;
-	columns.each(function () {
-		currentHeight = $(this).height();
-		if (currentHeight > tallestcolumn) {
-			tallestcolumn = currentHeight;
-		}
-	});
-	columns.height(tallestcolumn);
-}
 $(document).ready(function () {
-	setEqualHeight($(".item-loop__txtblock h3"));
+	function setEqualHeight(columns) {
+		var tallestcolumn = 0;
+		columns.each(function () {
+			currentHeight = $(this).height();
+			if (currentHeight > tallestcolumn) {
+				tallestcolumn = currentHeight;
+			}
+		});
+		columns.height(tallestcolumn);
+	}
+	$(document).ready(function () {
+		setEqualHeight($(".item-loop__txtblock h3"));
+	});
 });
+
+
+
+
