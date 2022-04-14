@@ -79,30 +79,56 @@ if (window.innerWidth < 993) {
 var articleSwiper = new Swiper('.article__swiper', {
 	direction: 'horizontal',
 	grabCursor: true,
-	slidesPerView: 4,
 	spaceBetween: 20,
+	freeMode: true,
 	breakpoints: {
 		1280: {
 			slidesPerView: 4,
 		},
 		992: {
-			slidesPerView: 3,
+			slidesPerView: 3.2,
 		},
 		768: {
-			slidesPerView: 2,
+			slidesPerView: 2.2,
 		},
-		639: {
+		640: {
 			slidesPerView: 1.7,
 		},
 		360: {
 			slidesPerView: 1.1,
 		}
 	},
-	loop: true,
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false,
-		pauseOnMouseEnter: true,
+});
+
+//car-style
+
+var articleSwiper = new Swiper('.car-style__swiper', {
+	direction: 'horizontal',
+	grabCursor: true,
+	spaceBetween: 12,
+	freeMode: true,
+	breakpoints: {
+		1280: {
+			slidesPerView: 5,
+		},
+		1024: {
+			slidesPerView: 4.1,
+		},
+		992: {
+			slidesPerView: 3.9,
+		},
+		768: {
+			slidesPerView: 2.9,
+		},
+		640: {
+			slidesPerView: 2.2,
+		},
+		480: {
+			slidesPerView: 1.8,
+		},
+		360: {
+			slidesPerView: 1.3,
+		}
 	},
 });
 
@@ -133,5 +159,3 @@ $('.btn-favor').on('click', function () {
 		$(this).attr('data-status', 'favorite')
 	}
 });
-
-
