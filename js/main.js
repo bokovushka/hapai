@@ -89,13 +89,16 @@ var articleSwiper = new Swiper('.article__swiper', {
 			slidesPerView: 3.2,
 		},
 		768: {
-			slidesPerView: 2.2,
+			slidesPerView: 2.4,
 		},
 		640: {
-			slidesPerView: 1.7,
+			slidesPerView: 2.1,
+		},
+		480: {
+			slidesPerView: 1.6,
 		},
 		360: {
-			slidesPerView: 1.1,
+			slidesPerView: 1.2,
 		}
 	},
 });
@@ -147,6 +150,8 @@ $(document).ready(function () {
 	}
 	$(document).ready(function () {
 		setEqualHeight($(".item-loop__txtblock h3"));
+		setEqualHeight($(".article__swiper .swiper-slide"));
+		setEqualHeight($(".happy-customers__swiper .swiper-slide"));
 	});
 });
 
