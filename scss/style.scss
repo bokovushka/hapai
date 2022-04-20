@@ -40,7 +40,7 @@ $fz32: 32px;
 }
 body {
 	@extend %txt;
-	font-family: "RF Dewi";
+	font-family: "RF Dewi", sans-serif;
 	color: $color-b;
 	background-color: $color-w;
 	font-weight: $fw400;
@@ -70,7 +70,7 @@ h6 {
 	@extend %txt-small;
 }
 .btn {
-	font-family: "RF Dewi";
+	font-family: "RF Dewi", sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -209,7 +209,7 @@ h6 {
 }
 input[type="text"] {
 	@extend %txt-big;
-	font-family: "RF Dewi";
+	font-family: "RF Dewi", sans-serif;
 	font-size: 14px;
 	line-height: 22px;
 	padding: 13px 12px 13px 56px;
@@ -1467,7 +1467,7 @@ input[type="text"] {
 		font-size: $fz14;
 	}
 	span {
-		font-family: "RF Dewi";
+		font-family: "RF Dewi", sans-serif;
 	}
 }
 .ac-time,

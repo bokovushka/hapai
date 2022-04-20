@@ -822,7 +822,7 @@ h6, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .fo
 }
 
 body {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
   color: #000000;
   background-color: #ffffff;
   font-weight: 400;
@@ -836,7 +836,7 @@ img,
 }
 
 .btn {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1042,7 +1042,7 @@ img,
 }
 
 input[type="text"] {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
   font-size: 14px;
   line-height: 22px;
   padding: 13px 12px 13px 56px;
@@ -2638,7 +2638,7 @@ input[type="text"] {
 }
 
 .ac-time-active span {
-  font-family: "RF Dewi";
+  font-family: "RF Dewi", sans-serif;
 }
 
 .ac-time,
