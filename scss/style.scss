@@ -3508,7 +3508,8 @@ video {
 	.happy-customers {
 		margin-bottom: 0;
 		.article__swiper {
-			padding: 12px 0;
+			padding-top: 12px;
+			padding-bottom: 12px;
 		}
 	}
 	.other-article {
@@ -3517,7 +3518,8 @@ video {
 			display: none;
 		}
 		.article__swiper {
-			padding: 12px 0;
+			padding-top: 12px;
+			padding-bottom: 12px;
 			margin-bottom: 20px;
 		}
 	}

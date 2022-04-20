@@ -5154,7 +5154,8 @@ video {
     margin-bottom: 0;
   }
   .happy-customers .article__swiper {
-    padding: 12px 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .other-article {
     padding-bottom: 0;
@@ -5163,7 +5164,8 @@ video {
     display: none;
   }
   .other-article .article__swiper {
-    padding: 12px 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-bottom: 20px;
   }
   .top-banner-search .choice-help {
