@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Item</title>
+	<link rel="shortcut icon" type="image/png" href="img/logo.svg">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<!-- WRAPPER start -->
+	<div class="wrapper">
+		<!-- HEADER start  -->
+		<header class="header">
+			<div class="container">
+				<div class="header-menu">
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<a href="/" class="logo">
+						<img src="img/logo.svg">
+					</a>
+					<div class="navigation">
+						<nav class="site-nav menu">
+							<ul class="nav-menu">
+								<li class="nav-menu__item">
+									<a href="auction.html" class="nav-menu__link">Аукцион</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="sale.html" class="nav-menu__link">Продать авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="lising.html" class="nav-menu__link">Лизинг</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="about.html" class="nav-menu__link">О нас</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="faq.html" class="nav-menu__link">FAQ</a>
+								</li>
+							</ul>
+							<div class="nav-menu__item language language-m">
+								<div class="language__ch">Рус</div>
+								<span class="icon-u_angle-down"></span>
+								<ul class="submenu">
+									<li><a href="##">Ру</a></li>
+									<li><a href="##">Укр</a></li>
+								</ul>
+							</div>
+						</nav>
+						<div class="personal-nav">
+							<ul class="nav-menu right-menu">
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">
+										<span class="icon-u_favorite"></span>
+									</a>
+								</li>
+								<li class="nav-menu__item user-profile">
+									<a href="##" class="nav-menu__link">
+										<span class="icon-u_user-circle"></span>
+										<span>Профиль</span>
+									</a>
+								</li>
+								<li class="nav-menu__item language">
+									<div class="language__ch">Рус</div>
+									<span class="icon-u_angle-down"></span>
+									<ul class="submenu">
+										<li><a href="##">Ру</a></li>
+										<li><a href="##">Укр</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header-search">
+					<form action="/" class="form-search icon-u_search">
+						<input type="text" placeholder="Я ищу ..." name="search">
+						<button type="submit" class="btn btn-seacrh">Найти</button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<!-- HEADER end  -->
+		<!-- MAIN start  -->
+		<main class="main">
+			<!-- CONTENT start  -->
+			<div class="content">
+				<section class="breadcrumb">
+					<div class="container">
+						<ul class="breadcrumb-wrap">
+							<li>
+								<a href="#"><span class="icon-u_home-alt"></span></a>
+							</li>
+							<li>Мой профиль</li>
+						</ul>
+					</div>
+				</section>
+				<section class="title-item">
+					<div class="container">
+						<div class="title-item__b">
+							<h1>Мой профиль</h1>
+						</div>
+					</div>
+				</section>
+				<section class="user-data">
+					<div class="container">
+						<div id="tabs" class="tabs">
+							<ul>
+								<li><a href="#tabs-1">Личные данные</a></li>
+								<li><a href="#tabs-2">Платежная информация</a></li>
+								<li><a href="#tabs-3">Уведомления</a></li>
+							</ul>
+							<div id="tabs-1" class="tabs__item">
+								<div class="tabs__content">
+									<div class="tabs__main">
+										<div class="verify">
+											<p> Вы не можете принимать участвие в аукционе. Ваш профиль не подтвержден.</p>
+											<a href="##" class="btn ">Подтвердить</a>
+										</div>
+										<div class="user-info">
+											<div class="user-txt">
+												<label for="name">ФИО</label>
+												<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
+											</div>
+											<div class="user-txt">
+												<label for="tel">Телефон</label>
+												<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+											</div>
+											<div class="user-txt not-validated">
+												<label for="email">email</label>
+												<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+												<div class="error">Не подтвержден</div>
+											</div>
+											<div class="user-txt">
+												<label for="password">Пароль</label>
+												<input id="password" type="text" name="password" value="••••••••">
+											</div>
+											<div class="user-txt">
+												<label for="city">Город</label>
+												<input id="city" type="text" name="city" value="Киев">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tabs-2" class="tabs__item">
+								<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+							</div>
+							<div id="tabs-3" class="tabs__item">
+								<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+								<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- CONTENT end -->
+		</main>
+		<!-- WRAPPER end -->
+		<!-- FOOTER start  -->
+		<footer class="foоter">
+			<div class="container">
+				<div class="foоter-main">
+					<div class="footer__info">
+						<div class="footer__caption">
+							<a href="#"><img src="img/logo.svg" alt=""></a>
+							<p>Сервис покупки в лизинг подержанных авто.</p>
+						</div>
+						<nav class="footer-nav">
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Аукцион</a></li>
+									<li><a href="#">Текущий аукцион</a></li>
+									<li><a href="#">Календарь торгов</a></li>
+									<li><a href="#">Каталог авто</a></li>
+									<li><a href="#">Проданные авто</a></li>
+									<li><a href="#">Правила проведения аукциона</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b">
+								<ul>
+									<li><a href="#">Хапай</a></li>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Продать авто</a></li>
+									<li><a href="#">Лизинг</a></li>
+									<li><a href="#">Блог</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav__b footer-helpdesk">
+								<p>Остались вопросы?</p>
+								<div class="number">
+									<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+								</div>
+								<div class="email">
+									<a target="_blank" href="mailto:info@hapai.ua">info@hapai.ua</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="footer-bottom">
+						<div class="copyright">© 2022 Хапай. Усі права захищенно</div>
+						<div class="regulation">
+							<ul>
+								<li><a href="#popup1" class="popup-link">Условия использования</a></li>
+								<li><a href="#popup2" class="popup-link">Политика конфиденциальности</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER end -->
+	</div>
+	<!-- WRAPPER end -->
+	<!-- POPUP  -->
+	<div id="popup1" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Lorem ipsum dolor sit 11111</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
+					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
+					fugit ea illum, perferendis cupiditate?
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="popup2" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Lorem ipsum dolor sit 11111</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
+					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
+					fugit ea illum, perferendis cupiditate?
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- POPUP END  -->
+	<!-- SCRIPTS start  -->
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/popups.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		$(function () {
+			$("#tabs").tabs();
+		});
+	</script>
+</body>
+
+</html>

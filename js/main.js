@@ -101,6 +101,39 @@ var articleSwiper = new Swiper('.article__swiper', {
 			slidesPerView: 1.2,
 		}
 	},
+	navigation: {
+		prevEl: ".team .swiper__buttons .icon-u_arrow-left",
+		nextEl: ".team .swiper__buttons .icon-u_arrow-right"
+	},
+});
+
+// team Swiper slider
+
+var teamSwiper = new Swiper('.team__swiper', {
+	direction: 'horizontal',
+	grabCursor: true,
+	spaceBetween: 20,
+	freeMode: true,
+	breakpoints: {
+		1280: {
+			slidesPerView: 4,
+		},
+		992: {
+			slidesPerView: 3.2,
+		},
+		768: {
+			slidesPerView: 2.4,
+		},
+		640: {
+			slidesPerView: 2.1,
+		},
+		480: {
+			slidesPerView: 1.6,
+		},
+		360: {
+			slidesPerView: 1.2,
+		}
+	},
 });
 
 //car-style
