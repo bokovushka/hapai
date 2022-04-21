@@ -795,7 +795,7 @@ h1, .title-item__b h1, .il-price__full, .choice-help__b h1, .partners h1, .price
   line-height: 44px;
 }
 
-h2, .a-filter__main-titile h2 {
+h2, .a-filter__main-titile h2, .user-data #tabs-2 .user-txt input[value] {
   font-size: 24px;
   line-height: 32px;
 }
@@ -810,7 +810,22 @@ h4, .nav-menu__item .nav-menu__link, input[type="text"], .choice-help__b p, .ite
   line-height: 24px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::placeholder {
   font-size: 14px;
   line-height: 22px;
 }
@@ -4707,10 +4722,59 @@ video {
 .user-data .tabs li a,
 .user-data .tabs .ui-tabs-anchor {
   all: unset;
+  display: block;
+}
+
+.user-data .tabs {
+  margin-bottom: 174px;
+  position: relative;
+}
+
+.user-data .tabs .btn-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 13px 18px;
+  line-height: 16px;
 }
 
 .user-data .tabs__main {
   max-width: 950px;
+}
+
+.user-data .tabs__main .verify {
+  background: #fff8fb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-data .tabs__main .verify p {
+  color: #d45279;
+}
+
+.user-data .tabs__main .verify .btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: #d45279;
+  border-radius: 4px;
+  color: #ffffff;
+  max-width: 128px;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .user-data .user-info {
@@ -4734,10 +4798,8 @@ video {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
-  max-width: calc((100% / 3) - 13px);
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: calc((100% / 3) - 14px);
+  min-width: 280px;
   position: relative;
 }
 
@@ -4772,7 +4834,12 @@ video {
 }
 
 .user-data .tabs li {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 !important;
   width: calc(100% / 3);
   text-align: center;
@@ -4780,7 +4847,7 @@ video {
 }
 
 .user-data .tabs li .ui-tabs-anchor {
-  display: block;
+  width: 100%;
   padding: 10px;
   position: relative;
 }
@@ -4801,16 +4868,101 @@ video {
   display: none;
 }
 
+.user-data .tabs li.ui-state-active, .user-data .tabs li.ui-state-hover {
+  background: #6667ab;
+  border-radius: 4px;
+}
+
 .user-data .tabs li.ui-state-active .ui-tabs-anchor,
 .user-data .tabs li.ui-state-hover .ui-tabs-anchor {
-  background: #6667ab;
   color: #ffffff;
-  border-radius: 4px;
 }
 
 .user-data .tabs li.ui-state-active .ui-tabs-anchor::after,
 .user-data .tabs li.ui-state-hover .ui-tabs-anchor::after {
   display: none;
+}
+
+.user-data #tabs-2 {
+  margin-top: 56px;
+}
+
+.user-data #tabs-2 .tabs__content {
+  background: #f5f5f5;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-data #tabs-2 .user-txt {
+  all: unset;
+  width: calc((100% / 2) - 10px);
+  max-width: 280px;
+  position: relative;
+}
+
+.user-data #tabs-2 .user-txt label {
+  position: absolute;
+  top: -36px;
+}
+
+.user-data #tabs-2 .user-txt input::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+.user-data #tabs-2 .user-txt input:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+.user-data #tabs-2 .user-txt input::-ms-input-placeholder {
+  font-weight: 400;
+}
+
+.user-data #tabs-2 .user-txt input::placeholder {
+  font-weight: 400;
+}
+
+.user-data #tabs-2 .user-txt input[value] {
+  font-weight: 600;
+}
+
+.tabs__card-button a {
+  position: relative;
+  padding-right: 32px;
+}
+
+.tabs__card-button a::after {
+  position: absolute;
+  font-family: "hapai";
+  font-size: 24px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.tabs__card-button .card-edit {
+  color: #6667ab;
+  margin-right: 20px;
+}
+
+.tabs__card-button .card-edit::after {
+  content: "\e905";
+}
+
+.tabs__card-button .card-delete {
+  color: #d45279;
+}
+
+.tabs__card-button .card-delete::after {
+  content: "\e909";
 }
 
 /* mobile */
@@ -5232,6 +5384,12 @@ video {
   .car-style__swiper {
     margin-right: -20px;
   }
+  .user-data .tabs__main {
+    max-width: 100%;
+  }
+  .user-data .tabs__main .verify {
+    margin: 12px 0;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -5331,6 +5489,44 @@ video {
   .choice-help__sell-car-info {
     -ms-flex-wrap: nowrap !important;
         flex-wrap: nowrap !important;
+  }
+  .tabs .btn-edit {
+    display: none;
+  }
+  .user-data .tabs .show {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+  .user-data .user-txt {
+    width: calc((100% / 2) - 10px);
+  }
+  .user-data #tabs-2 {
+    margin-top: 32px;
+  }
+  .user-data #tabs-2 .btn.show {
+    margin-bottom: 40px;
+  }
+  .user-data #tabs-2 .tabs__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px;
+  }
+  .user-data #tabs-2 .tabs__card-button {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -5559,6 +5755,10 @@ video {
   .accordion-section {
     margin-bottom: 32px;
   }
+  .user-data .tabs__main .verify {
+    margin: 12px -12px;
+    border-radius: unset;
+  }
 }
 
 @media only screen and (max-width: 639px) {
@@ -5722,6 +5922,12 @@ video {
   .ecosystem__item {
     max-width: 100%;
     height: 128px;
+  }
+  .user-data .tabs {
+    margin-bottom: 149px;
+  }
+  .user-data .user-txt {
+    width: 100%;
   }
 }
 

@@ -3095,9 +3095,43 @@ video {
 	.tabs li a,
 	.tabs .ui-tabs-anchor {
 		all: unset;
+		display: block;
+	}
+	.tabs {
+		margin-bottom: 174px;
+		position: relative;
+		.btn-edit {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: max-content;
+			padding: 13px 18px;
+			line-height: 16px;
+		}
 	}
 	.tabs__main {
 		max-width: 950px;
+		.verify {
+			background: #fff8fb;
+			border-radius: 8px;
+			padding: 20px;
+			margin: 20px 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p {
+				color: #d45279;
+			}
+			.btn {
+				width: max-content;
+				background: #d45279;
+				border-radius: 4px;
+				color: $color-w;
+				max-width: 128px;
+				width: 100%;
+				padding: 10px 0;
+			}
+		}
 	}
 	.user-info {
 		display: flex;
@@ -3113,8 +3147,8 @@ video {
 		border: 1px solid #e5e5e5;
 		box-sizing: border-box;
 		border-radius: 4px;
-		max-width: calc((100% / 3) - 13px);
-		flex-grow: 1;
+		width: calc((100% / 3) - 14px);
+		min-width: 280px;
 		position: relative;
 		label {
 			@extend %txt-small;
@@ -3144,13 +3178,14 @@ video {
 			max-width: 600px;
 		}
 		li {
-			display: block;
+			display: flex;
+			align-items: center;
 			padding: 0 !important;
 			width: calc(100% / 3);
 			text-align: center;
 			cursor: pointer;
 			.ui-tabs-anchor {
-				display: block;
+				width: 100%;
 				padding: 10px;
 				position: relative;
 				&::after {
@@ -3167,11 +3202,14 @@ video {
 			&:last-child .ui-tabs-anchor::after {
 				display: none;
 			}
+			&.ui-state-active,
+			&.ui-state-hover {
+				background: $color-f;
+				border-radius: 4px;
+			}
 			&.ui-state-active .ui-tabs-anchor,
 			&.ui-state-hover .ui-tabs-anchor {
-				background: $color-f;
 				color: $color-w;
-				border-radius: 4px;
 				&::after {
 					display: none;
 				}
@@ -3179,6 +3217,63 @@ video {
 		}
 	}
 }
+.user-data #tabs-2 {
+	margin-top: 56px;
+
+	.tabs__content {
+		background: #f5f5f5;
+		padding: 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.user-txt {
+		all: unset;
+		width: calc((100% / 2) - 10px);
+		max-width: 280px;
+		position: relative;
+		label {
+			position: absolute;
+			top: -36px;
+		}
+		input::placeholder {
+			@extend %txt;
+			font-weight: $fw400;
+		}
+		input[value] {
+			@extend %h2;
+			font-weight: $fw600;
+		}
+	}
+}
+.tabs__card-button {
+	a {
+		position: relative;
+		padding-right: 32px;
+		&::after {
+			position: absolute;
+			font-family: "hapai";
+			font-size: $fz24;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+		}
+	}
+	.card-edit {
+		color: $color-f;
+		margin-right: 20px;
+		&::after {
+			content: "\e905";
+		}
+	}
+	.card-delete {
+		color: #d45279;
+		&::after {
+			content: "\e909";
+		}
+	}
+}
+
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
@@ -3557,6 +3652,14 @@ video {
 	.car-style__swiper {
 		margin-right: -20px;
 	}
+	.user-data {
+		.tabs__main {
+			max-width: 100%;
+			.verify {
+				margin: 12px 0;
+			}
+		}
+	}
 }
 @media only screen and (max-width: 991px) {
 	.a-main {
@@ -3644,6 +3747,35 @@ video {
 	}
 	.choice-help__sell-car-info {
 		flex-wrap: nowrap !important;
+	}
+	.tabs .btn-edit {
+		display: none;
+	}
+	.user-data .tabs .show {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 32px;
+		margin-bottom: 20px;
+	}
+	.user-data .user-txt {
+		width: calc((100% / 2) - 10px);
+	}
+	.user-data #tabs-2 {
+		margin-top: 32px;
+		.btn.show {
+			margin-bottom: 40px;
+		}
+		.tabs__content {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		.tabs__card-button {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+		}
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -3857,6 +3989,10 @@ video {
 	.accordion-section {
 		margin-bottom: 32px;
 	}
+	.user-data .tabs__main .verify {
+		margin: 12px -12px;
+		border-radius: unset;
+	}
 }
 @media only screen and (min-width: 680px) {
 }
@@ -4005,6 +4141,14 @@ video {
 	.ecosystem__item {
 		max-width: 100%;
 		height: 128px;
+	}
+	.user-data {
+		.tabs {
+			margin-bottom: 149px;
+		}
+		.user-txt {
+			width: 100%;
+		}
 	}
 }
 @media only screen and (max-width: 479px) {
