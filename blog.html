@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Item</title>
 	<link rel="shortcut icon" type="image/png" href="img/logo.svg">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -60,7 +61,7 @@
 									</a>
 								</li>
 								<li class="nav-menu__item user-profile">
-									<a href="##" class="nav-menu__link">
+									<a href="#popup-authorization" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
@@ -456,7 +457,7 @@
 	<div id="popup1" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
 				<h1>Lorem ipsum dolor sit 11111</h1>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
 					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
@@ -468,7 +469,7 @@
 	<div id="popup2" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="##" class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
 				<h1>Lorem ipsum dolor sit 11111</h1>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem officia accusantium
 					expedita quas voluptas? Vel vitae modi pariatur rem, esse recusandae deleniti est accusantium
@@ -477,11 +478,81 @@
 			</div>
 		</div>
 	</div>
+	<div id="popup-authorization" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="authorization__wrap">
+					<div class="login">
+						<h1>Вход</h1>
+						<form id="form-login-popup">
+							<div class="user-info">
+								<div class="user-txt">
+									<label for="tel">Телефон</label>
+									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+								</div>
+								<div class="user-txt">
+									<label for="password">Пароль</label>
+									<input id="password" type="text" name="password" value="••••••••">
+								</div>
+								<div class="user-info__b">
+									<div class="checkbox">
+										<label for="checkbox-remember-popup"></label>
+										<input type="checkbox" name="checkbox-remember-popup" id="checkbox-remember-popup">
+										<span class="checkbox__txt">Запомнить меня</span>
+									</div>
+									<a href="##" class="forgot-password">Забыли пароль?</a>
+								</div>
+								<button type="button" class="btn btn-style-1">Войти</button>
+								<a class="txt-link">У меня еще нет аккаунта</a>
+							</div>
+						</form>
+					</div>
+					<div class="register hide">
+						<h1>Регистрация</h1>
+						<form id="form-register-popup">
+							<div class="user-info">
+								<div class="user-txt">
+									<label for="name">ФИО</label>
+									<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
+								</div>
+								<div class="user-txt">
+									<label for="tel">Телефон</label>
+									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+								</div>
+								<div class="user-txt">
+									<label for="email">email</label>
+									<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+								</div>
+								<div class="user-txt">
+									<label for="password">Пароль</label>
+									<input id="password" type="text" name="password" value="••••••••">
+								</div>
+								<div class="user-txt">
+									<label for="password-repeat">Повторите пароль</label>
+									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
+								</div>
+								<div class="checkbox">
+									<label for="checkbox-agree-popup"></label>
+									<input type="checkbox" name="checkbox-agree-popup" id="checkbox-agree-popup">
+									<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
+								</div>
+								<button type="button" class="btn btn-style-1">Зарегистрироваться</button>
+								<a class="txt-link">У меня уже есть аккаунт</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- POPUP END  -->
 	<!-- SCRIPTS start  -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="js/popups.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/popups.js"></script>
 	<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
 	<script type="text/javascript" src="js/pagination.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
