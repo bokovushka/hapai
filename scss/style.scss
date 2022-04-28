@@ -1003,7 +1003,6 @@ input[type="text"] {
 	overflow: hidden;
 }
 .ic-img {
-	margin: 10px;
 	position: relative;
 	overflow: hidden;
 	img {
@@ -1039,12 +1038,11 @@ input[type="text"] {
 	margin-right: 8px;
 }
 .ic-middle {
-	margin-bottom: 20px;
-	padding: 20px 5px 20px 20px;
+	padding: 20px 0 20px 20px;
 	margin-top: 25px;
 }
 .ic-bottom {
-	padding: 20px;
+	padding: 20px 0 20px 20px;
 }
 .ic-quality {
 	padding: 12px 64px;
@@ -1155,7 +1153,6 @@ input[type="text"] {
 }
 .ic-top {
 	display: flex;
-	flex-wrap: wrap;
 }
 .feature {
 	flex: 1;
@@ -1171,7 +1168,7 @@ input[type="text"] {
 	margin: 0;
 	transition: 0.2s ease-in-out;
 	background: $color-w;
-	max-width: 620px;
+	max-width: 580px;
 	margin-right: 20px;
 	margin-top: 20px;
 }
@@ -1181,7 +1178,7 @@ input[type="text"] {
 	position: relative;
 }
 .ic-img-loop {
-	margin-left: -20px;
+	gap: 20px;
 }
 .geo-box {
 	padding: 12px;
@@ -1439,6 +1436,11 @@ input[type="text"] {
 	font-weight: 600;
 	flex: 1;
 	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	.btn-icon {
+		width: max-content;
+	}
 }
 .ac-code i {
 	margin-left: 6px;
@@ -1549,11 +1551,14 @@ input[type="text"] {
 	}
 }
 .icon-info {
-	cursor: help;
+	cursor: pointer;
 	&:before {
 		color: #e1b573;
 		font-size: $fz16;
 	}
+}
+.feature .icon-info {
+	cursor: help;
 }
 .btn .icon-info {
 	cursor: pointer;
@@ -3297,9 +3302,12 @@ input.field {
 			width: 100%;
 		}
 	}
-	.hide {
-		display: none;
-	}
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
 }
 .register,
 .login {
@@ -3395,7 +3403,7 @@ input.field {
 #popup-authorization {
 	.authorization__wrap {
 		padding: 0;
-		margin: 0 -10px;
+		margin: 0;
 		h1 {
 			@extend %txt-big;
 			text-align: left;
@@ -3417,7 +3425,7 @@ input.field {
 		color: rgba(119, 119, 119, 0.54);
 	}
 	.popup__close {
-		right: 10px;
+		right: 20px;
 	}
 }
 
@@ -3762,6 +3770,334 @@ input.field {
 	}
 }
 
+//item-off
+.ic-top__right {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-top: 20px;
+	min-width: 310px;
+}
+.ic-top__rb {
+	all: unset;
+	background: #f5f6f8;
+	border-radius: 12px;
+	padding: 20px;
+	position: relative;
+	.popup {
+		position: absolute;
+		border-radius: 12px;
+		z-index: 6;
+	}
+	.popup__body {
+		padding: 0;
+		height: 100%;
+	}
+	.popup__content {
+		padding: 20px;
+		height: 100%;
+		transform: unset;
+	}
+	.popup-auction-info__title {
+		@extend %txt-big;
+		font-weight: $fw600;
+		margin-bottom: 20px;
+	}
+	.popup__close .icon-fi_x {
+		font-size: $fz24;
+		color: #777777;
+	}
+	//автоставка
+	.price-spinner {
+		display: none;
+	}
+	&.autobid-change {
+		#showbtn2 {
+			display: flex;
+		}
+	}
+	&.autobid-off {
+		.ac-title,
+		.ac-code,
+		#showbtn {
+			display: flex;
+		}
+	}
+	&.autobid-change,
+	&.autobid-on {
+		.price-spinner {
+			display: block;
+		}
+		#showbtn {
+			display: none;
+		}
+	}
+}
+
+.buyback {
+	margin-bottom: 20px;
+	text-align: center;
+	.buyback__title {
+		@extend %txt-big;
+		font-weight: $fw600;
+	}
+	.buyback__full-price {
+		@extend %h1;
+		font-weight: $fw600;
+		color: $color-f;
+	}
+	.buyback__ua-price {
+		@extend %txt-big;
+		color: #a9a9a9;
+	}
+	.btn-style-1 {
+		margin-top: 20px;
+	}
+}
+
+//reverse-time
+.timer {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	margin-bottom: 20px;
+}
+.timer__item {
+	position: relative;
+	width: 100%;
+	@extend %h3;
+	font-weight: $fw600;
+	padding-bottom: 20px;
+	background: $color-w;
+	border-radius: 4px;
+	padding: 4px;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+.timer__item::before {
+	content: attr(data-title);
+	display: block;
+	position: relative;
+	@extend %txt;
+	font-weight: $fw400;
+}
+
+.ic-top__right .btn-style-2 {
+	background: transparent;
+	color: $color-b;
+	&:hover {
+		background: $color-b;
+		color: $color-w;
+	}
+}
+.test-drive {
+	border: 2px solid #0c8d47;
+	border-radius: 12px;
+	padding: 12px;
+	padding-right: 40px;
+	@extend %txt-big;
+	font-weight: $fw600;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	span {
+		color: #0c8d47;
+		@extend %txt-small;
+		font-weight: $fw400;
+	}
+}
+.installment-payment {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $color-f;
+	border-radius: 12px;
+	padding: 16px 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	.icon {
+		display: block;
+		font-size: 24px;
+		padding: 12px;
+		color: $color-w;
+		background: #7f81d5;
+		border-radius: 12px;
+		margin-right: 20px;
+		height: max-content;
+	}
+	.btn-style-3 {
+		max-width: 270px;
+		height: max-content;
+	}
+}
+.installment-payment__b {
+	display: flex;
+	align-items: center;
+}
+.installment-payment__price-m {
+	@extend %h1;
+	font-weight: $fw600;
+	color: $color-w;
+	display: flex;
+	flex-direction: column;
+}
+.installment-payment__price-full {
+	@extend %txt-big;
+	color: #e5e5e5;
+}
+.auction-off .ic-middle {
+	margin-top: 0;
+}
+.auction-off .selection-car__payments-item {
+	width: 100%;
+}
+.auction-off .selection-car__result-search .il-price {
+	margin-top: 8px;
+	margin-bottom: 26px;
+}
+.popup-auction {
+	.popup__close .icon-fi_x {
+		font-size: $fz24;
+		color: #777777;
+	}
+	.popup__content {
+		max-width: 360px;
+		border-radius: 8px;
+		padding: 20px;
+		.authorization__wrap {
+			padding: 0;
+			margin: 0;
+		}
+		.popup-auction__title {
+			margin-bottom: 20px;
+			@extend %txt-big;
+			font-weight: $fw600;
+		}
+		.popup-auction__note {
+			background: #fff8fb;
+			color: #d45279;
+			border-radius: 8px;
+			padding: 8px;
+			margin-bottom: 20px;
+		}
+	}
+}
+.payment-methods__item {
+	position: relative;
+	padding: 12px 8px 12px 12px;
+	background: #f5f6f8;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	color: #777777;
+	font-weight: $fw600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	span {
+		font-size: $fz24;
+		color: $color-f;
+	}
+}
+.popup-bg-body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.bank-card-data {
+	.user-info {
+		flex-direction: row;
+	}
+	.user-txt {
+		padding: 13px 12px;
+	}
+	.date-card,
+	.cvv-card {
+		width: calc(50% - 10px) !important;
+		min-width: auto;
+	}
+}
+.bank-card__button {
+	width: 100%;
+	display: flex;
+	gap: 8px;
+}
+.card-check {
+	transition: all 0.8s ease 0s;
+	text-align: center;
+	.popup-auction__title {
+		margin-bottom: 0 !important;
+	}
+	p {
+		color: #777777;
+	}
+	.bank-card__button {
+		flex-direction: column;
+		margin-top: 40px;
+	}
+	.icon {
+		font-size: 40px;
+		color: #d45279;
+		padding: 20px;
+		background: #fff8fb;
+		display: block;
+		border-radius: 50%;
+		width: max-content;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+.card-accepted {
+	transition: all 0.8s ease 0s;
+	.icon {
+		color: #0c8d47;
+		background: #effcf5;
+	}
+}
+#popup-installment {
+	.popup__body {
+		padding: 0;
+	}
+	.popup__content {
+		max-width: 360px;
+		border-radius: 12px;
+		padding: 20px;
+		.authorization__wrap {
+			padding: 0;
+			margin: 0;
+			.popup-auction__title {
+				margin-bottom: 20px;
+			}
+			.user-txt {
+				padding: 12px;
+			}
+		}
+		.popup__close .icon-fi_x {
+			font-size: $fz24;
+		}
+	}
+}
+.installment-accepted .icon {
+	background: #effcf5;
+	color: #0c8d47;
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
@@ -3873,10 +4209,30 @@ input.field {
 	.top-banner-lease__wrap img {
 		left: 40px;
 	}
+	.ic-top__rb.auction-card {
+		margin-left: 0;
+	}
+	.feature {
+		padding-right: 0;
+	}
 }
 @media (min-width: 993px) and (max-width: 1279px) {
 	.a-main .item-loop {
 		width: calc((100% - 8px) / 2);
+	}
+	.ic-top__right {
+		padding-left: 20px;
+	}
+	.installment-payment {
+		flex-direction: column;
+		.btn-style-3 {
+			max-width: 100%;
+		}
+	}
+	.installment-payment__b {
+		width: 100%;
+		justify-content: flex-start;
+		margin-bottom: 40px;
 	}
 }
 @media only screen and (min-width: 993px) {
@@ -4155,6 +4511,12 @@ input.field {
 				margin: 12px 0;
 			}
 		}
+	}
+	.installment-payment {
+		margin-left: 0;
+	}
+	.ic-top__right {
+		margin-left: 20px;
 	}
 }
 @media only screen and (max-width: 991px) {
@@ -4586,6 +4948,12 @@ input.field {
 	.faq-category__item {
 		width: calc((100% - 12px) / 2);
 	}
+	.buyback {
+		margin-bottom: 12px;
+	}
+	.auction-off .selection-car__result-search .il-price {
+		margin-bottom: 8px;
+	}
 }
 @media only screen and (min-width: 680px) {
 }
@@ -4769,6 +5137,26 @@ input.field {
 	.faq-connection__item {
 		width: 100%;
 	}
+	.installment-payment {
+		flex-direction: column;
+		border-radius: inherit;
+		margin: 0 -12px;
+		margin-top: 20px;
+		.btn-style-3 {
+			max-width: 100%;
+		}
+	}
+	.installment-payment__b {
+		width: 100%;
+		justify-content: flex-start;
+		margin-bottom: 40px;
+	}
+	.ic-top__right {
+		margin-left: 0;
+	}
+	.ic-top__rb.auction-card {
+		margin: 0;
+	}
 }
 @media only screen and (max-width: 479px) {
 	.header-menu {
@@ -4802,13 +5190,24 @@ input.field {
 	.car-style__button .btn {
 		padding: 11px 8px;
 	}
+	#popup-authorization .authorization__wrap {
+		margin: 0 -10px;
+	}
 	.register .user-info .user-txt:nth-child(2),
 	.register .user-info .user-txt:nth-child(3) {
 		width: 100%;
 	}
+	#popup-authorization .popup__close {
+		right: 10px;
+	}
 	.questions-lease .img-wrap {
 		top: -30px;
 		margin-bottom: -70px;
+	}
+	.popup-auction {
+		.popup__body {
+			padding: 30px 0;
+		}
 	}
 }
 
@@ -4818,6 +5217,12 @@ input.field {
 		.login {
 			border-radius: unset;
 		}
+	}
+	.popup-auction .popup__content {
+		border-radius: unset;
+	}
+	#popup-installment .popup__content {
+		border-radius: unset;
 	}
 }
 @media (min-width: 1024px) and (max-width: 1239px) {

@@ -43,6 +43,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-u_google:before {
+  content: "\e933";
+}
+
 .icon-fi_truck:before {
   content: "\e92c";
 }
