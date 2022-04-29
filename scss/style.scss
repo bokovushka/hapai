@@ -339,7 +339,7 @@ input[type="text"] {
 	justify-content: flex-end;
 	.ui-selectmenu-button {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		margin: 0;
 		background: $color-w;
 		padding: 12px;
@@ -4097,6 +4097,143 @@ input.field {
 .installment-accepted .icon {
 	background: #effcf5;
 	color: #0c8d47;
+}
+
+//auction-calendar
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+		content: "\e910";
+		font-family: "hapai";
+		font-size: 24px;
+		color: #6667ab;
+	}
+	&.ui-datepicker-prev-hover,
+	&.ui-datepicker-next-hover {
+		background: transparent;
+	}
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 0;
+	transform: rotate(90deg);
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 0;
+	transform: rotate(-90deg);
+}
+#popup-date {
+	.popup__content {
+		max-width: 320px;
+		width: 100%;
+		padding: 0;
+		background: $color-w;
+		padding: 20px 12px 12px 12px;
+		border-radius: 12px;
+	}
+	.btn-style-1 {
+		margin-top: 20px;
+	}
+}
+.ui-datepicker {
+	position: relative;
+	border: unset !important;
+	width: 100%;
+	padding: 0;
+	border-radius: unset;
+	tr {
+		display: flex;
+		justify-content: space-between;
+	}
+	td {
+		padding: 0;
+		width: 100%;
+		a {
+			@extend %txt-small;
+			text-align: center;
+			padding: 10px 0;
+			border-radius: 50%;
+		}
+	}
+	.ui-state-default,
+	.ui-widget-content .ui-state-default {
+		border: unset;
+		color: #19181a;
+		background: transparent;
+		&.ui-state-highlight {
+			background: #f8f7fa;
+			color: $color-f;
+			font-weight: $fw700;
+			&.ui-state-active,
+			&.ui-state-hover {
+				color: $color-w;
+				background: $color-f;
+			}
+		}
+	}
+	.ui-state-hover,
+	.ui-widget-content .ui-state-hover,
+	.ui-state-active,
+	.ui-widget-content .ui-state-active {
+		color: $color-w;
+		background: $color-f;
+	}
+}
+.ui-datepicker-title {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	gap: 20px;
+	select {
+		background: #f8f7fa;
+		color: $color-f;
+		font-weight: $fw600;
+		border-radius: 8px;
+		padding: 8px;
+		cursor: pointer;
+		&::after {
+			content: "\e910";
+			font-family: "hapai";
+			font-size: 24px;
+			display: block;
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}
+.ui-datepicker .ui-datepicker-header {
+	padding: 0;
+	background: transparent;
+	position: relative;
+}
+.bg-datepicker {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.date-link {
+	margin-bottom: 20px;
+}
+.date-result-car {
+	width: 100%;
 }
 //.............................................................................................
 /* mobile */
