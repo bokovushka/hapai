@@ -827,21 +827,6 @@
 	<script type="text/javascript" src="js/popups.js"></script>
 	<script type="text/javascript" src="js/select.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script>
-		$(function () {
-			$("#selection-car__slider-month").slider({
-				range: "min",
-				value: 1,
-				min: 1,
-				max: 12,
-				slide: function (event, ui) {
-					$('.v-p').remove();
-					$('#selection-car__slider-result h3').append('<span class="v-p">' + ui.value + '</span>');
-
-				}
-			});
-		});
-	</script>
 </body>
 
 </html>

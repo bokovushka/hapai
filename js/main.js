@@ -59,3 +59,55 @@ $(".register .txt-link").click(function () {
 	$(".register").addClass("hide");
 	$(".login").removeClass("hide");
 });
+
+//accordion
+
+$(function () {
+	$("#accordion").accordion();
+});
+
+//календар
+
+$(function () {
+	$("#datepicker").datepicker({
+		// changeMonth: true,
+		// changeYear: true,
+		showOn: "button",
+		showOtherMonths: true,
+		selectOtherMonths: true
+	});
+});
+$(document).ready(function () {
+	$(".date-link").click(function () {
+		$("#datepicker").datepicker("show");
+	});
+});
+
+//slider month
+
+$(function () {
+	$("#selection-car__slider-month").slider({
+		range: "min",
+		value: 1,
+		min: 1,
+		max: 12,
+		slide: function (event, ui) {
+			$('.v-p').remove();
+			$('#selection-car__slider-result h3').append('<span class="v-p">' + ui.value + '</span>');
+
+		}
+	});
+});
+
+//block active-search sell-car page
+
+$(".top-banner-sell-car .btn-style-3").click(function () {
+	$('.choice-help__sell-car-info').addClass("active-search");
+	$('.choice-help__seacrh-number-car').addClass("hide");
+});
+
+//tabs user page
+
+$(function () {
+	$("#tabs").tabs();
+});
