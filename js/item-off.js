@@ -71,7 +71,7 @@ $(document).ready(function () {
 			.stop()
 			.animate(
 				{
-					scrollTop: $(anchor.attr("href")).offset().top - 0,
+					scrollTop: $(anchor.attr("href")).offset().top - 20,
 				},
 				800
 			);

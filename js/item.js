@@ -9,10 +9,12 @@ $('.item-tabs .item-tab').click(function () {
 }).eq(1).trigger('click');
 
 // табы внутри табов
-
-$(function () {
-	$("#tab-view").tabs();
-});
+$('.tab-view li').click(function () {
+	$('.tab-view li').removeClass("active");
+	$(this).addClass("active");
+	$('.tab-view__content .tab-view__info').hide();
+	$($('.item-tab-content .tab-view__info')[$(this).index()]).show();
+}).eq(0).trigger('click');
 
 // подсказка
 
@@ -78,6 +80,7 @@ $("#auction-bar").progressbar({
 });
 
 // ставка аукцион
+
 // $( "#price-spinner" ).spinner();
 
 $.widget("ui.spinner", $.ui.spinner, {
@@ -117,7 +120,8 @@ $(document).ready(function () {
 
 });
 
-// Fancybo gallery галерея авто
+// Fancybox gallery галерея авто
+
 Fancybox.bind('[data-fancybox="gallery"]', {
 	animated: false,
 	showClass: false,
@@ -137,4 +141,18 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 			position: "center"
 		}, "close"],
 	},
+});
+
+//popup btn-info
+
+$(".auction-card .btn-info").click(function () {
+	$('.popup-bg-body').addClass("open");
+});
+$(".close-popup").click(function () {
+	$('.popup-bg-body').removeClass("open");
+});
+$(".popup-bg-body").click(function () {
+	$(this).removeClass("open");
+	$('.popup').removeClass("open");
+	$('.lock').removeClass("lock");
 });

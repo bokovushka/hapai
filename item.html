@@ -239,9 +239,7 @@
 										<div class="ac-head">
 											<div class="ac-title">Активный аукцион</div>
 											<div class="ac-title2">Автоставка</div>
-											<div class="ac-code">2690134<i class="icon-info icon-u_info-circle"></i>
-												<span class="help-tool"></span>
-											</div>
+											<div class="ac-code">2690134<a href="#popup-auction-info" class="btn btn-icon btn-info popup-link"><i class="icon-info icon-u_info-circle"></i></a></div>
 											<div class="ac-code2">Выключена
 											</div>
 											<div class="ac-code3">Включена
@@ -285,7 +283,7 @@
 											</div>
 											<div id="showbtn" class="price-autobid">
 												<a id="autobid" class="btn btn-style-2">Автоставка</a>
-												<a class="btn btn-icon"><i class="icon-info icon-u_info-circle"></i></a>
+												<a href="#popup-auction-info" class="btn btn-icon btn-info popup-link"><i class="icon-info icon-u_info-circle"></i></a>
 											</div>
 											<div id="showbtn1" class="price-autobid showbtn">
 												<a class="btn btn-icon exit-ac"><i class="icon-arrowleft icon-u_arrow-left"></i></a>
@@ -296,6 +294,25 @@
 												<a id="autobidsave" class="btn btn-style-1">Сохранить</a>
 											</div>
 										</div>
+										<div id="popup-auction-info" class="popup">
+											<div class="popup__body">
+												<div class="popup__content">
+													<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+													<div class="popup-auction-info__title">Аукцион</div>
+													<p>Для борьбы со спамом мы используем холдирование денежных средств в размере 50$. Для участия в аукционе выберите удобны способ холдирования.</p>
+												</div>
+											</div>
+										</div>
+										<div id="popup-autobid-info" class="popup">
+											<div class="popup__body">
+												<div class="popup__content">
+													<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+													<div class="popup-auction-info__title">Автоставка</div>
+													<p>Для борьбы со спамом мы используем холдирование денежных средств в размере 50$. Для участия в аукционе выберите удобны способ холдирования.</p>
+												</div>
+											</div>
+										</div>
+										<div class="popup-bg-body"></div>
 									</div>
 								</div>
 								<div class="ic-middle">
@@ -414,40 +431,42 @@
 										</div>
 										<div id="tab-view" class="tab-card tab-view">
 											<ul>
-												<li><a href="#tabs-1">Интерьер</a></li>
-												<li><a href="#tabs-2">Экстерьер</a></li>
+												<li>Интерьер</li>
+												<li>Экстерьер</li>
 											</ul>
-											<div id="tabs-1">
-												<div class="tab-view-img">
-													<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
-													<div class="circle-info circle-info-1">
-														<div class="circle-number">1</div>
-														<span>Небольшой скол на правой части передней двери</span>
-													</div>
-													<div class="circle-info circle-info-2">
-														<div class="circle-number">2</div>
-														<span>Небольшой скол на правой части передней двери</span>
-													</div>
-													<div class="circle-info circle-info-3">
-														<div class="circle-number">3</div>
-														<span>Небольшой скол на правой части передней двери</span>
+											<div class="tab-view__content">
+												<div id="tabs-1" class="tab-view__info">
+													<div class="tab-view-img">
+														<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
+														<div class="circle-info circle-info-1">
+															<div class="circle-number">1</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
+														<div class="circle-info circle-info-2">
+															<div class="circle-number">2</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
+														<div class="circle-info circle-info-3">
+															<div class="circle-number">3</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
 													</div>
 												</div>
-											</div>
-											<div id="tabs-2">
-												<div class="tab-view-img">
-													<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
-													<div class="circle-info circle-info-1">
-														<div class="circle-number">1</div>
-														<span>Небольшой скол на правой части передней двери</span>
-													</div>
-													<div class="circle-info circle-info-2">
-														<div class="circle-number">2</div>
-														<span>Небольшой скол на правой части передней двери</span>
-													</div>
-													<div class="circle-info circle-info-3">
-														<div class="circle-number">3</div>
-														<span>Небольшой скол на правой части передней двери</span>
+												<div id="tabs-2" class="tab-view__info">
+													<div class="tab-view-img">
+														<img src="img/7166ad73ab5cea79bc3dde390587339f.png">
+														<div class="circle-info circle-info-1">
+															<div class="circle-number">1</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
+														<div class="circle-info circle-info-2">
+															<div class="circle-number">2</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
+														<div class="circle-info circle-info-3">
+															<div class="circle-number">3</div>
+															<span>Небольшой скол на правой части передней двери</span>
+														</div>
 													</div>
 												</div>
 											</div>

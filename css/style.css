@@ -814,22 +814,22 @@ h4, .nav-menu__item .nav-menu__link, input[type="text"], .choice-help__b p, .ite
   line-height: 24px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-webkit-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-webkit-input-placeholder, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input:-ms-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input:-ms-input-placeholder, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-ms-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::-ms-input-placeholder, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, #tab-view.ui-tabs .ui-tabs-nav li a, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data #tabs-2 .user-txt input::placeholder, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
@@ -2205,7 +2205,7 @@ input[type="text"] {
   content: "";
   position: absolute;
   top: 100%;
-  left: 5%;
+  left: 8px;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
@@ -2225,7 +2225,9 @@ input[type="text"] {
   transition: opacity 0.3s;
   bottom: 110%;
   left: 0;
-  max-width: 200px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   font-weight: 400;
 }
 
@@ -2328,7 +2330,7 @@ input[type="text"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background: #f5f5f5;
   border-radius: 4px;
 }
@@ -2428,47 +2430,36 @@ input[type="text"] {
   padding: 0 5px 0 0;
 }
 
-#tab-view.ui-widget.ui-widget-content {
-  border: 0;
-}
-
-#tab-view .ui-widget-header {
-  border: 0;
-  background: transparent;
+.tab-view ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 40px;
+  margin-bottom: 8px;
 }
 
-#tab-view.ui-tabs .ui-tabs-nav li {
-  float: unset;
-  border: 0;
-  background: transparent;
-  margin: 0 16px;
+.tab-view ul li {
+  cursor: pointer;
 }
 
-#tab-view.ui-tabs .ui-tabs-nav li a {
-  color: #000000;
-  padding: 8px 0 0 0;
-}
-
-#tab-view.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+.tab-view ul li.active {
   border-bottom: 1px solid;
 }
 
-#tab-view.ui-tabs .ui-tabs-nav li:hover a {
-  border-bottom: 1px solid;
-}
-
-#tab-view .ui-tabs-panel {
-  text-align: center;
-}
-
-#tab-view .ui-tabs-panel img {
-  max-width: 216px;
+#tabs-2 .tab-view-img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #6667ab;
+  mix-blend-mode: color;
+  z-index: 2;
 }
 
 .tab-view-legend {
@@ -2503,6 +2494,7 @@ input[type="text"] {
 .circle-info {
   position: absolute;
   cursor: pointer;
+  z-index: 3;
 }
 
 .circle-info.circle-info-1 {
@@ -2593,6 +2585,43 @@ input[type="text"] {
   margin-top: 20px;
   max-width: 310px;
   min-width: 310px;
+  position: relative;
+}
+
+.auction-card .popup {
+  position: absolute;
+  border-radius: 12px;
+  z-index: 6;
+  text-align: left;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.auction-card .popup__body {
+  padding: 0;
+  height: 100%;
+}
+
+.auction-card .popup__content {
+  padding: 20px;
+  height: 100%;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+.auction-card .popup-auction-info__title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.auction-card .popup__close .icon-fi_x {
+  font-size: 24px;
+  color: #777777;
 }
 
 .ac-head {
