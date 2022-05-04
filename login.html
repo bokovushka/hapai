@@ -97,14 +97,34 @@
 		<main class="main">
 			<!-- CONTENT start  -->
 			<div class="content">
-				<section class="not-found">
+				<section class="authorization">
 					<div class="container">
-						<div class="not-found__title">Ошибка 404</div>
-						<h1>Страница не найдена</h1>
-						<p>Неправильно набран адрес или такой страницы на сайте больше не существует.</p>
-						<a href="/" class="btn btn-style-1">Вернуться на главную</a>
-						<div class="not-found__img">
-							<img src="img/5cae3bed59062cc4b6c910312b6c580b.png" alt="">
+						<div class="authorization__wrap">
+							<div class="login">
+								<h1>Вход</h1>
+								<form id="form-login">
+									<div class="user-info">
+										<div class="user-txt">
+											<label for="tel">Телефон</label>
+											<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+										</div>
+										<div class="user-txt">
+											<label for="password">Пароль</label>
+											<input id="password" type="password" name="password" value=" ••••••••">
+										</div>
+										<div class="user-info__b">
+											<div class="checkbox">
+												<label for="checkbox-remember"></label>
+												<input type="checkbox" name="checkbox-remember" id="checkbox-remember">
+												<span class="checkbox__txt">Запомнить меня</span>
+											</div>
+											<a href="##" class="forgot-password">Забыли пароль?</a>
+										</div>
+										<button type="button" class="btn btn-style-1">Войти</button>
+										<a class="txt-link">У меня еще нет аккаунта</a>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -208,7 +228,7 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="password" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value=" ••••••••">
 								</div>
 								<div class="user-info__b">
 									<div class="checkbox">
@@ -241,7 +261,7 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="password" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value=" ••••••••">
 								</div>
 								<div class="user-txt">
 									<label for="password-repeat">Повторите пароль</label>

@@ -62,11 +62,17 @@
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
-								<li class="nav-menu__item user-profile">
+								<li class="nav-menu__item user-profile user-authorized">
 									<a href="#popup-authorization" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
+									<ul class="submenu">
+										<li><a href="user.html">Личные данные</a></li>
+										<li><a href="payment-info.html">Платежная информация</a></li>
+										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="##">Выйти</a></li>
+									</ul>
 								</li>
 								<li class="nav-menu__item language">
 									<div class="language__ch">Рус</div>
@@ -108,7 +114,7 @@
 					<div class="container">
 						<div class="title-item__b">
 							<h1>Porsche Macan S 2.9 PDK, 2021</h1>
-							<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+							<a href="#win-lot" class="btn-favor popup-link"><i class="icon-star icon-u_favorite"></i></a>
 						</div>
 					</div>
 				</section>
@@ -760,6 +766,18 @@
 	</div>
 	<!-- WRAPPER end -->
 	<!-- POPUP  -->
+	<div id="win-lot" class="popup win-lot">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="win-lot__title">Поздравляем! <br>
+					Вы выиграли лот <span>2690314</span></div>
+				<div class="win-lot__name">Porsche Macan S 2.9 PDK, 2021</div>
+				<a href="##"><img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt=""></a>
+				<a href="##" class="btn btn-style-1">Посмотреть</a>
+			</div>
+		</div>
+	</div>
 	<div id="popup1" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
@@ -799,7 +817,7 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value=" ••••••••">
 								</div>
 								<div class="user-info__b">
 									<div class="checkbox">
@@ -832,11 +850,11 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value=" ••••••••">
 								</div>
 								<div class="user-txt">
 									<label for="password-repeat">Повторите пароль</label>
-									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
+									<input id="password-repeat" type="password" name="password-repeat" value="••••••••">
 								</div>
 								<div class="checkbox">
 									<label for="checkbox-agree-popup"></label>
@@ -931,10 +949,10 @@
 									<input id="tel" type="text" name="tel" placeholder="Ваше имя">
 								</div>
 								<div class="user-txt">
-									<input id="password" type="text" name="password" placeholder="Ваш номер телефона">
+									<input id="password" type="text" name="number" placeholder=" Ваш номер телефона">
 								</div>
 								<div class="user-txt">
-									<input id="password" type="text" name="password" placeholder="	Ваш ИНН">
+									<input id="password" type="text" name="number-ttn" placeholder=" Ваш ИНН">
 								</div>
 								<div class="checkbox">
 									<label for="checkbox-agree-installment"></label>

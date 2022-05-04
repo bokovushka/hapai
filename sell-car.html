@@ -61,11 +61,17 @@
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
-								<li class="nav-menu__item user-profile">
+								<li class="nav-menu__item user-profile user-authorized">
 									<a href="#popup-authorization" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
+									<ul class="submenu">
+										<li><a href="user.html">Личные данные</a></li>
+										<li><a href="payment-info.html">Платежная информация</a></li>
+										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="##">Выйти</a></li>
+									</ul>
 								</li>
 								<li class="nav-menu__item language">
 									<div class="language__ch">Рус</div>
@@ -486,7 +492,7 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value="••••••••">
 								</div>
 								<div class="user-info__b">
 									<div class="checkbox">
@@ -519,11 +525,11 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value="••••••••">
 								</div>
 								<div class="user-txt">
 									<label for="password-repeat">Повторите пароль</label>
-									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
+									<input id="password-repeat" type="password" name="password-repeat" value="••••••••">
 								</div>
 								<div class="checkbox">
 									<label for="checkbox-agree-popup"></label>

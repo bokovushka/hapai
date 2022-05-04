@@ -60,11 +60,17 @@
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
-								<li class="nav-menu__item user-profile">
+								<li class="nav-menu__item user-profile user-authorized">
 									<a href="#popup-authorization" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
+									<ul class="submenu">
+										<li><a href="user.html">Личные данные</a></li>
+										<li><a href="payment-info.html">Платежная информация</a></li>
+										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="##">Выйти</a></li>
+									</ul>
 								</li>
 								<li class="nav-menu__item language">
 									<div class="language__ch">Рус</div>
@@ -110,13 +116,13 @@
 				</section>
 				<section class="user-data">
 					<div class="container">
-						<div id="tabs" class="tabs">
+						<div class="tabs">
 							<ul>
-								<li><a href="#tabs-1">Личные данные</a></li>
-								<li><a href="#tabs-2">Платежная информация</a></li>
-								<li><a href="#tabs-3">Уведомления</a></li>
+								<li><a class="ui-tabs-anchor active" href="user.html">Личные данные</a></li>
+								<li><a class="ui-tabs-anchor" href="payment-info.html">Платежная информация</a></li>
+								<li><a class="ui-tabs-anchor" href="notifications.html">Уведомления</a></li>
 							</ul>
-							<div id="tabs-1" class="tabs__item">
+							<div class="tabs__item">
 								<div class="tabs__content">
 									<div class="tabs__main">
 										<div class="verify">
@@ -133,14 +139,14 @@
 												<label for="tel">Телефон</label>
 												<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
 											</div>
-											<div class="user-txt not-validated">
+											<div class="user-txt error">
 												<label for="email">email</label>
 												<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
-												<div class="error">Не подтвержден</div>
+												<div class="not-validated">Не подтвержден</div>
 											</div>
 											<div class="user-txt">
 												<label for="password">Пароль</label>
-												<input id="password" type="text" name="password" value="••••••••">
+												<input id="password" type="password" name="password" value="••••••••">
 											</div>
 											<div class="user-txt">
 												<label for="city">Город</label>
@@ -149,28 +155,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div id="tabs-2" class="tabs__item">
-								<a href="##" class="btn btn-style-2 btn-edit show">Редактировать профиль</a>
-								<div class="tabs__content">
-									<div class="user-info">
-										<div class="user-txt">
-											<label for="card">Номер карты</label>
-											<input id="card" type="text" name="card" placeholder="Введите номер карты" value="4141***9911">
-										</div>
-										<div class="user-txt">
-											<label for="date">Дата</label>
-											<input id="date" type="text" name="date" placeholder="Введите дату" value="05/25">
-										</div>
-									</div>
-									<div class="tabs__card-button">
-										<a href="##" class="card-edit">Редактировать</a>
-										<a href="##" class="card-delete">Удалить</a>
-									</div>
-								</div>
-							</div>
-							<div id="tabs-3" class="tabs__item">
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam distinctio reiciendis autem iure beatae doloribus tenetur iusto et assumenda. Eum, aliquid. Voluptatibus sapiente ea facilis natus repudiandae doloremque deleniti cumque!</p>
 							</div>
 							<a href="##" class="btn btn-style-2 btn-edit">Редактировать профиль</a>
 						</div>
@@ -276,7 +260,7 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value="••••••••">
 								</div>
 								<div class="user-info__b">
 									<div class="checkbox">
@@ -309,11 +293,11 @@
 								</div>
 								<div class="user-txt">
 									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
+									<input id="password" type="password" name="password" value="••••••••">
 								</div>
 								<div class="user-txt">
 									<label for="password-repeat">Повторите пароль</label>
-									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
+									<input id="password-repeat" type="password" name="password-repeat" value="••••••••">
 								</div>
 								<div class="checkbox">
 									<label for="checkbox-agree-popup"></label>

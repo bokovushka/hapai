@@ -97,14 +97,51 @@
 		<main class="main">
 			<!-- CONTENT start  -->
 			<div class="content">
-				<section class="not-found">
+				<section class="breadcrumb">
 					<div class="container">
-						<div class="not-found__title">Ошибка 404</div>
-						<h1>Страница не найдена</h1>
-						<p>Неправильно набран адрес или такой страницы на сайте больше не существует.</p>
-						<a href="/" class="btn btn-style-1">Вернуться на главную</a>
-						<div class="not-found__img">
-							<img src="img/5cae3bed59062cc4b6c910312b6c580b.png" alt="">
+						<ul class="breadcrumb-wrap">
+							<li>
+								<a href="#"><span class="icon-u_home-alt"></span></a>
+							</li>
+							<li>Мой профиль</li>
+						</ul>
+					</div>
+				</section>
+				<section class="title-item">
+					<div class="container">
+						<div class="title-item__b">
+							<h1>Мой профиль</h1>
+						</div>
+					</div>
+				</section>
+				<section class="user-data">
+					<div class="container">
+						<div class="tabs">
+							<ul>
+								<li><a class="ui-tabs-anchor" href="user.html">Личные данные</a></li>
+								<li><a class="ui-tabs-anchor active" href="payment-info.html">Платежная информация</a></li>
+								<li><a class="ui-tabs-anchor" href="notifications.html">Уведомления</a></li>
+							</ul>
+							<div class="tabs__item payment-info">
+								<a href="##" class="btn btn-style-2 btn-edit show">Добавить карту</a>
+								<div class="tabs__content">
+									<div class="user-info">
+										<div class="user-txt">
+											<label for="card">Номер карты</label>
+											<input id="card" type="text" name="card" placeholder="Введите номер карты" value="4141***9911">
+										</div>
+										<div class="user-txt">
+											<label for="date">Дата</label>
+											<input id="date" type="text" name="date" placeholder="Введите дату" value="05/25">
+										</div>
+									</div>
+									<div class="tabs__card-button">
+										<a href="##" class="card-edit">Редактировать</a>
+										<a href="##" class="card-delete">Удалить</a>
+									</div>
+								</div>
+							</div>
+							<a href="##" class="btn btn-style-2 btn-edit">Добавить карту</a>
 						</div>
 					</div>
 				</section>

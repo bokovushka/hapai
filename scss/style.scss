@@ -96,7 +96,6 @@ h6 {
 	align-items: center;
 	padding: 8px 0;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .logo {
 	display: block;
@@ -130,13 +129,15 @@ h6 {
 		line-height: 22px;
 		font-weight: $fw600;
 		padding: 16px;
+		z-index: 3;
 	}
 	ul {
 		display: none;
 		position: absolute;
 		z-index: 2;
 		top: 0;
-		padding-top: 50px;
+		right: 0;
+		padding-top: 56px;
 		cursor: pointer;
 		li {
 			color: $color-w;
@@ -145,6 +146,7 @@ h6 {
 			border-radius: 4px;
 			padding: 14px;
 			cursor: pointer;
+			min-width: 200px;
 			a {
 				color: $color-w;
 			}
@@ -157,9 +159,13 @@ h6 {
 		.icon-u_angle-down {
 			transform: rotate(-180deg);
 		}
-		ul {
+		&.user-authorized ul,
+		&.language ul {
 			display: block;
 		}
+	}
+	&.language {
+		padding: 16px 0;
 	}
 }
 .right-menu {
@@ -168,8 +174,12 @@ h6 {
 		display: flex;
 		align-items: center;
 		margin: 0;
+		position: relative;
 		&:last-child a {
 			padding-right: 0;
+		}
+		&.language .submenu li {
+			min-width: max-content;
 		}
 	}
 }
@@ -207,7 +217,7 @@ h6 {
 		font-weight: $fw600;
 	}
 }
-input[type="text"] {
+input {
 	@extend %txt-big;
 	font-family: "RF Dewi", sans-serif;
 	font-size: 14px;
@@ -218,6 +228,17 @@ input[type="text"] {
 	background: #f5f5f5;
 	width: 100%;
 	font-weight: $fw600;
+}
+::-webkit-contacts-auto-fill-button {
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+}
+::-webkit-credentials-auto-fill-button {
+	visibility: hidden;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
 }
 .btn-seacrh {
 	max-width: 200px;
@@ -638,12 +659,19 @@ input[type="text"] {
 }
 
 //a-main
+
 .a-main {
-	display: flex;
-	flex-wrap: wrap;
+	padding: 20px 0 0 20px;
+	#pagination-container {
+		padding: 0;
+		padding-top: 20px;
+	}
+}
+.loop-wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	position: relative;
 	width: 100%;
-	padding: 20px 0 0 20px;
 	gap: 20px 8px;
 	overflow: hidden;
 }
@@ -656,6 +684,15 @@ input[type="text"] {
 	padding: 0;
 	z-index: 1;
 }
+.loop-cover {
+	min-width: 0;
+}
+.loop-choice {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 3;
+}
 .item-loop {
 	padding: 8px;
 	background: $color-w;
@@ -664,9 +701,13 @@ input[type="text"] {
 	border-radius: 8px;
 	margin-bottom: 20px;
 	min-width: 0;
-	.a-main & {
-		width: calc((100% - 16px) / 3);
-	}
+}
+.loop-last {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-start: 1;
+	grid-column-end: 3;
+	gap: 8px;
 }
 .item-loop__img {
 	position: relative;
@@ -1311,7 +1352,7 @@ input[type="text"] {
 		}
 	}
 }
-#tabs-2 .tab-view-img::after {
+.payment-info .tab-view-img::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -3170,6 +3211,7 @@ input.field {
 			width: max-content;
 			padding: 13px 18px;
 			line-height: 16px;
+			min-width: 208px;
 		}
 	}
 	.tabs__main {
@@ -3225,20 +3267,14 @@ input.field {
 					transform: translate(0, -50%);
 					background-color: #e5e5e5;
 				}
-			}
-			&:last-child .ui-tabs-anchor::after {
-				display: none;
-			}
-			&.ui-state-active,
-			&.ui-state-hover {
-				background: $color-f;
-				border-radius: 4px;
-			}
-			&.ui-state-active .ui-tabs-anchor,
-			&.ui-state-hover .ui-tabs-anchor {
-				color: $color-w;
-				&::after {
-					display: none;
+				&.active,
+				&.active:hover {
+					background: $color-f;
+					color: $color-w;
+					border-radius: 4px;
+				}
+				&.active::after {
+					all: unset;
 				}
 			}
 		}
@@ -3269,18 +3305,22 @@ input.field {
 		background: none;
 		padding: 0;
 	}
-	.error {
+	.not-validated {
 		position: absolute;
 		bottom: -21px;
 		@extend %txt-small;
 		color: #d45279;
 	}
-	&.not-validated {
+	&.error {
 		margin-bottom: 8px;
 		border: 1px solid #d45279;
+		label,
+		input {
+			color: #d45279;
+		}
 	}
 }
-.user-data #tabs-2 {
+.user-data .payment-info {
 	margin-top: 56px;
 
 	.tabs__content {
@@ -3373,6 +3413,11 @@ input.field {
 .checkbox {
 	display: flex;
 	align-items: center;
+	&.error {
+		.ui-checkboxradio-icon {
+			border: 2px solid #d45279;
+		}
+	}
 	label {
 		all: unset;
 		margin-right: 12px !important;
@@ -4285,7 +4330,39 @@ input.field {
 	margin-bottom: 20px;
 }
 .date-result-car {
-	width: 100%;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+//win lot
+.win-lot__title {
+	@extend %txt-big;
+	font-weight: $fw600;
+}
+.win-lot__name {
+	color: #424242;
+	margin-bottom: 8px;
+}
+.win-lot {
+	.popup__close .icon-fi_x {
+		font-size: $fz24;
+		color: #777777;
+	}
+	.popup__content {
+		max-width: 600px;
+		border-radius: 8px;
+	}
+	img {
+		border-radius: 4px;
+		max-height: 280px;
+		object-fit: cover;
+	}
+	.btn-style-1 {
+		display: none;
+	}
+}
+.user-authorized .nav-menu__item ul {
+	right: 12px;
 }
 //.............................................................................................
 /* mobile */
@@ -4404,11 +4481,19 @@ input.field {
 	.feature {
 		padding-right: 0;
 	}
+	.loop-wrap {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.loop-choice {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.date-result-car {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
 }
 @media (min-width: 993px) and (max-width: 1279px) {
-	.a-main .item-loop {
-		width: calc((100% - 8px) / 2);
-	}
 	.ic-top__right {
 		padding-left: 20px;
 	}
@@ -4460,6 +4545,17 @@ input.field {
 		}
 	}
 }
+@media only screen and (width: 992px) {
+	.loop-wrap {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.loop-choice {
+		grid-column-end: 4;
+	}
+	.date-result-car {
+		grid-column-end: 4;
+	}
+}
 @media only screen and (max-width: 992px) {
 	.container {
 		padding: 0px 12px;
@@ -4483,18 +4579,25 @@ input.field {
 				top: 20px;
 				right: 15px;
 				margin: 0;
+				.submenu {
+					right: 0;
+					li {
+						min-width: max-content;
+					}
+				}
 			}
 		}
 	}
 	.nav-menu__item ul {
-		padding-top: 30px;
+		padding-top: 48px;
+		right: 12px;
 	}
 	.menu-btn {
 		width: 100%;
 		max-width: 24px;
 		height: 24px;
 		position: relative;
-		z-index: 4;
+		z-index: 5;
 		overflow: hidden;
 		margin-right: 20px;
 		span {
@@ -4541,7 +4644,7 @@ input.field {
 		background: $color-w;
 		transform: translateX(-100%);
 		transition: transform 0.5s;
-		z-index: 3;
+		z-index: 4;
 		.nav-menu {
 			position: relative;
 			flex-direction: column;
@@ -4620,7 +4723,7 @@ input.field {
 	.a-sidebar {
 		display: block;
 		position: absolute;
-		z-index: 4;
+		z-index: 5;
 		position: fixed;
 		overflow: scroll;
 		top: 0;
@@ -4711,10 +4814,6 @@ input.field {
 @media only screen and (max-width: 991px) {
 	.a-main {
 		justify-content: center;
-		.item-loop {
-			width: calc((100% - 8px) / 2);
-			max-width: 380px;
-		}
 	}
 	.choice-help img {
 		right: -160px;
@@ -4803,7 +4902,7 @@ input.field {
 	.user-data .user-txt {
 		width: calc((100% - 20px) / 2);
 	}
-	.user-data #tabs-2 {
+	.user-data .payment-info {
 		margin-top: 32px;
 		.btn.show {
 			margin-bottom: 40px;
@@ -5143,6 +5242,9 @@ input.field {
 	.auction-off .selection-car__result-search .il-price {
 		margin-bottom: 8px;
 	}
+	.loop-wrap {
+		gap: 12px 8px;
+	}
 }
 @media only screen and (min-width: 680px) {
 }
@@ -5345,6 +5447,35 @@ input.field {
 	}
 	.ic-top__rb.auction-card {
 		margin: 0;
+	}
+	.win-lot {
+		.btn-style-1 {
+			display: block;
+		}
+		img {
+			display: none;
+		}
+	}
+	.loop-wrap {
+		grid-template-columns: 1fr;
+	}
+	.loop-choice,
+	.loop-last {
+		grid-column-start: unset;
+		grid-column-end: unset;
+		grid-row-start: unset;
+		grid-row-end: unset;
+		grid-template-columns: 1fr;
+	}
+	.a-main #pagination-container {
+		padding: 0;
+		padding-top: 12px;
+	}
+	.loop-wrap {
+		gap: 0;
+	}
+	.date-result-car {
+		grid-column-end: 2;
 	}
 }
 @media only screen and (max-width: 479px) {

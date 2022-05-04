@@ -50,12 +50,12 @@ $('.btn-favor').on('click', function () {
 $(function () {
 	$(".checkbox input").checkboxradio();
 });
-$(".login .txt-link").click(function () {
+$("#popup-authorization .login .txt-link").click(function () {
 	$(".login").addClass("hide");
 	$(".register").removeClass("hide");
 
 });
-$(".register .txt-link").click(function () {
+$("#popup-authorization .register .txt-link").click(function () {
 	$(".register").addClass("hide");
 	$(".login").removeClass("hide");
 });
@@ -104,10 +104,4 @@ $(function () {
 $(".top-banner-sell-car .btn-style-3").click(function () {
 	$('.choice-help__sell-car-info').addClass("active-search");
 	$('.choice-help__seacrh-number-car').addClass("hide");
-});
-
-//tabs user page
-
-$(function () {
-	$("#tabs").tabs();
 });
