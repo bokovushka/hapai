@@ -1,6 +1,7 @@
 // меню
 
 $(document).ready(function () {
+	let body_lock = document.querySelector('body');
 	let menuBtn = document.querySelector('.menu-btn');
 	let menu = document.querySelector('.menu');
 	let language = document.querySelector('.language');
@@ -11,6 +12,7 @@ $(document).ready(function () {
 		menu.classList.toggle('active');
 		language.classList.toggle('active');
 		header_active.classList.toggle('active');
+		body_lock.classList.toggle('lock-menu-m');
 	})
 });
 
@@ -104,4 +106,22 @@ $(function () {
 $(".top-banner-sell-car .btn-style-3").click(function () {
 	$('.choice-help__sell-car-info').addClass("active-search");
 	$('.choice-help__seacrh-number-car').addClass("hide");
+});
+
+//href link
+
+$(document).ready(function () {
+	$('.menu-btn').bind("click", function (e) {
+		var anchor = $(this);
+		$("html, body")
+			.stop()
+			.animate(
+				{
+					scrollTop: $(anchor.attr("href")).offset().top - 20,
+				},
+				800
+			);
+		e.preventDefault();
+	});
+	return false;
 });

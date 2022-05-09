@@ -134,24 +134,32 @@ h6 {
 	ul {
 		display: none;
 		position: absolute;
-		z-index: 2;
+		z-index: 3;
 		top: 0;
 		right: 0;
-		padding-top: 56px;
+		margin-top: 56px;
 		cursor: pointer;
+		background-color: $color-w;
+		border-radius: 4px;
+		border: 1px solid #e5e5e5;
 		li {
-			color: $color-w;
-			background: $color-b;
 			@extend %txt;
-			border-radius: 4px;
 			padding: 14px;
 			cursor: pointer;
 			min-width: 200px;
+			border-bottom: 1px solid #e5e5e5;
+			&:last-child {
+				border-bottom: unset;
+			}
 			a {
-				color: $color-w;
+				color: $color-b;
 			}
 			&:hover {
 				background: #4f4599;
+				border-radius: 4px;
+				a {
+					color: $color-w;
+				}
 			}
 		}
 	}
@@ -183,7 +191,8 @@ h6 {
 		}
 	}
 }
-.language-m {
+.language-m,
+.authorization-btn-m {
 	display: none;
 }
 .icon-u_favorite,
@@ -662,6 +671,7 @@ input {
 
 .a-main {
 	padding: 20px 0 0 20px;
+	width: 100%;
 	#pagination-container {
 		padding: 0;
 		padding-top: 20px;
@@ -2638,6 +2648,7 @@ video {
 	border-radius: 8px;
 	width: calc((100% / 4) - 16px);
 	color: $color-b;
+	overflow: hidden;
 	img {
 		height: 72px;
 		width: 72px;
@@ -3272,6 +3283,11 @@ input.field {
 					background: $color-f;
 					color: $color-w;
 					border-radius: 4px;
+					height: 100%;
+					max-height: -webkit-fill-available;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 				&.active::after {
 					all: unset;
@@ -3297,6 +3313,10 @@ input.field {
 	width: calc((100% - 40px) / 3);
 	min-width: 280px;
 	position: relative;
+	min-height: 48px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	label {
 		@extend %txt-small;
 		color: #777777;
@@ -3384,6 +3404,8 @@ input.field {
 }
 .authorization__wrap {
 	padding: 118px 0 166px 0;
+	max-width: 520px;
+	margin: 0 auto;
 	h1 {
 		text-align: center;
 		margin-bottom: 20px;
@@ -3395,20 +3417,54 @@ input.field {
 		}
 	}
 }
-.hide {
-	display: none;
-}
-.show {
-	display: block;
-}
+.login,
 .register,
-.login {
+.password-recovery {
 	background: #ffffff;
 	border-radius: 12px;
-	max-width: 520px;
-	width: 100%;
-	margin: 0 auto;
 	padding: 20px;
+}
+#register,
+#login,
+#password-recovery,
+#popup-test-drive {
+	.popup__content {
+		max-width: 360px;
+		border-radius: 8px;
+		padding: 20px;
+	}
+	.popup__close .icon-fi_x {
+		font-size: 24px;
+		color: rgba(119, 119, 119, 0.54);
+	}
+	h1 {
+		@extend %txt-big;
+		margin-bottom: 20px;
+	}
+	.user-txt {
+		width: 100%;
+	}
+}
+#register .user-info .user-txt {
+	width: calc((100% - 20px) / 2);
+	min-width: auto;
+	&:first-child {
+		width: 100%;
+	}
+}
+
+#password-recovery {
+	.popup__content {
+		max-width: 520px;
+	}
+	.user-info {
+		gap: 12px;
+	}
+	.email-description {
+		@extend %txt-small;
+		margin-bottom: 8px;
+		color: #777777;
+	}
 }
 .checkbox {
 	display: flex;
@@ -3472,6 +3528,7 @@ input.field {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 100%;
 	.forgot-password {
 		color: $color-f;
 		font-weight: $fw700;
@@ -3495,34 +3552,6 @@ input.field {
 				width: 100%;
 			}
 		}
-	}
-}
-#popup-authorization {
-	.authorization__wrap {
-		padding: 0;
-		margin: 0;
-		h1 {
-			@extend %txt-big;
-			text-align: left;
-			margin-bottom: 20px;
-		}
-	}
-	.register,
-	.login {
-		border-radius: 8px;
-		padding: 20px;
-	}
-	.popup__content {
-		padding: 0;
-		max-width: 360px;
-		border-radius: 8px;
-	}
-	.popup__close .icon-fi_x {
-		font-size: 24px;
-		color: rgba(119, 119, 119, 0.54);
-	}
-	.popup__close {
-		right: 20px;
 	}
 }
 
@@ -3998,6 +4027,7 @@ input.field {
 	display: flex;
 	flex-direction: column;
 	margin-top: 15px;
+	color: $color-b;
 	span {
 		color: #0c8d47;
 		@extend %txt-small;
@@ -4364,6 +4394,61 @@ input.field {
 .user-authorized .nav-menu__item ul {
 	right: 12px;
 }
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+#popup-test-drive {
+	.popup-auction__title {
+		margin-bottom: 20px;
+		@extend %txt-big;
+		font-weight: $fw600;
+	}
+	.user-txt {
+		width: calc((100% - 20px) / 2);
+		min-width: auto;
+		&:first-child,
+		&:nth-child(2) {
+			width: 100%;
+		}
+	}
+}
+.loop-not-found {
+	position: relative;
+	max-width: 400px;
+	padding: 32px;
+	color: #777777;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+	&::after {
+		content: "";
+		width: 24px;
+		height: 24px;
+		background: url(../img/svg/fi_frown.svg) no-repeat 50% 50%;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+.notifications-info {
+	h3 {
+		margin: 20px 0;
+	}
+	.btn-style-1 {
+		max-width: 208px;
+	}
+}
+.notifications-checkbox {
+	margin-bottom: 40px;
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
@@ -4569,18 +4654,25 @@ input.field {
 		max-width: 113px;
 	}
 	//mobile menu
+	body.lock-menu-m {
+		overflow: hidden;
+	}
 	.header-menu {
 		&.active {
+			.logo {
+				margin-left: 44px;
+			}
 			.language-m {
 				display: flex !important;
 				align-items: center;
-				position: absolute;
+				position: relative;
 				z-index: 3;
-				top: 20px;
-				right: 15px;
 				margin: 0;
+				width: max-content;
 				.submenu {
-					right: 0;
+					left: 0;
+					width: max-content;
+					padding-top: 0;
 					li {
 						min-width: max-content;
 					}
@@ -4589,8 +4681,8 @@ input.field {
 		}
 	}
 	.nav-menu__item ul {
-		padding-top: 48px;
 		right: 12px;
+		z-index: 4;
 	}
 	.menu-btn {
 		width: 100%;
@@ -4636,26 +4728,31 @@ input.field {
 	}
 	.menu {
 		position: fixed;
-		top: 0;
+		top: 64px;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		padding: 15px;
+		padding: 12px;
+		padding-bottom: 84px;
 		background: $color-w;
 		transform: translateX(-100%);
 		transition: transform 0.5s;
 		z-index: 4;
+		overflow: scroll;
 		.nav-menu {
 			position: relative;
 			flex-direction: column;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
 			margin: 0;
+			margin-bottom: 20px;
+			align-items: flex-start;
 		}
 		&.active {
 			//active menu
 			transform: translateX(0);
+			border-top: 1px solid #e5e5e5;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			.right-menu {
 				position: absolute;
 			}
@@ -4810,6 +4907,20 @@ input.field {
 	.ic-top__right {
 		margin-left: 20px;
 	}
+	.authorization-btn-m {
+		display: block;
+		.btn-style-3 {
+			margin-bottom: 12px;
+		}
+	}
+	.nav-menu__item {
+		margin-bottom: 8px;
+		.nav-menu__link {
+			font-size: 32px;
+			line-height: 44px;
+			padding-left: 0;
+		}
+	}
 }
 @media only screen and (max-width: 991px) {
 	.a-main {
@@ -4857,7 +4968,10 @@ input.field {
 	.selection-car__result-search {
 		max-width: 100%;
 	}
-	.ch-car-brand__item,
+	.ch-car-brand__item {
+		width: calc(50% - 20px);
+		flex-grow: 0;
+	}
 	.how-works__item {
 		width: calc(50% - 10px);
 		flex-grow: 0;
@@ -5245,6 +5359,9 @@ input.field {
 	.loop-wrap {
 		gap: 12px 8px;
 	}
+	.why__item {
+		width: calc(50% - 6px);
+	}
 }
 @media only screen and (min-width: 680px) {
 }
@@ -5363,11 +5480,11 @@ input.field {
 	.ch-car-brand__item {
 		flex-direction: column;
 		width: calc((100% / 2) - 6px);
-		padding: 12px;
+		padding: 8px;
 		margin: 3px;
 		img {
 			position: relative;
-			left: -10px;
+			left: -8px;
 		}
 		&:nth-child(6) img,
 		&:nth-child(10) img {
@@ -5403,13 +5520,17 @@ input.field {
 		}
 	}
 	.register,
-	.login {
+	.login,
+	.password-recovery {
 		max-width: 100%;
 		border-radius: unset;
 		padding: 32px 12px;
 	}
-	.authorization__wrap {
+	.authorization .container {
 		margin: 0 -12px;
+	}
+	.authorization__wrap {
+		max-width: 100%;
 		padding: 0;
 	}
 	.favorite__main .item-loop {
@@ -5479,9 +5600,6 @@ input.field {
 	}
 }
 @media only screen and (max-width: 479px) {
-	.header-menu {
-		padding: 12px 0;
-	}
 	.header-search {
 		padding: 12px 0;
 	}
@@ -5510,16 +5628,6 @@ input.field {
 	.car-style__button .btn {
 		padding: 11px 8px;
 	}
-	#popup-authorization .authorization__wrap {
-		margin: 0 -10px;
-	}
-	.register .user-info .user-txt:nth-child(2),
-	.register .user-info .user-txt:nth-child(3) {
-		width: 100%;
-	}
-	#popup-authorization .popup__close {
-		right: 10px;
-	}
 	.questions-lease .img-wrap {
 		top: -30px;
 		margin-bottom: -70px;
@@ -5532,10 +5640,12 @@ input.field {
 }
 
 @media only screen and (max-width: 360px) {
-	#popup-authorization {
-		.register,
-		.login {
-			border-radius: unset;
+	#register,
+	#login,
+	#password-recovery,
+	#popup-test-drive {
+		.popup__body {
+			margin: 0 -12px;
 		}
 	}
 	.popup-auction .popup__content {
