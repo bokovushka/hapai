@@ -3331,7 +3331,7 @@ input.field {
 		@extend %txt-small;
 		color: #d45279;
 	}
-	&.error {
+	&.has-error {
 		margin-bottom: 8px;
 		border: 1px solid #d45279;
 		label,
@@ -3448,9 +3448,6 @@ input.field {
 #register .user-info .user-txt {
 	width: calc((100% - 20px) / 2);
 	min-width: auto;
-	&:first-child {
-		width: 100%;
-	}
 }
 
 #password-recovery {
@@ -3469,7 +3466,7 @@ input.field {
 .checkbox {
 	display: flex;
 	align-items: center;
-	&.error {
+	&.has-error {
 		.ui-checkboxradio-icon {
 			border: 2px solid #d45279;
 		}
@@ -3548,9 +3545,6 @@ input.field {
 		.user-txt {
 			width: calc((100% - 20px) / 2);
 			min-width: auto;
-			&:first-child {
-				width: 100%;
-			}
 		}
 	}
 }

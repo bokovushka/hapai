@@ -5017,13 +5017,13 @@ input.field {
   color: #d45279;
 }
 
-.user-txt.error {
+.user-txt.has-error {
   margin-bottom: 8px;
   border: 1px solid #d45279;
 }
 
-.user-txt.error label,
-.user-txt.error input {
+.user-txt.has-error label,
+.user-txt.has-error input {
   color: #d45279;
 }
 
@@ -5179,10 +5179,6 @@ input.field {
   min-width: auto;
 }
 
-#register .user-info .user-txt:first-child {
-  width: 100%;
-}
-
 #password-recovery .popup__content {
   max-width: 520px;
 }
@@ -5205,7 +5201,7 @@ input.field {
           align-items: center;
 }
 
-.checkbox.error .ui-checkboxradio-icon {
+.checkbox.has-error .ui-checkboxradio-icon {
   border: 2px solid #d45279;
 }
 
@@ -5307,10 +5303,6 @@ input.field {
 .register .user-info .user-txt {
   width: calc((100% - 20px) / 2);
   min-width: auto;
-}
-
-.register .user-info .user-txt:first-child {
-  width: 100%;
 }
 
 .not-found {
