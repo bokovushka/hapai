@@ -4443,6 +4443,20 @@ input.field {
 .notifications-checkbox {
 	margin-bottom: 40px;
 }
+#ui-id-1 {
+	width: calc(100% - 40px) !important;
+	max-width: 1240px;
+	border-radius: 4px;
+	height: 180px;
+	overflow: scroll;
+	&.ui-menu .ui-menu-item-wrapper {
+		padding-left: 22px;
+	}
+	.ui-autocomplete-category {
+		padding: 10px 0;
+		padding-left: 22px;
+	}
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
@@ -4914,6 +4928,9 @@ input.field {
 			line-height: 44px;
 			padding-left: 0;
 		}
+	}
+	#ui-id-1 {
+		width: calc(100% - 24px) !important;
 	}
 }
 @media only screen and (max-width: 991px) {

@@ -6441,6 +6441,23 @@ input.field {
   margin-bottom: 40px;
 }
 
+#ui-id-1 {
+  width: calc(100% - 40px) !important;
+  max-width: 1240px;
+  border-radius: 4px;
+  height: 180px;
+  overflow: scroll;
+}
+
+#ui-id-1.ui-menu .ui-menu-item-wrapper {
+  padding-left: 22px;
+}
+
+#ui-id-1 .ui-autocomplete-category {
+  padding: 10px 0;
+  padding-left: 22px;
+}
+
 /* mobile */
 @media only screen and (max-width: 1279px) {
   .nav-menu__item {
@@ -6975,6 +6992,9 @@ input.field {
     font-size: 32px;
     line-height: 44px;
     padding-left: 0;
+  }
+  #ui-id-1 {
+    width: calc(100% - 24px) !important;
   }
 }
 
