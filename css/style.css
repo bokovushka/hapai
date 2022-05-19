@@ -3308,6 +3308,7 @@ input {
 .auction-win.auction-card .ac-textblock,
 .auction-win.auction-card .ac-code2,
 .auction-win.auction-card .ac-code3,
+.auction-win.auction-card .timer,
 .auction-lose.auction-card .ac-price,
 .auction-lose.auction-card .ac-time,
 .auction-lose.auction-card .ac-quantity,
@@ -3315,7 +3316,8 @@ input {
 .auction-lose.auction-card .ac-title2,
 .auction-lose.auction-card .ac-textblock,
 .auction-lose.auction-card .ac-code2,
-.auction-lose.auction-card .ac-code3 {
+.auction-lose.auction-card .ac-code3,
+.auction-lose.auction-card .timer {
   display: none;
 }
 
@@ -5903,6 +5905,27 @@ input.field {
   display: none;
 }
 
+.ic-top__rb.auction-win, .ic-top__rb.auction-lose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 416px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 310px;
+}
+
 .buyback {
   margin-bottom: 20px;
   text-align: center;
@@ -7821,6 +7844,9 @@ input.field {
   }
   .date-result-car {
     grid-column-end: 2;
+  }
+  .ic-top__rb.auction-win, .ic-top__rb.auction-lose {
+    margin: 0 auto;
   }
 }
 

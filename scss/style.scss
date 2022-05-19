@@ -1997,7 +1997,8 @@ input {
 		.ac-title2,
 		.ac-textblock,
 		.ac-code2,
-		.ac-code3 {
+		.ac-code3,
+		.timer {
 			display: none;
 		}
 		.card-sold,
@@ -4022,6 +4023,17 @@ input.field {
 			display: none;
 		}
 	}
+	&.auction-win,
+	&.auction-lose {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		min-height: 416px;
+		box-sizing: border-box;
+		max-width: 310px;
+	}
 }
 
 .buyback {
@@ -5678,6 +5690,10 @@ input.field {
 	}
 	.date-result-car {
 		grid-column-end: 2;
+	}
+	.ic-top__rb.auction-win,
+	.ic-top__rb.auction-lose {
+		margin: 0 auto;
 	}
 }
 @media only screen and (max-width: 479px) {
