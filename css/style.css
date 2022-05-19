@@ -809,7 +809,7 @@ h3, .title-item__b h3, .item-loop__txtblock h3, .reviews__user-logo, .car-buy-de
   line-height: 28px;
 }
 
-h4, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register h1,
+h4, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register h1,
 #login h1,
 #password-recovery h1,
 #popup-test-drive h1, .not-found p, .not-found__title, .lease-terms__item p, .ic-top__rb .popup-auction-info__title, .buyback .buyback__title, .buyback .buyback__ua-price, .test-drive, .installment-payment__price-full, .popup-auction .popup__content .popup-auction__title, .win-lot__title, #popup-test-drive .popup-auction__title {
@@ -838,7 +838,8 @@ body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .
 }
 
 h6, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .footer__caption p, .footer-nav__b li, .footer-helpdesk p, .footer-bottom,
-.footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info .circle-number, .circle-info span, .auction-notification, .autobid-in-up, .spinner-show2, .article__group, .reviews__date, .user-txt label, .user-txt .not-validated, #password-recovery .email-description, .checkbox__txt, .test-drive span, .ui-datepicker td a {
+.footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info .circle-number, .circle-info span, .auction-notification, .autobid-in-up, .spinner-show2, .card-sold .subtitle1,
+.card-sold .subtitle2, .article__group, .reviews__date, .user-txt label, .user-txt .not-validated, #password-recovery .email-description, .checkbox__txt, .test-drive span, .ui-datepicker td a {
   font-size: 12px;
   line-height: 20px;
 }
@@ -2654,6 +2655,7 @@ input {
   margin-top: 20px;
   max-width: 310px;
   min-width: 310px;
+  min-height: 416px;
   position: relative;
 }
 
@@ -2701,7 +2703,8 @@ input {
   margin-bottom: 20px;
 }
 
-.ac-title {
+.ac-title,
+.ac-title3 {
   font-weight: 700;
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -3096,6 +3099,7 @@ input {
 }
 
 .auction-card .ac-title2,
+.auction-card .ac-title3,
 .auction-card .ac-code2,
 .ac-textblock {
   display: none;
@@ -3289,6 +3293,78 @@ input {
 
 .spinner-show2 {
   color: #a9a9a9;
+}
+
+.auction-card .card-sold,
+.auction-card .upcoming-auction {
+  display: none;
+}
+
+.auction-win.auction-card .ac-price,
+.auction-win.auction-card .ac-time,
+.auction-win.auction-card .ac-quantity,
+.auction-win.auction-card .ac-title,
+.auction-win.auction-card .ac-title2,
+.auction-win.auction-card .ac-textblock,
+.auction-win.auction-card .ac-code2,
+.auction-win.auction-card .ac-code3,
+.auction-lose.auction-card .ac-price,
+.auction-lose.auction-card .ac-time,
+.auction-lose.auction-card .ac-quantity,
+.auction-lose.auction-card .ac-title,
+.auction-lose.auction-card .ac-title2,
+.auction-lose.auction-card .ac-textblock,
+.auction-lose.auction-card .ac-code2,
+.auction-lose.auction-card .ac-code3 {
+  display: none;
+}
+
+.auction-win.auction-card .card-sold,
+.auction-win.auction-card .upcoming-auction,
+.auction-win.auction-card .ac-title3,
+.auction-lose.auction-card .card-sold,
+.auction-lose.auction-card .upcoming-auction,
+.auction-lose.auction-card .ac-title3 {
+  display: block;
+}
+
+.auction-win.auction-card .ac-code,
+.auction-lose.auction-card .ac-code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-sold .title {
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.card-sold .price {
+  margin-bottom: 34px;
+}
+
+.card-sold .subtitle1,
+.card-sold .subtitle2 {
+  font-weight: 600;
+  color: #777777;
+  padding: 0 50px;
+}
+
+.auction-win .card-sold .price {
+  color: #0c8d47;
+}
+
+.auction-win .card-sold .subtitle2 {
+  display: none;
+}
+
+.auction-lose .card-sold .price {
+  color: #d45279;
+}
+
+.auction-lose .card-sold .subtitle1 {
+  display: none;
 }
 
 body.lock {

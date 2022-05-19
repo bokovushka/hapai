@@ -1495,6 +1495,7 @@ input {
 	margin-top: 20px;
 	max-width: 310px;
 	min-width: 310px;
+	min-height: 416px;
 	position: relative;
 	@extend %txt-big;
 	.popup {
@@ -1530,7 +1531,8 @@ input {
 	display: flex;
 	margin-bottom: 20px;
 }
-.ac-title {
+.ac-title,
+.ac-title3 {
 	font-weight: $fw700;
 	flex: 2;
 	text-align: left;
@@ -1727,7 +1729,7 @@ input {
 	text-align: center;
 }
 
-// auction win
+// autobid win
 .auction-card.active-win .price {
 	color: #0c8d47;
 }
@@ -1757,7 +1759,7 @@ input {
 	display: block;
 }
 
-//auction lose
+//autobid lose
 .auction-card.active-lose .price,
 .auction-notification.lose-auc {
 	color: #d45279;
@@ -1841,6 +1843,7 @@ input {
 	text-align: left;
 }
 .auction-card .ac-title2,
+.auction-card .ac-title3,
 .auction-card .ac-code2,
 .ac-textblock {
 	display: none;
@@ -1976,6 +1979,73 @@ input {
 	color: #a9a9a9;
 	@extend %txt-small;
 }
+
+//auction-win
+.auction-card {
+	.card-sold,
+	.upcoming-auction {
+		display: none;
+	}
+}
+.auction-win,
+.auction-lose {
+	&.auction-card {
+		.ac-price,
+		.ac-time,
+		.ac-quantity,
+		.ac-title,
+		.ac-title2,
+		.ac-textblock,
+		.ac-code2,
+		.ac-code3 {
+			display: none;
+		}
+		.card-sold,
+		.upcoming-auction,
+		.ac-title3 {
+			display: block;
+		}
+		.ac-code {
+			display: flex;
+		}
+	}
+}
+.card-sold {
+	.title {
+		@extend %txt-big;
+		font-weight: $fw600;
+		margin-bottom: 13px;
+	}
+	.price {
+		margin-bottom: 34px;
+	}
+	.subtitle1,
+	.subtitle2 {
+		@extend %txt-small;
+		font-weight: $fw600;
+		color: #777777;
+		padding: 0 50px;
+	}
+}
+.auction-win {
+	.card-sold .price {
+		color: #0c8d47;
+	}
+	.card-sold .subtitle2 {
+		display: none;
+	}
+}
+
+//auction-lose
+.auction-lose {
+	.card-sold .price {
+		color: #d45279;
+	}
+	.card-sold .subtitle1 {
+		display: none;
+	}
+}
+
 //popup
 body.lock {
 	overflow: hidden;
