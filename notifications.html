@@ -72,7 +72,7 @@
 									<ul class="submenu">
 										<li><a href="user.html">Личные данные</a></li>
 										<li><a href="payment-info.html">Платежная информация</a></li>
-										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="notifications.html">История аукционов</a></li>
 										<li><a href="##">Выйти</a></li>
 									</ul>
 								</li>
@@ -124,33 +124,94 @@
 							<ul>
 								<li><a class="ui-tabs-anchor" href="user.html">Личные данные</a></li>
 								<li><a class="ui-tabs-anchor" href="payment-info.html">Платежная информация</a></li>
-								<li><a class="ui-tabs-anchor active" href="notifications.html">Уведомления</a></li>
+								<li><a class="ui-tabs-anchor active" href="notifications.html">История аукционов</a></li>
 							</ul>
-							<div class="tabs__item notifications-info">
-								<h3>Уведомления</h3>
-								<div class="notifications-checkbox">
-									<div class="checkbox">
-										<label for="checkbox-cmc"></label>
-										<input type="checkbox" name="checkbox-cmc" id="checkbox-cmc">
-										<span class="checkbox__txt">CMC</span>
-									</div>
-									<div class="checkbox">
-										<label for="checkbox-email"></label>
-										<input type="checkbox" name="checkbox-email" id="checkbox-email">
-										<span class="checkbox__txt">Email</span>
-									</div>
-									<div class="checkbox">
-										<label for="checkbox-viber"></label>
-										<input type="checkbox" name="checkbox-viber" id="checkbox-viber">
-										<span class="checkbox__txt">Viber</span>
-									</div>
-									<div class="checkbox">
-										<label for="checkbox-telegram"></label>
-										<input type="checkbox" name="checkbox-telegram" id="checkbox-telegram">
-										<span class="checkbox__txt">Telegram</span>
+							<div class="notifications-table">
+								<div class="notifications-table__row notifications-table__title">
+									<div class="notifications-info__txt">Изображение</div>
+									<div class="notifications-info__txt">Автомобиль</div>
+									<div class="notifications-info__txt">Номер лота</div>
+									<div class="notifications-info__txt">Стартовая цена</div>
+									<div class="notifications-info__txt">Дата старта</div>
+									<div class="notifications-info__txt">Дата окончания</div>
+									<div class="notifications-info__txt">Статус</div>
+									<div class="notifications-info__txt"></div>
+								</div>
+								<div class="notifications-table__row notifications-table__info">
+									<div class="notifications-info__txt"><img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt=""></div>
+									<div class="notifications-info__txt">Mazda 3 2014</div>
+									<div class="notifications-info__txt">311</div>
+									<div class="notifications-info__txt">19000 $</div>
+									<div class="notifications-info__txt">22/04/2022 13:00</div>
+									<div class="notifications-info__txt">23/04/2022 12:00</div>
+									<div class="notifications-info__txt">Новый</div>
+									<div class="notifications-info__txt"><span class="icon-view"></span></div>
+								</div>
+								<div class="notifications-table__row notifications-table__info">
+									<div class="notifications-info__txt"><img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt=""></div>
+									<div class="notifications-info__txt">Porshe Cayen 2014</div>
+									<div class="notifications-info__txt">221</div>
+									<div class="notifications-info__txt">69000 $</div>
+									<div class="notifications-info__txt">21/04/2022 16:00</div>
+									<div class="notifications-info__txt">21/04/2022 18:00</div>
+									<div class="notifications-info__txt">Завершен</div>
+									<div class="notifications-info__txt"><span class="icon-view"></span></div>
+								</div>
+							</div>
+							<div class="notifications-lot">
+								<h3>Аукцион №311</h3>
+								<div class="notifications-lot__info">
+									<img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt="">
+									<div class="notifications-lot__b">
+										<div class="notifications-lot__name">Mazda 3 2014</div>
+										<div>22/04/2022 13:00</div>
+										<div>19050 $</div>
 									</div>
 								</div>
-								<button class="btn btn-style-1">Сохранить</button>
+								<div class="notifications-lot__table">
+									<div class="notifications-lot__row notifications-table__title">
+										<div class="notifications-lot__txt">№</div>
+										<div class="notifications-lot__txt">Дата и время</div>
+										<div class="notifications-lot__txt">Пользователь</div>
+										<div class="notifications-lot__txt">Ставка</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">1</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">2</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">3</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">4</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">5</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+									<div class="notifications-lot__row notifications-lt-info">
+										<div class="notifications-lot__txt">6</div>
+										<div class="notifications-lot__txt">22/04/2022 11:00:00</div>
+										<div class="notifications-lot__txt">user123</div>
+										<div class="notifications-lot__txt">18800 $</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

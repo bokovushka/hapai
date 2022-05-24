@@ -74,7 +74,7 @@
 									<ul class="submenu">
 										<li><a href="user.html">Личные данные</a></li>
 										<li><a href="payment-info.html">Платежная информация</a></li>
-										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="notifications.html">История аукционов</a></li>
 										<li><a href="##">Выйти</a></li>
 									</ul>
 								</li>
@@ -348,7 +348,7 @@
 										<div class="icq-head">Этот автомобиль сертифицирован Хапай</div>
 										<p>Каждый продаваемый нами автомобиль проходит тщательный ремонт в соответствии с нашими
 											высокими стандартами.</p>
-										<a href="/" class="btn btn-style-0">Запросить доп. информацию</a>
+										<a href="#popup-more-info" class="btn btn-style-0 popup-link">Запросить доп. информацию</a>
 									</div>
 								</div>
 								<div class="ic-bottom">
@@ -1047,6 +1047,27 @@
 					<div class="bank-card__button">
 						<button type="button" class="btn btn-style-2">Закрыть</button>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-more-info" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="popup-test-drive__main">
+					<div class="popup-auction__title">Узнать больше информации</div>
+					<form id="form-test-drive">
+						<div class="user-info">
+							<div class="user-txt">
+								<input id="tel" type="text" name="tel" placeholder="Ваше имя">
+							</div>
+							<div class="user-txt">
+								<input id="password" type="text" name="number" placeholder="Ваш номер телефона">
+							</div>
+							<button type="button" class="btn btn-style-1">Отправить</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

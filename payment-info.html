@@ -72,7 +72,7 @@
 									<ul class="submenu">
 										<li><a href="user.html">Личные данные</a></li>
 										<li><a href="payment-info.html">Платежная информация</a></li>
-										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="notifications.html">История аукционов</a></li>
 										<li><a href="##">Выйти</a></li>
 									</ul>
 								</li>
@@ -124,28 +124,40 @@
 							<ul>
 								<li><a class="ui-tabs-anchor" href="user.html">Личные данные</a></li>
 								<li><a class="ui-tabs-anchor active" href="payment-info.html">Платежная информация</a></li>
-								<li><a class="ui-tabs-anchor" href="notifications.html">Уведомления</a></li>
+								<li><a class="ui-tabs-anchor" href="notifications.html">История аукционов</a></li>
 							</ul>
 							<div class="tabs__item payment-info">
-								<a href="##" class="btn btn-style-2 btn-edit show">Добавить карту</a>
 								<div class="tabs__content">
-									<div class="user-info">
-										<div class="user-txt">
-											<label for="card">Номер карты</label>
-											<input id="card" type="text" name="card" placeholder="Введите номер карты" value="4141***9911">
+									<div class="tabs__main">
+										<div class="verify">
+											<p>Вы не можете принимать участвие в аукционе. Ваш гарантийный платеж не внесен</p>
+											<button type="button" class="btn">Внести</button>
 										</div>
-										<div class="user-txt">
-											<label for="date">Дата</label>
-											<input id="date" type="text" name="date" placeholder="Введите дату" value="05/25">
+										<div class="payment__description">
+											Гарантированый платеж необходим для участия в аукционе. Для борьбы со спамом мы используем холдирование денежных средств в размере 50$.
 										</div>
+										<button class="btn">Внести</button>
 									</div>
-									<div class="tabs__card-button">
-										<a href="##" class="card-edit">Редактировать</a>
-										<a href="##" class="card-delete">Удалить</a>
+									<div class="tabs__card">
+										<div class="user-info">
+											<div class="user-txt">
+												<label for="date">Дата</label>
+												<input id="date" type="text" name="date" placeholder="Введите дату" value="05/25" readonly>
+											</div>
+											<div class="user-txt">
+												<label for="sum">Сума</label>
+												<input id="sum" type="text" name="sum" placeholder="Сума" value="50$" readonly>
+											</div>
+										</div>
+										<div class="tabs__card-button">
+											<div class="user-txt">
+												<label for="sum">Статус</label>
+												<input id="sum" type="text" name="sum" placeholder="Статус" value="Внесен" readonly>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<a href="##" class="btn btn-style-2 btn-edit">Добавить карту</a>
 						</div>
 					</div>
 				</section>

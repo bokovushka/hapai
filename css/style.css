@@ -586,6 +586,10 @@ select:-webkit-autofill:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-view:before {
+  content: "\e934";
+}
+
 .icon-u_google:before {
   content: "\e933";
 }
@@ -812,34 +816,35 @@ h3, .title-item__b h3, .item-loop__txtblock h3, .reviews__user-logo, .car-buy-de
 h4, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register h1,
 #login h1,
 #password-recovery h1,
-#popup-test-drive h1, .not-found p, .not-found__title, .lease-terms__item p, .ic-top__rb .popup-auction-info__title, .buyback .buyback__title, .buyback .buyback__ua-price, .test-drive, .installment-payment__price-full, .popup-auction .popup__content .popup-auction__title, .win-lot__title, #popup-test-drive .popup-auction__title {
+#popup-test-drive h1,
+#popup-more-info h1, .not-found p, .not-found__title, .lease-terms__item p, .ic-top__rb .popup-auction-info__title, .buyback .buyback__title, .buyback .buyback__ua-price, .test-drive, .installment-payment__price-full, .popup-auction .popup__content .popup-auction__title, .win-lot__title, #popup-test-drive .popup-auction__title, #popup-more-info .popup-auction__title {
   font-size: 16px;
   line-height: 24px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::-webkit-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::-webkit-input-placeholder, .payment__description, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input:-ms-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input:-ms-input-placeholder, .payment__description, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::-ms-input-placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::-ms-input-placeholder, .payment__description, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
-body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::placeholder, .timer__item::before {
+body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .ui-selectmenu-button, .filter-clear, .filter-close, .filter-list input, .slide-group-input, .choice-help__b span, .ac-textblock, .autobid-in-down, .news__button, .choice-help__sell-car-info p, .user-data .payment-info .user-txt input::placeholder, .payment__description, .timer__item::before {
   font-size: 14px;
   line-height: 22px;
 }
 
 h6, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .footer__caption p, .footer-nav__b li, .footer-helpdesk p, .footer-bottom,
 .footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info .circle-number, .circle-info span, .auction-notification, .autobid-in-up, .spinner-show2, .card-sold .subtitle1,
-.card-sold .subtitle2, .article__group, .reviews__date, .user-txt label, .user-txt .not-validated, #password-recovery .email-description, .checkbox__txt, .test-drive span, .ui-datepicker td a {
+.card-sold .subtitle2, .article__group, .reviews__date, .user-txt label, .user-txt .not-validated, #password-recovery .email-description, .checkbox__txt, .test-drive span, .ui-datepicker td a, .notifications-table__title {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1573,6 +1578,7 @@ input {
   font-weight: 600;
   font-size: 12px;
   line-height: 17px;
+  max-width: 228px;
 }
 
 .slide-group-input {
@@ -2971,13 +2977,6 @@ input {
   pointer-events: none;
   cursor: default;
   border: 2px solid transparent;
-}
-
-.auction-card.active-win .price-autobid a {
-  color: #a9a9a9;
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.5;
 }
 
 .auction-card.active-win .price-spinner .input-group-prepend,
@@ -4945,6 +4944,21 @@ input.field {
   min-width: 208px;
 }
 
+.user-data .tabs__item.payment-made .verify,
+.user-data .tabs__item.payment-made .tabs__main .btn {
+  display: none;
+}
+
+.user-data .tabs__item.payment-made .tabs__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-data .tabs__item.payment-made .tabs__main {
+  margin-top: 20px;
+}
+
 .user-data .tabs__main {
   max-width: 950px;
 }
@@ -4967,17 +4981,15 @@ input.field {
 
 .user-data .tabs__main .verify p {
   color: #d45279;
+  padding-right: 20px;
 }
 
 .user-data .tabs__main .verify .btn {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   background: #d45279;
   border-radius: 4px;
   color: #ffffff;
+  min-width: 128px;
   max-width: 128px;
-  width: 100%;
   padding: 10px 0;
 }
 
@@ -5105,22 +5117,26 @@ input.field {
   color: #d45279;
 }
 
-.user-data .payment-info {
-  margin-top: 56px;
+.user-data .payment-info .tabs__main .btn {
+  background: #d45279;
+  border-radius: 4px;
+  color: #ffffff;
+  max-width: 128px;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.user-data .payment-info .tabs__content {
+.user-data .payment-info .tabs__card {
+  display: none;
   background: #f5f5f5;
   padding: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 23px;
 }
 
 .user-data .payment-info .user-txt {
@@ -5155,6 +5171,13 @@ input.field {
   font-weight: 600;
 }
 
+.tabs__card-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 117px;
+}
+
 .tabs__card-button a {
   position: relative;
   padding-right: 32px;
@@ -5185,6 +5208,20 @@ input.field {
 
 .tabs__card-button .card-delete::after {
   content: "\e909";
+}
+
+.tabs__card-button input[value] {
+  color: #6cd452;
+}
+
+.tabs__card-button .user-txt {
+  width: 100% !important;
+}
+
+.payment__description {
+  max-width: 570px;
+  color: #777777;
+  padding: 10px 0 30px 0;
 }
 
 .authorization {
@@ -5224,7 +5261,8 @@ input.field {
 #register .popup__content,
 #login .popup__content,
 #password-recovery .popup__content,
-#popup-test-drive .popup__content {
+#popup-test-drive .popup__content,
+#popup-more-info .popup__content {
   max-width: 360px;
   border-radius: 8px;
   padding: 20px;
@@ -5233,7 +5271,8 @@ input.field {
 #register .popup__close .icon-fi_x,
 #login .popup__close .icon-fi_x,
 #password-recovery .popup__close .icon-fi_x,
-#popup-test-drive .popup__close .icon-fi_x {
+#popup-test-drive .popup__close .icon-fi_x,
+#popup-more-info .popup__close .icon-fi_x {
   font-size: 24px;
   color: rgba(119, 119, 119, 0.54);
 }
@@ -5241,14 +5280,16 @@ input.field {
 #register h1,
 #login h1,
 #password-recovery h1,
-#popup-test-drive h1 {
+#popup-test-drive h1,
+#popup-more-info h1 {
   margin-bottom: 20px;
 }
 
 #register .user-txt,
 #login .user-txt,
 #password-recovery .user-txt,
-#popup-test-drive .user-txt {
+#popup-test-drive .user-txt,
+#popup-more-info .user-txt {
   width: 100%;
 }
 
@@ -6501,6 +6542,11 @@ input.field {
   width: 100%;
 }
 
+#popup-more-info .popup-auction__title {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
 .loop-not-found {
   position: relative;
   max-width: 400px;
@@ -6528,19 +6574,169 @@ input.field {
           transform: translate(-50%, 0);
 }
 
-.notifications-info h3 {
-  margin: 20px 0;
+.notifications-table {
+  margin-top: 34px;
+  overflow: scroll;
 }
 
-.notifications-info .btn-style-1 {
-  max-width: 208px;
+.notifications-table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1240px;
 }
 
-.notifications-checkbox {
-  margin-bottom: 40px;
+.notifications-table__title {
+  color: #a9a9a9;
+  font-weight: 700;
+  margin-bottom: 2px;
+  padding: 0 13px;
 }
 
-#ui-id-1 {
+.notifications-table__title .notifications-info__txt:last-child {
+  min-width: 32px;
+}
+
+.notifications-table__info {
+  border-radius: 4px;
+  padding: 11px 13px;
+  background: #f5f5f5;
+  margin-bottom: 11px;
+}
+
+.notifications-table__info:last-child {
+  margin-bottom: 0;
+}
+
+.notifications-info__txt {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+.notifications-info__txt:first-child, .notifications-info__txt:nth-child(2), .notifications-info__txt:nth-last-child(2) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.notifications-info__txt:nth-last-child(2) {
+  margin-left: 20px;
+}
+
+.notifications-info__txt:last-child {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.notifications-info__txt img {
+  max-width: 62px;
+  border-radius: 4px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.notifications-info__txt span {
+  font-size: 32px;
+  color: #6667ab;
+  cursor: pointer;
+}
+
+.notifications-lot {
+  font-weight: 600;
+  margin-top: 37px;
+}
+
+.notifications-lot h3 {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 18px;
+}
+
+.notifications-lot img {
+  max-width: 102px;
+  border-radius: 4px;
+  height: 69px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.notifications-lot .notifications-lot__table {
+  overflow: scroll;
+}
+
+.notifications-lot .notifications-lot__table .notifications-table__title {
+  padding: 0 22px;
+}
+
+.notifications-lot .notifications-lot__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.notifications-lot .notifications-lot__b {
+  margin-left: 15px;
+}
+
+.notifications-lot .notifications-lot__name {
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.notifications-lot .notifications-lt-info {
+  border-radius: 4px;
+  padding: 14px 22px;
+  background: #f5f5f5;
+  margin-bottom: 2px;
+}
+
+.notifications-lot .notifications-lt-info:last-child {
+  margin-bottom: 0px;
+}
+
+.notifications-lot .notifications-lot__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1240px;
+}
+
+.notifications-lot .notifications-lot__row .notifications-lot__txt {
+  min-width: 140px;
+}
+
+.notifications-lot .notifications-lot__row .notifications-lot__txt:first-child {
+  min-width: 20px;
+  margin-right: 37px;
+}
+
+.notifications-lot .notifications-lot__row .notifications-lot__txt:nth-child(2) {
+  margin-right: 82px;
+}
+
+.notifications-lot .notifications-lot__row .notifications-lot__txt:nth-child(3) {
+  margin-right: 100px;
+}
+
+.ui-autocomplete {
   width: calc(100% - 40px) !important;
   max-width: 1240px;
   border-radius: 4px;
@@ -6548,11 +6744,11 @@ input.field {
   overflow: scroll;
 }
 
-#ui-id-1.ui-menu .ui-menu-item-wrapper {
+.ui-autocomplete.ui-menu .ui-menu-item-wrapper {
   padding-left: 22px;
 }
 
-#ui-id-1 .ui-autocomplete-category {
+.ui-autocomplete .ui-autocomplete-category {
   padding: 10px 0;
   padding-left: 22px;
 }
@@ -7197,7 +7393,7 @@ input.field {
     display: none;
   }
   .user-data .tabs .show {
-    display: block;
+    display: block !important;
     position: relative;
     margin: 0 auto;
     margin-top: 32px;
@@ -7263,6 +7459,9 @@ input.field {
   }
   .faq-item__main .accordion-section.lease {
     padding-bottom: 0;
+  }
+  .payment__description {
+    padding-top: 0;
   }
 }
 
