@@ -4688,6 +4688,57 @@ input.field {
 	}
 }
 
+//popup-installment-checkout
+#popup-installment-checkout {
+	.popup__content {
+		max-width: 620px;
+		background: $color-f;
+		border-radius: 12px;
+		padding: 20px;
+	}
+	.selection-car__info {
+		background: none;
+		padding: 0;
+		margin-top: 20px;
+	}
+	.icon {
+		display: block;
+		font-size: 24px;
+		padding: 12px;
+		color: $color-w;
+		background: #7f81d5;
+		border-radius: 12px;
+		margin-right: 20px;
+		height: max-content;
+	}
+	.selection-car__result-search {
+		position: relative;
+	}
+	.btn-style-3 {
+		position: absolute;
+		bottom: 20px;
+		width: calc(100% - 40px);
+	}
+	.selection-car__preferences,
+	.selection-car__result-search {
+		width: 50%;
+	}
+	.selection-car__payments-item {
+		width: 100%;
+	}
+}
+#seo-text-section {
+	ul li {
+		list-style: disc;
+	}
+	ol li {
+		list-style: auto;
+	}
+	b,
+	strong {
+		font-weight: $fw700;
+	}
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
@@ -5304,6 +5355,9 @@ input.field {
 	.payment__description {
 		padding-top: 0;
 	}
+	#popup-installment-checkout .selection-car__info {
+		flex-direction: row;
+	}
 }
 @media only screen and (max-width: 767px) {
 	.choice-help img {
@@ -5846,6 +5900,13 @@ input.field {
 	.ic-top__rb.auction-win,
 	.ic-top__rb.auction-lose {
 		margin: 0 auto;
+	}
+	#popup-installment-checkout .selection-car__info {
+		flex-direction: column;
+	}
+	#popup-installment-checkout .selection-car__preferences,
+	#popup-installment-checkout .selection-car__result-search {
+		width: 100%;
 	}
 }
 @media only screen and (max-width: 479px) {

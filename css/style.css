@@ -6753,6 +6753,64 @@ input.field {
   padding-left: 22px;
 }
 
+#popup-installment-checkout .popup__content {
+  max-width: 620px;
+  background: #6667ab;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#popup-installment-checkout .selection-car__info {
+  background: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#popup-installment-checkout .icon {
+  display: block;
+  font-size: 24px;
+  padding: 12px;
+  color: #ffffff;
+  background: #7f81d5;
+  border-radius: 12px;
+  margin-right: 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+#popup-installment-checkout .selection-car__result-search {
+  position: relative;
+}
+
+#popup-installment-checkout .btn-style-3 {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}
+
+#popup-installment-checkout .selection-car__preferences,
+#popup-installment-checkout .selection-car__result-search {
+  width: 50%;
+}
+
+#popup-installment-checkout .selection-car__payments-item {
+  width: 100%;
+}
+
+#seo-text-section ul li {
+  list-style: disc;
+}
+
+#seo-text-section ol li {
+  list-style: auto;
+}
+
+#seo-text-section b,
+#seo-text-section strong {
+  font-weight: 700;
+}
+
 /* mobile */
 @media only screen and (max-width: 1279px) {
   .nav-menu__item {
@@ -7463,6 +7521,12 @@ input.field {
   .payment__description {
     padding-top: 0;
   }
+  #popup-installment-checkout .selection-car__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -8046,6 +8110,16 @@ input.field {
   }
   .ic-top__rb.auction-win, .ic-top__rb.auction-lose {
     margin: 0 auto;
+  }
+  #popup-installment-checkout .selection-car__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #popup-installment-checkout .selection-car__preferences,
+  #popup-installment-checkout .selection-car__result-search {
+    width: 100%;
   }
 }
 
