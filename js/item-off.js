@@ -55,10 +55,21 @@ $(".card-accepted .bank-card__button .btn-style-2").click(function () {
 //installment-accepted
 $("#popup-installment .btn-style-1").click(function () {
 	$(".installment").addClass("hide");
-	$(".installment-accepted").addClass("show");
-	$(".installment-accepted").removeClass("hide");
+	$("#popup-installment .installment-accepted").addClass("show");
+	$("#popup-installment .installment-accepted").removeClass("hide");
 });
 $(".installment-accepted .btn-style-2").click(function () {
+	$('.popup').removeClass("open");
+	$('.lock').removeClass("lock");
+});
+
+//installment-accepted
+$("#popup-test-drive .btn-style-1").click(function () {
+	$(".popup-test-drive__main").addClass("hide");
+	$("#popup-test-drive .installment-accepted").addClass("show");
+	$("#popup-test-drive .installment-accepted").removeClass("hide");
+});
+$("#popup-test-drive .installment-accepted .btn-style-2").click(function () {
 	$('.popup').removeClass("open");
 	$('.lock').removeClass("lock");
 });

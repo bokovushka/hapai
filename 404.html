@@ -14,19 +14,27 @@
 	<!-- WRAPPER start -->
 	<div class="wrapper">
 		<!-- HEADER start  -->
-		<header class="header">
+		<header id="header" class="header">
 			<div class="container">
 				<div class="header-menu">
-					<div class="menu-btn">
+					<a href="#header" class="menu-btn">
 						<span></span>
 						<span></span>
 						<span></span>
-					</div>
+					</a>
 					<a href="/" class="logo">
 						<img src="img/logo.svg">
 					</a>
 					<div class="navigation">
 						<nav class="site-nav menu">
+							<div class="nav-menu__item language language-m">
+								<div class="language__ch">Рус</div>
+								<span class="icon-u_angle-down"></span>
+								<ul class="submenu">
+									<li><a href="##">Ру</a></li>
+									<li><a href="##">Укр</a></li>
+								</ul>
+							</div>
 							<ul class="nav-menu">
 								<li class="nav-menu__item">
 									<a href="auction.html" class="nav-menu__link">Аукцион</a>
@@ -44,13 +52,9 @@
 									<a href="faq.html" class="nav-menu__link">FAQ</a>
 								</li>
 							</ul>
-							<div class="nav-menu__item language language-m">
-								<div class="language__ch">Рус</div>
-								<span class="icon-u_angle-down"></span>
-								<ul class="submenu">
-									<li><a href="##">Ру</a></li>
-									<li><a href="##">Укр</a></li>
-								</ul>
+							<div class="authorization-btn-m">
+								<a href="login.html" class="btn btn-style-3">Войти</a>
+								<a href="register.html" class="btn btn-style-1">Зарегистрироваться</a>
 							</div>
 						</nav>
 						<div class="personal-nav">
@@ -60,11 +64,17 @@
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
-								<li class="nav-menu__item user-profile">
-									<a href="#popup-authorization" class="nav-menu__link popup-link">
+								<li class="nav-menu__item user-profile user-authorized">
+									<a href="#login" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
+									<ul class="submenu">
+										<li><a href="user.html">Личные данные</a></li>
+										<li><a href="payment-info.html">Платежная информация</a></li>
+										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="##">Выйти</a></li>
+									</ul>
 								</li>
 								<li class="nav-menu__item language">
 									<div class="language__ch">Рус</div>
@@ -80,7 +90,7 @@
 				</div>
 				<div class="header-search">
 					<form action="/" class="form-search icon-u_search">
-						<input type="text" placeholder="Я ищу ..." name="search">
+						<input type="text" placeholder="Я ищу ..." name="search" id="search">
 						<button type="submit" class="btn btn-seacrh">Найти</button>
 					</form>
 				</div>
@@ -187,71 +197,90 @@
 			</div>
 		</div>
 	</div>
-	<div id="popup-authorization" class="popup">
+	<div id="login" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
 				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
-				<div class="authorization__wrap">
-					<div class="login">
-						<h1>Вход</h1>
-						<form id="form-login-popup">
-							<div class="user-info">
-								<div class="user-txt">
-									<label for="tel">Телефон</label>
-									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
-								</div>
-								<div class="user-txt">
-									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
-								</div>
-								<div class="user-info__b">
-									<div class="checkbox">
-										<label for="checkbox-remember-popup"></label>
-										<input type="checkbox" name="checkbox-remember-popup" id="checkbox-remember-popup">
-										<span class="checkbox__txt">Запомнить меня</span>
-									</div>
-									<a href="##" class="forgot-password">Забыли пароль?</a>
-								</div>
-								<button type="button" class="btn btn-style-1">Войти</button>
-								<a class="txt-link">У меня еще нет аккаунта</a>
+				<h1>Вход</h1>
+				<form id="form-login-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="tel">Телефон</label>
+							<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+						</div>
+						<div class="user-txt">
+							<label for="password">Пароль</label>
+							<input id="password" type="password" name="password" value="••••••••">
+						</div>
+						<div class="user-info__b">
+							<div class="checkbox">
+								<label for="checkbox-remember-popup"></label>
+								<input type="checkbox" name="checkbox-remember-popup" id="checkbox-remember-popup">
+								<span class="checkbox__txt">Запомнить меня</span>
 							</div>
-						</form>
+							<a href="#password-recovery" class="forgot-password popup-link">Забыли пароль?</a>
+						</div>
+						<button type="button" class="btn btn-style-1">Войти</button>
+						<a href="#register" class="txt-link popup-link">У меня еще нет аккаунта</a>
 					</div>
-					<div class="register hide">
-						<h1>Регистрация</h1>
-						<form id="form-register-popup">
-							<div class="user-info">
-								<div class="user-txt">
-									<label for="name">ФИО</label>
-									<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
-								</div>
-								<div class="user-txt">
-									<label for="tel">Телефон</label>
-									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
-								</div>
-								<div class="user-txt">
-									<label for="email">email</label>
-									<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
-								</div>
-								<div class="user-txt">
-									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
-								</div>
-								<div class="user-txt">
-									<label for="password-repeat">Повторите пароль</label>
-									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
-								</div>
-								<div class="checkbox">
-									<label for="checkbox-agree-popup"></label>
-									<input type="checkbox" name="checkbox-agree-popup" id="checkbox-agree-popup">
-									<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
-								</div>
-								<button type="button" class="btn btn-style-1">Зарегистрироваться</button>
-								<a class="txt-link">У меня уже есть аккаунт</a>
-							</div>
-						</form>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="register" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Регистрация</h1>
+				<form id="form-register-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="name">ФИО</label>
+							<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
+						</div>
+						<div class="user-txt">
+							<label for="tel">Телефон</label>
+							<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+						</div>
+						<div class="user-txt">
+							<label for="email">email</label>
+							<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+						</div>
+						<div class="user-txt">
+							<label for="password">Пароль</label>
+							<input id="password" type="password" name="password" value="••••••••">
+						</div>
+						<div class="user-txt">
+							<label for="password-repeat">Повторите пароль</label>
+							<input id="password-repeat" type="password" name="password-repeat" value="••••••••">
+						</div>
+						<div class="checkbox">
+							<label for="checkbox-agree-popup"></label>
+							<input type="checkbox" name="checkbox-agree-popup" id="checkbox-agree-popup">
+							<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
+						</div>
+						<button type="button" class="btn btn-style-1">Зарегистрироваться</button>
+						<a href="#login" class="txt-link popup-link">У меня уже есть аккаунт</a>
 					</div>
-				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="password-recovery" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Восстановление пароля</h1>
+				<form id="form-password-recovery-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="email">email</label>
+							<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+						</div>
+						<p class="email-description">Вам на почту будет отправлена ссылка по сбросу пароля</p>
+						<button type="button" class="btn btn-style-1">Отправить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

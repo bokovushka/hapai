@@ -16,19 +16,27 @@
 	<!-- WRAPPER start -->
 	<div class="wrapper">
 		<!-- HEADER start  -->
-		<header class="header">
+		<header id="header" class="header">
 			<div class="container">
 				<div class="header-menu">
-					<div class="menu-btn">
+					<a href="#header" class="menu-btn">
 						<span></span>
 						<span></span>
 						<span></span>
-					</div>
+					</a>
 					<a href="/" class="logo">
 						<img src="img/logo.svg">
 					</a>
 					<div class="navigation">
 						<nav class="site-nav menu">
+							<div class="nav-menu__item language language-m">
+								<div class="language__ch">Рус</div>
+								<span class="icon-u_angle-down"></span>
+								<ul class="submenu">
+									<li><a href="##">Ру</a></li>
+									<li><a href="##">Укр</a></li>
+								</ul>
+							</div>
 							<ul class="nav-menu">
 								<li class="nav-menu__item">
 									<a href="auction.html" class="nav-menu__link">Аукцион</a>
@@ -46,13 +54,9 @@
 									<a href="faq.html" class="nav-menu__link">FAQ</a>
 								</li>
 							</ul>
-							<div class="nav-menu__item language language-m">
-								<div class="language__ch">Рус</div>
-								<span class="icon-u_angle-down"></span>
-								<ul class="submenu">
-									<li><a href="##">Ру</a></li>
-									<li><a href="##">Укр</a></li>
-								</ul>
+							<div class="authorization-btn-m">
+								<a href="login.html" class="btn btn-style-3">Войти</a>
+								<a href="register.html" class="btn btn-style-1">Зарегистрироваться</a>
 							</div>
 						</nav>
 						<div class="personal-nav">
@@ -62,11 +66,17 @@
 										<span class="icon-u_favorite"></span>
 									</a>
 								</li>
-								<li class="nav-menu__item user-profile">
-									<a href="#popup-authorization" class="nav-menu__link popup-link">
+								<li class="nav-menu__item user-profile user-authorized">
+									<a href="#login" class="nav-menu__link popup-link">
 										<span class="icon-u_user-circle"></span>
 										<span>Профиль</span>
 									</a>
+									<ul class="submenu">
+										<li><a href="user.html">Личные данные</a></li>
+										<li><a href="payment-info.html">Платежная информация</a></li>
+										<li><a href="notifications.html">Уведомления</a></li>
+										<li><a href="##">Выйти</a></li>
+									</ul>
 								</li>
 								<li class="nav-menu__item language">
 									<div class="language__ch">Рус</div>
@@ -82,7 +92,7 @@
 				</div>
 				<div class="header-search">
 					<form action="/" class="form-search icon-u_search">
-						<input type="text" placeholder="Я ищу ..." name="search">
+						<input type="text" placeholder="Я ищу ..." name="search" id="search">
 						<button type="submit" class="btn btn-seacrh">Найти</button>
 					</form>
 				</div>
@@ -108,7 +118,7 @@
 					<div class="container">
 						<div class="title-item__b">
 							<h1>Porsche Macan S 2.9 PDK, 2021</h1>
-							<a class="btn-favor"><i class="icon-star icon-u_favorite"></i></a>
+							<a href="#win-lot" class="btn-favor popup-link"><i class="icon-star icon-u_favorite"></i></a>
 						</div>
 					</div>
 				</section>
@@ -226,10 +236,10 @@
 												<i class="icon-info icon-u_info-circle"></i>WAUANCF5хKAхххх37
 											</div>
 										</div>
-										<div class="test-drive">
+										<a href="#popup-test-drive" class="test-drive popup-link">
 											Записаться на тест-драйв до 24.01.2022
 											<span>Киев, пр.Победы 134</span>
-										</div>
+										</a>
 									</div>
 									<div class="ic-top__right">
 										<div class="ic-top__rb buyback">
@@ -241,6 +251,7 @@
 										<div class=" ic-top__rb auction-card">
 											<div class="ac-head">
 												<div class="ac-title">До начала аукциона</div>
+												<div class="ac-title3">Аукцион завершен</div>
 												<div class="ac-code">2690-134<a href="#popup-auction-info" class="btn btn-icon btn-info popup-link"><i class="icon-info icon-u_info-circle"></i></a></div>
 											</div>
 											<div class="timer">
@@ -276,6 +287,16 @@
 													<a id="autobidsave" class="btn btn-style-1">Сохранить</a>
 												</div>
 											</div>
+											<div class="card-sold">
+												<div class="title">авто выкуплено за:</div>
+												<div class="price">12 500$</div>
+												<div class="subtitle1">
+													Поздравляем! Менеджер свяжется с Вами в течение 30 минут</div>
+												<div class="subtitle2">
+													Ваша ставка проиграла, повезет в другой раз
+												</div>
+											</div>
+											<a href="##" class="btn btn-style-1 upcoming-auction">Посмотреть ближайшие торги</a>
 											<div id="popup-auction-info" class="popup">
 												<div class="popup__body">
 													<div class="popup__content">
@@ -760,6 +781,18 @@
 	</div>
 	<!-- WRAPPER end -->
 	<!-- POPUP  -->
+	<div id="win-lot" class="popup win-lot">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="win-lot__title">Поздравляем! <br>
+					Вы выиграли лот <span>2690314</span></div>
+				<div class="win-lot__name">Porsche Macan S 2.9 PDK, 2021</div>
+				<a href="##"><img src="img/42f67ed5f9e3f01222c85d2f4382a1ea.png" alt=""></a>
+				<a href="##" class="btn btn-style-1">Посмотреть</a>
+			</div>
+		</div>
+	</div>
 	<div id="popup1" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
@@ -784,71 +817,90 @@
 			</div>
 		</div>
 	</div>
-	<div id="popup-authorization" class="popup">
+	<div id="login" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
 				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
-				<div class="authorization__wrap">
-					<div class="login">
-						<h1>Вход</h1>
-						<form id="form-login-popup">
-							<div class="user-info">
-								<div class="user-txt">
-									<label for="tel">Телефон</label>
-									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
-								</div>
-								<div class="user-txt">
-									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
-								</div>
-								<div class="user-info__b">
-									<div class="checkbox">
-										<label for="checkbox-remember-popup"></label>
-										<input type="checkbox" name="checkbox-remember-popup" id="checkbox-remember-popup">
-										<span class="checkbox__txt">Запомнить меня</span>
-									</div>
-									<a href="##" class="forgot-password">Забыли пароль?</a>
-								</div>
-								<button type="button" class="btn btn-style-1">Войти</button>
-								<a class="txt-link">У меня еще нет аккаунта</a>
+				<h1>Вход</h1>
+				<form id="form-login-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="tel">Телефон</label>
+							<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+						</div>
+						<div class="user-txt">
+							<label for="password">Пароль</label>
+							<input id="password" type="password" name="password" value="••••••••">
+						</div>
+						<div class="user-info__b">
+							<div class="checkbox">
+								<label for="checkbox-remember-popup"></label>
+								<input type="checkbox" name="checkbox-remember-popup" id="checkbox-remember-popup">
+								<span class="checkbox__txt">Запомнить меня</span>
 							</div>
-						</form>
+							<a href="#password-recovery" class="forgot-password popup-link">Забыли пароль?</a>
+						</div>
+						<button type="button" class="btn btn-style-1">Войти</button>
+						<a href="#register" class="txt-link popup-link">У меня еще нет аккаунта</a>
 					</div>
-					<div class="register hide">
-						<h1>Регистрация</h1>
-						<form id="form-register-popup">
-							<div class="user-info">
-								<div class="user-txt">
-									<label for="name">ФИО</label>
-									<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
-								</div>
-								<div class="user-txt">
-									<label for="tel">Телефон</label>
-									<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
-								</div>
-								<div class="user-txt">
-									<label for="email">email</label>
-									<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
-								</div>
-								<div class="user-txt">
-									<label for="password">Пароль</label>
-									<input id="password" type="text" name="password" value="••••••••">
-								</div>
-								<div class="user-txt">
-									<label for="password-repeat">Повторите пароль</label>
-									<input id="password-repeat" type="text" name="password-repeat" value="••••••••">
-								</div>
-								<div class="checkbox">
-									<label for="checkbox-agree-popup"></label>
-									<input type="checkbox" name="checkbox-agree-popup" id="checkbox-agree-popup">
-									<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
-								</div>
-								<button type="button" class="btn btn-style-1">Зарегистрироваться</button>
-								<a class="txt-link">У меня уже есть аккаунт</a>
-							</div>
-						</form>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="register" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Регистрация</h1>
+				<form id="form-register-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="name">ФИО</label>
+							<input id="name" type="text" name="name" value="Федоров Сергей Михайлович">
+						</div>
+						<div class="user-txt">
+							<label for="tel">Телефон</label>
+							<input id="tel" type="text" name="tel" value="+380 95 196 29 00">
+						</div>
+						<div class="user-txt">
+							<label for="email">email</label>
+							<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+						</div>
+						<div class="user-txt">
+							<label for="password">Пароль</label>
+							<input id="password" type="password" name="password" value="••••••••">
+						</div>
+						<div class="user-txt">
+							<label for="password-repeat">Повторите пароль</label>
+							<input id="password-repeat" type="password" name="password-repeat" value="••••••••">
+						</div>
+						<div class="checkbox">
+							<label for="checkbox-agree-popup"></label>
+							<input type="checkbox" name="checkbox-agree-popup" id="checkbox-agree-popup">
+							<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
+						</div>
+						<button type="button" class="btn btn-style-1">Зарегистрироваться</button>
+						<a href="#login" class="txt-link popup-link">У меня уже есть аккаунт</a>
 					</div>
-				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="password-recovery" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<h1>Восстановление пароля</h1>
+				<form id="form-password-recovery-popup">
+					<div class="user-info">
+						<div class="user-txt">
+							<label for="email">email</label>
+							<input id="email" type="text" name="email" value="serezhaphe@gmail.com">
+						</div>
+						<p class="email-description">Вам на почту будет отправлена ссылка по сбросу пароля</p>
+						<button type="button" class="btn btn-style-1">Отправить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -931,10 +983,10 @@
 									<input id="tel" type="text" name="tel" placeholder="Ваше имя">
 								</div>
 								<div class="user-txt">
-									<input id="password" type="text" name="password" placeholder="Ваш номер телефона">
+									<input id="password" type="text" name="number" placeholder=" Ваш номер телефона">
 								</div>
 								<div class="user-txt">
-									<input id="password" type="text" name="password" placeholder="	Ваш ИНН">
+									<input id="password" type="text" name="number-ttn" placeholder=" Ваш ИНН">
 								</div>
 								<div class="checkbox">
 									<label for="checkbox-agree-installment"></label>
@@ -948,10 +1000,52 @@
 					<div class="installment-accepted card-check hide">
 						<span class="icon icon-u_check"></span>
 						<div class="popup-auction__title">Карта принята</div>
-						<p>Удачи в торгах!</p>
+						<p>Наш менеджер свяжется с вами</p>
 						<div class="bank-card__button">
 							<button type="button" class="btn btn-style-2">Закрыть</button>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-test-drive" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="popup-test-drive__main">
+					<div class="popup-auction__title">Записаться на тест-драйв</div>
+					<form id="form-test-drive">
+						<div class="user-info">
+							<div class="user-txt">
+								<input id="tel" type="text" name="tel" placeholder="Ваше имя">
+							</div>
+							<div class="user-txt">
+								<input id="password" type="text" name="number" placeholder="Ваш номер телефона">
+							</div>
+							<div class="user-txt">
+								<label for="password">Дата</label>
+								<input id="password" type="text" name="password" value="20.05.2022">
+							</div>
+							<div class="user-txt">
+								<label for="password">Время</label>
+								<input id="password" type="text" name="password" value="18:30">
+							</div>
+							<div class="checkbox">
+								<label for="checkbox-agree-test-drive"></label>
+								<input type="checkbox" name="checkbox-agree-test-drive" id="checkbox-agree-test-drive">
+								<span class="checkbox__txt">Даю согласие на сбор, обработку, хранение и использование своих персональных данных.</span>
+							</div>
+							<button type="button" class="btn btn-style-1">Отправить</button>
+						</div>
+					</form>
+				</div>
+				<div class="installment-accepted card-check hide">
+					<span class="icon icon-u_check"></span>
+					<div class="popup-auction__title">Карта принята</div>
+					<p>Наш менеджер свяжется с вами</p>
+					<div class="bank-card__button">
+						<button type="button" class="btn btn-style-2">Закрыть</button>
 					</div>
 				</div>
 			</div>

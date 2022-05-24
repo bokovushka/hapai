@@ -1,6 +1,7 @@
 // меню
 
 $(document).ready(function () {
+	let body_lock = document.querySelector('body');
 	let menuBtn = document.querySelector('.menu-btn');
 	let menu = document.querySelector('.menu');
 	let language = document.querySelector('.language');
@@ -11,6 +12,7 @@ $(document).ready(function () {
 		menu.classList.toggle('active');
 		language.classList.toggle('active');
 		header_active.classList.toggle('active');
+		body_lock.classList.toggle('lock-menu-m');
 	})
 });
 
@@ -50,12 +52,12 @@ $('.btn-favor').on('click', function () {
 $(function () {
 	$(".checkbox input").checkboxradio();
 });
-$(".login .txt-link").click(function () {
+$("#popup-authorization .login .txt-link").click(function () {
 	$(".login").addClass("hide");
 	$(".register").removeClass("hide");
 
 });
-$(".register .txt-link").click(function () {
+$("#popup-authorization .register .txt-link").click(function () {
 	$(".register").addClass("hide");
 	$(".login").removeClass("hide");
 });
@@ -106,8 +108,62 @@ $(".top-banner-sell-car .btn-style-3").click(function () {
 	$('.choice-help__seacrh-number-car').addClass("hide");
 });
 
-//tabs user page
+//href link
+
+$(document).ready(function () {
+	$('.menu-btn').bind("click", function (e) {
+		var anchor = $(this);
+		$("html, body")
+			.stop()
+			.animate(
+				{
+					scrollTop: $(anchor.attr("href")).offset().top - 20,
+				},
+				800
+			);
+		e.preventDefault();
+	});
+	return false;
+});
+
+// MAIN SEARCH
 
 $(function () {
-	$("#tabs").tabs();
+	$.widget("custom.catcomplete", $.ui.autocomplete, {
+		_create: function () {
+			this._super();
+			this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+		},
+		_renderMenu: function (ul, items) {
+			var that = this,
+				currentCategory = "";
+			$.each(items, function (index, item) {
+				var li;
+				if (item.category != currentCategory) {
+					ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+					currentCategory = item.category;
+				}
+				li = that._renderItemData(ul, item);
+				if (item.category) {
+					li.attr("aria-label", item.category + " : " + item.label);
+				}
+			});
+		}
+	});
+	var data = [
+		{ label: "anders", category: "" },
+		{ label: "andreas", category: "" },
+		{ label: "antal", category: "" },
+		{ label: "annhhx10", category: "Products" },
+		{ label: "annk K12", category: "Products" },
+		{ label: "annttop C13", category: "Products" },
+		{ label: "anders andersson", category: "People" },
+		{ label: "andreas andersson", category: "People" },
+		{ label: "andreas johnson", category: "People" }
+	];
+
+	$("#search").catcomplete({
+		delay: 0,
+		source: data
+	});
 });
