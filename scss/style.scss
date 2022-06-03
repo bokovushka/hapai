@@ -4739,6 +4739,40 @@ input.field {
 		font-weight: $fw700;
 	}
 }
+.seo-text-section {
+	h1 {
+		margin-bottom: 20px;
+	}
+	h2 {
+		margin: 20px 0;
+	}
+	h3 {
+		margin: 20px 0;
+	}
+	a {
+		color: $color-f;
+	}
+	ol li,
+	ul li {
+		margin-left: 20px;
+	}
+	table {
+		border: solid 1px $color-f;
+		caption {
+			border: inherit;
+			border-bottom: none;
+		}
+		th,
+		td {
+			padding: 10px;
+			border: solid 1px #6667ab;
+			&:last-child {
+				text-align: center;
+				vertical-align: middle;
+			}
+		}
+	}
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {

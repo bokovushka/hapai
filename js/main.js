@@ -167,3 +167,11 @@ $(function () {
 		source: data
 	});
 });
+
+//faq-item
+$(function () {
+	$("#accordion").accordion({
+		collapsible: true,
+		active: false,
+	});
+});

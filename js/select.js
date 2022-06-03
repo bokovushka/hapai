@@ -54,3 +54,10 @@ $('.select').each(function () {
 		}
 	});
 });
+
+$(document).mouseup(function (e) {
+	var containerclose = $("new-select");
+	if (containerclose.has(e.target).length === 0) {
+		containerclose.hide();
+	}
+});

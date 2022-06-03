@@ -6811,6 +6811,48 @@ input.field {
   font-weight: 700;
 }
 
+.seo-text-section h1 {
+  margin-bottom: 20px;
+}
+
+.seo-text-section h2 {
+  margin: 20px 0;
+}
+
+.seo-text-section h3 {
+  margin: 20px 0;
+}
+
+.seo-text-section a {
+  color: #6667ab;
+}
+
+.seo-text-section ol li,
+.seo-text-section ul li {
+  margin-left: 20px;
+}
+
+.seo-text-section table {
+  border: solid 1px #6667ab;
+}
+
+.seo-text-section table caption {
+  border: inherit;
+  border-bottom: none;
+}
+
+.seo-text-section table th,
+.seo-text-section table td {
+  padding: 10px;
+  border: solid 1px #6667ab;
+}
+
+.seo-text-section table th:last-child,
+.seo-text-section table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
 /* mobile */
 @media only screen and (max-width: 1279px) {
   .nav-menu__item {
