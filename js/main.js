@@ -175,3 +175,5 @@ $(function () {
 		active: false,
 	});
 });
+
+$("#car-type, #car-brand, #car-model, #car-year").selectmenu();

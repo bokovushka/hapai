@@ -2667,7 +2667,38 @@ video {
 		max-width: 208px;
 	}
 }
-
+.choice-help__search-main {
+	gap: 8px;
+	.ui-selectmenu-button {
+		all: unset;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		padding: 12px 32px 12px 12px;
+		background: $color-w;
+		color: #777777;
+		border: 1px solid #e5e5e5;
+		box-sizing: border-box;
+		border-radius: 4px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 120px;
+	}
+	.ui-selectmenu-icon.ui-icon,
+	.ui-selectmenu-text {
+		all: unset;
+	}
+	.ui-selectmenu-text::after {
+		right: 4px;
+	}
+}
+#car-year-menu,
+#car-model-menu,
+#car-brand-menu,
+#car-type-menu {
+	max-height: 220px;
+}
 //why
 .why__wrap {
 	display: flex;
@@ -5392,6 +5423,9 @@ input.field {
 	#popup-installment-checkout .selection-car__info {
 		flex-direction: row;
 	}
+	.choice-help__search-main .ui-selectmenu-button {
+		width: calc(50% - 10px);
+	}
 }
 @media only screen and (max-width: 767px) {
 	.choice-help img {
@@ -5694,6 +5728,9 @@ input.field {
 	}
 	.why__item {
 		width: calc(50% - 6px);
+	}
+	.choice-help__search-main .ui-selectmenu-button {
+		width: calc(50% - 4px);
 	}
 }
 @media only screen and (min-width: 680px) {
