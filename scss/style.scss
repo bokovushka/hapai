@@ -2970,6 +2970,7 @@ input.field {
 	box-sizing: border-box;
 	border-radius: 12px;
 	padding: 20px;
+	width: calc(100% / 3);
 	.heading {
 		padding: 12px;
 		color: $color-w;
@@ -3054,6 +3055,7 @@ input.field {
 	box-sizing: border-box;
 	border-radius: 12px;
 	padding: 20px;
+	width: calc(100% / 3);
 	span {
 		font-size: 24px;
 		margin-bottom: 12px;

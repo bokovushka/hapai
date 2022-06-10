@@ -4529,6 +4529,7 @@ input.field {
           box-sizing: border-box;
   border-radius: 12px;
   padding: 20px;
+  width: calc(100% / 3);
 }
 
 .how-works__item .heading {
@@ -4636,6 +4637,7 @@ input.field {
           box-sizing: border-box;
   border-radius: 12px;
   padding: 20px;
+  width: calc(100% / 3);
 }
 
 .documents-sale-car__item span {
