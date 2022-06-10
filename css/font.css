@@ -43,6 +43,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-view:before {
+  content: "\e934";
+}
+
 .icon-u_google:before {
   content: "\e933";
 }

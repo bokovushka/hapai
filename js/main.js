@@ -30,7 +30,7 @@ $(document).ready(function () {
 		columns.height(tallestcolumn);
 	}
 	$(document).ready(function () {
-		setEqualHeight($(".item-loop__txtblock h3"));
+		setEqualHeight($(".item-loop__txtblock .heading"));
 		setEqualHeight($(".article__swiper .swiper-slide"));
 		setEqualHeight($(".happy-customers__swiper .swiper-slide"));
 		setEqualHeight($(".favorite__main .item-loop__link"));
@@ -95,7 +95,7 @@ $(function () {
 		max: 12,
 		slide: function (event, ui) {
 			$('.v-p').remove();
-			$('#selection-car__slider-result h3').append('<span class="v-p">' + ui.value + '</span>');
+			$('#selection-car__slider-result .heading').append('<span class="v-p">' + ui.value + '</span>');
 
 		}
 	});
@@ -167,3 +167,20 @@ $(function () {
 		source: data
 	});
 });
+
+//faq-item
+$(function () {
+	$("#accordion").accordion({
+		collapsible: true,
+		active: false,
+	});
+});
+
+//select index-page
+(function ($) {
+	$(function () {
+
+		$('.choice-help__search-main select').styler();
+
+	});
+})(jQuery);
