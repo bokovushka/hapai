@@ -798,26 +798,26 @@ select:-webkit-autofill:focus {
   content: "\e926";
 }
 
-h1, .title-item__b h1, .il-price__full, .choice-help__b h1, .partners h1, .price, .buyback .buyback__full-price, .installment-payment__price-m {
+.title, .title-item__b .title, .il-price__full, .choice-help__b .title, .partners .title, .price, .buyback .buyback__full-price, .installment-payment__price-m {
   font-size: 32px;
   line-height: 44px;
 }
 
-h2, .a-filter__main-titile h2, .user-data .payment-info .user-txt input[value], .faq-connection__info .number a {
+.subtitle, .a-filter__main-titile .subtitle, .user-data .payment-info .user-txt input[value], .faq-connection__info .number a {
   font-size: 24px;
   line-height: 32px;
 }
 
-h3, .title-item__b h3, .item-loop__txtblock h3, .reviews__user-logo, .car-buy-description__wrap li, .sell-car-slider__price p span, .timer__item {
+.heading, .title-item__b .heading, .item-loop__txtblock .heading, .reviews__user-logo, .car-buy-description__wrap li, .sell-car-slider__price p span, .timer__item {
   font-size: 20px;
   line-height: 28px;
 }
 
-h4, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register h1,
-#login h1,
-#password-recovery h1,
-#popup-test-drive h1,
-#popup-more-info h1, .not-found p, .not-found__title, .lease-terms__item p, .ic-top__rb .popup-auction-info__title, .buyback .buyback__title, .buyback .buyback__ua-price, .test-drive, .installment-payment__price-full, .popup-auction .popup__content .popup-auction__title, .win-lot__title, #popup-test-drive .popup-auction__title, #popup-more-info .popup-auction__title {
+.txt-big, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register .title,
+#login .title,
+#password-recovery .title,
+#popup-test-drive .title,
+#popup-more-info .title, .not-found p, .not-found__title, .lease-terms__item p, .ic-top__rb .popup-auction-info__title, .buyback .buyback__title, .buyback .buyback__ua-price, .test-drive, .installment-payment__price-full, .popup-auction .popup__content .popup-auction__title, .win-lot__title, #popup-test-drive .popup-auction__title, #popup-more-info .popup-auction__title {
   font-size: 16px;
   line-height: 24px;
 }
@@ -842,7 +842,7 @@ body, p, .btn, .nav-menu__item ul li, .filter-result-txt, .r-f-tags, .a-filter .
   line-height: 22px;
 }
 
-h6, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .footer__caption p, .footer-nav__b li, .footer-helpdesk p, .footer-bottom,
+.txt-small, .breadcrumb-wrap, .breadcrumb-wrap span, .il-param p, .il-price__action, .footer__caption p, .footer-nav__b li, .footer-helpdesk p, .footer-bottom,
 .footer-bottom a, .ic-tags a, .icq-card p, .icq-card .btn-style-0, .help-tool, .geo-card a, .item-tab, .equ-col, .f-table-row, .tab-view-legend, .circle-info .circle-number, .circle-info span, .auction-notification, .autobid-in-up, .spinner-show2, .card-sold .subtitle1,
 .card-sold .subtitle2, .article__group, .reviews__date, .user-txt label, .user-txt .not-validated, #password-recovery .email-description, .checkbox__txt, .test-drive span, .ui-datepicker td a, .notifications-table__title {
   font-size: 12px;
@@ -1205,11 +1205,11 @@ input {
   position: relative;
 }
 
-.title-item__b h1 {
+.title-item__b .title {
   padding-right: 60px;
 }
 
-.title-item__b h3 {
+.title-item__b .heading {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1479,7 +1479,7 @@ input {
   display: none;
 }
 
-.a-filter__main-titile h2 {
+.a-filter__main-titile .subtitle {
   font-weight: 600;
 }
 
@@ -1776,7 +1776,7 @@ input {
           flex-direction: column;
 }
 
-.item-loop__txtblock h3 {
+.item-loop__txtblock .heading {
   font-weight: 700;
   color: #000000;
 }
@@ -1924,7 +1924,7 @@ input {
   max-width: 480px;
 }
 
-.choice-help__b h1 {
+.choice-help__b .title {
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -1949,7 +1949,7 @@ input {
   overflow: hidden;
 }
 
-.partners h1 {
+.partners .title {
   font-weight: 600;
   margin-bottom: 20px;
   padding-right: 110px;
@@ -3427,7 +3427,7 @@ body.lock {
           transform: translate(0px, -100%);
 }
 
-.popup__content h1 {
+.popup__content .title {
   margin: 0 30px 30px 0;
 }
 
@@ -3594,7 +3594,7 @@ body.lock {
   margin-bottom: 20px;
 }
 
-.article h2 {
+.article .subtitle {
   margin-bottom: 6px;
   margin-top: 20px;
 }
@@ -3640,7 +3640,7 @@ body.lock {
   width: 100%;
 }
 
-.article-sidebar h3 {
+.article-sidebar .heading {
   margin-bottom: 20px;
 }
 
@@ -3692,7 +3692,7 @@ video {
   margin-bottom: 14px;
 }
 
-.rating-wrap h3 {
+.rating-wrap .heading {
   margin-bottom: 8px;
 }
 
@@ -3926,7 +3926,7 @@ video {
   padding-bottom: 60px;
 }
 
-.other-article h1 {
+.other-article .title {
   padding-top: 20px;
 }
 
@@ -3935,7 +3935,7 @@ video {
   width: 100%;
 }
 
-.article-page .title-item h1 {
+.article-page .title-item .title {
   padding: 0;
 }
 
@@ -3949,85 +3949,66 @@ video {
   z-index: 2;
 }
 
-.top-banner-search .select {
-  display: block;
-  width: auto;
-  position: relative;
-  margin-right: 8px;
-}
-
-.top-banner-search .new-select {
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.top-banner-search .jq-selectbox__select {
   padding: 12px 32px 12px 12px;
   background: #ffffff;
   color: #777777;
   border: 1px solid #e5e5e5;
+  height: auto;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
   text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 120px;
+  position: relative;
 }
 
-.top-banner-search .new-select__list {
+.top-banner-search .jq-selectbox__select::after {
   position: absolute;
-  top: 45px;
-  left: 0;
-  border: 1px solid #ced4da;
-  cursor: pointer;
-  width: 100%;
-  z-index: 2;
-  background: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  max-height: 220px;
-  overflow: scroll;
-}
-
-.top-banner-search .new-select__list.on {
-  display: block;
-}
-
-.top-banner-search .new-select__item span {
-  display: block;
-  padding: 12px;
-  width: 100%;
-  color: #777777;
-  font-weight: 400;
-  text-align: left;
-}
-
-.top-banner-search .new-select__item span:hover {
-  background: #6667ab;
-  color: #ffffff;
-}
-
-.top-banner-search .new-select:after {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 4px;
   content: "\e910";
   font-family: "hapai";
   font-size: 24px;
-  display: block;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%) rotate(0deg);
-          transform: translate(0, -50%) rotate(0deg);
-  -webkit-transition: all 0.27s ease-in-out;
-  transition: all 0.27s ease-in-out;
+  color: #6667ab;
 }
 
-.top-banner-search .new-select.on:after {
-  -webkit-transform: translate(0, -50%) rotate(180deg);
-          transform: translate(0, -50%) rotate(180deg);
+.top-banner-search .jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid #e5e5e5;
+}
+
+.top-banner-search .jq-selectbox ul {
+  max-height: 220px;
+}
+
+.top-banner-search .jq-selectbox li {
+  padding: 12px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.top-banner-search .jq-selectbox li:hover {
+  background: #6667ab;
+}
+
+.top-banner-search .jq-selectbox li.disabled:hover {
+  background: none;
+}
+
+.top-banner-search .jq-selectbox li.selected {
+  background: #6667ab;
+}
+
+.top-banner-search .jq-selectbox__trigger {
+  display: none;
 }
 
 .top-banner-search .btn-style-3 {
@@ -4082,7 +4063,7 @@ video {
   padding-bottom: 76px;
 }
 
-.car-style h1 {
+.car-style .title {
   margin-bottom: 20px;
 }
 
@@ -4237,7 +4218,7 @@ video {
   margin-bottom: 12px;
 }
 
-.why__item h3 {
+.why__item .heading {
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -4304,7 +4285,7 @@ video {
   padding: 40px;
 }
 
-.social-channel h2 {
+.social-channel .subtitle {
   margin-bottom: 4px;
 }
 
@@ -4339,7 +4320,7 @@ video {
   margin-bottom: 60px;
 }
 
-.happy-customers h1 {
+.happy-customers .title {
   padding: 20px 0;
 }
 
@@ -4399,7 +4380,7 @@ video {
   width: 100%;
 }
 
-.selection-car__txt h2 {
+.selection-car__txt .subtitle {
   margin-bottom: 4px;
 }
 
@@ -4491,7 +4472,7 @@ input.field {
   color: #777777;
 }
 
-.selection-car__slider-result h3 {
+.selection-car__slider-result .heading {
   font-weight: 600;
   color: #6667ab;
 }
@@ -4550,7 +4531,7 @@ input.field {
   padding: 20px;
 }
 
-.how-works__item h3 {
+.how-works__item .heading {
   padding: 12px;
   color: #ffffff;
   background: #6667ab;
@@ -4572,7 +4553,7 @@ input.field {
   margin-bottom: 60px;
 }
 
-.car-buy-description__main h1 {
+.car-buy-description__main .title {
   color: #0c8d47;
   margin-bottom: 12px;
 }
@@ -4636,7 +4617,7 @@ input.field {
   padding: 20px;
 }
 
-.documents-sale-car__main h1 {
+.documents-sale-car__main .title {
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -4663,7 +4644,7 @@ input.field {
   display: block;
 }
 
-.documents-sale-car__item h3 {
+.documents-sale-car__item .heading {
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -4783,12 +4764,12 @@ input.field {
   width: 50%;
 }
 
-.about-h__info h1 {
+.about-h__info .title {
   color: #6667ab;
   margin-bottom: 12px;
 }
 
-.about-h__info h2 {
+.about-h__info .subtitle {
   color: #777777;
   margin-bottom: 12px;
 }
@@ -5275,7 +5256,7 @@ input.field {
   margin: 0 auto;
 }
 
-.authorization__wrap h1 {
+.authorization__wrap .title {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -5318,11 +5299,11 @@ input.field {
   color: rgba(119, 119, 119, 0.54);
 }
 
-#register h1,
-#login h1,
-#password-recovery h1,
-#popup-test-drive h1,
-#popup-more-info h1 {
+#register .title,
+#login .title,
+#password-recovery .title,
+#popup-test-drive .title,
+#popup-more-info .title {
   margin-bottom: 20px;
 }
 
@@ -5470,7 +5451,7 @@ input.field {
   margin: 60px 0;
 }
 
-.not-found h1 {
+.not-found .title {
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -5617,7 +5598,7 @@ input.field {
   margin-bottom: 20px;
 }
 
-.top-banner-lease__wrap h1 {
+.top-banner-lease__wrap .title {
   margin-bottom: 4px;
 }
 
@@ -5671,7 +5652,7 @@ input.field {
   padding-right: 20px;
 }
 
-.lease-terms__b h3 {
+.lease-terms__b .heading {
   color: #6667ab;
   margin-bottom: 4px;
 }
@@ -5743,7 +5724,7 @@ input.field {
   margin-bottom: 60px;
 }
 
-.lease-txt-b h1 {
+.lease-txt-b .title {
   margin-bottom: 20px;
 }
 
@@ -5752,7 +5733,7 @@ input.field {
   padding-bottom: 60px;
 }
 
-.accordion-section.lease h1 {
+.accordion-section.lease .title {
   padding-bottom: 20px;
 }
 
@@ -5798,7 +5779,7 @@ input.field {
           justify-content: space-between;
 }
 
-.faq-category__item h4 {
+.faq-category__item .txt-big {
   font-weight: 700;
   margin-bottom: 32px;
   word-break: break-word;
@@ -5891,7 +5872,7 @@ input.field {
   width: 100%;
 }
 
-.faq-item__sidebar h3 {
+.faq-item__sidebar .heading {
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -6701,7 +6682,7 @@ input.field {
   margin-top: 37px;
 }
 
-.notifications-lot h3 {
+.notifications-lot .heading {
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 18px;
@@ -6852,15 +6833,15 @@ input.field {
   font-weight: 700;
 }
 
-.seo-text-section h1 {
+.seo-text-section .title {
   margin-bottom: 20px;
 }
 
-.seo-text-section h2 {
+.seo-text-section .subtitle {
   margin: 20px 0;
 }
 
-.seo-text-section h3 {
+.seo-text-section .heading {
   margin: 20px 0;
 }
 
@@ -7086,7 +7067,7 @@ input.field {
   .ic-img:nth-last-child(-n + 2) {
     display: block;
   }
-  .ic-img:nth-last-child(-n + 2) h4 {
+  .ic-img:nth-last-child(-n + 2) .txt-big {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7613,6 +7594,9 @@ input.field {
   .choice-help__search-main .ui-selectmenu-button {
     width: calc(50% - 10px);
   }
+  .top-banner-search .jq-selectbox__select {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -7688,7 +7672,7 @@ input.field {
   .partners {
     margin: 32px 0;
   }
-  .partners h1 {
+  .partners .title {
     margin-bottom: 12px;
   }
   .article {
@@ -7956,7 +7940,7 @@ input.field {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .title-item__b h3 {
+  .title-item__b .heading {
     position: unset;
   }
   .a-main {
@@ -8022,7 +8006,7 @@ input.field {
   .article .news__date {
     margin-bottom: 12px;
   }
-  .article h2 {
+  .article .subtitle {
     margin-top: 32px;
   }
   .article p {
@@ -8037,7 +8021,7 @@ input.field {
   .rating-wrap {
     margin-bottom: 20px;
   }
-  .rating-wrap h3 {
+  .rating-wrap .heading {
     padding-top: 16px;
   }
   .reviews__info {
@@ -8129,7 +8113,7 @@ input.field {
     top: -50px;
     margin-bottom: -100px;
   }
-  .accordion-section.lease h1 {
+  .accordion-section.lease .title {
     padding-right: 20px;
   }
   .faq-connection {
