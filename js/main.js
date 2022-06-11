@@ -151,15 +151,14 @@ $(function () {
 		}
 	});
 	var data = [
-		{ label: "anders", category: "" },
-		{ label: "andreas", category: "" },
-		{ label: "antal", category: "" },
-		{ label: "annhhx10", category: "Products" },
-		{ label: "annk K12", category: "Products" },
-		{ label: "annttop C13", category: "Products" },
-		{ label: "anders andersson", category: "People" },
-		{ label: "andreas andersson", category: "People" },
-		{ label: "andreas johnson", category: "People" }
+		{ label: "Audi A3", category: "" },
+		{ label: "Audi A4", category: "" },
+		{ label: "Audi A5", category: "" },
+		{ label: "Audi A7", category: "" },
+		{ label: "Продати Audi", category: "Послуги" },
+		{ label: "Купити Audi", category: "Послуги" },
+		{ label: "Audi захоплює дух часу цим автомобілем: перший Audi 80 був представлений 50 років тому", category: "Блог" },
+		{ label: "Audi додає Apple Music до широкого спектру своїх моделей", category: "Блог" }
 	];
 
 	$("#search").catcomplete({

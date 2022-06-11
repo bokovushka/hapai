@@ -3292,11 +3292,11 @@ input.field {
 		overflow: unset;
 		padding: 0;
 		padding-right: 40px;
-		margin-bottom: 20px;
 		p {
 			@extend %txt-big;
 			color: #777777;
 			padding-right: 40px;
+			padding-bottom: 20px;
 		}
 	}
 }
@@ -4241,6 +4241,7 @@ input.field {
 			margin-bottom: 20px;
 			@extend %txt-big;
 			font-weight: $fw600;
+			padding-right: 40px;
 		}
 		.popup-auction__note {
 			background: #fff8fb;
@@ -4705,8 +4706,10 @@ input.field {
 	// width: calc(100% - 40px) !important;
 	max-width: 1040px;
 	border-radius: 4px;
-	height: 180px;
-	overflow: scroll;
+	max-height: 264px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-bottom: 8px;
 	&.ui-menu .ui-menu-item-wrapper {
 		color: #979797;
 		line-height: 24px;
@@ -4807,6 +4810,12 @@ input.field {
 			}
 		}
 	}
+}
+#table-wrapper {
+	position: relative;
+}
+#table-scroll {
+	overflow: auto;
 }
 //.............................................................................................
 /* mobile */
@@ -5736,7 +5745,7 @@ input.field {
 	.choice-help__search-main .ui-selectmenu-button {
 		width: calc(50% - 4px);
 	}
-	#ui-id-1 {
+	.ui-autocomplete.ui-front {
 		width: calc(100% - 24px) !important;
 	}
 }
