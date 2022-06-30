@@ -4759,12 +4759,14 @@ input.field {
 	}
 	.btn-style-3 {
 		position: absolute;
+		right: 20px;
 		bottom: 20px;
 		width: calc(100% - 40px);
 	}
 	.selection-car__preferences,
 	.selection-car__result-search {
 		width: 50%;
+		padding: 20px;
 	}
 	.selection-car__payments-item {
 		width: 100%;
@@ -4956,6 +4958,9 @@ input.field {
 	.selection-car__preferences,
 	.selection-car__result-search {
 		max-width: 100%;
+	}
+	#popup-installment-checkout .selection-car__info {
+		flex-direction: row;
 	}
 }
 @media (min-width: 993px) and (max-width: 1279px) {
@@ -5999,6 +6004,12 @@ input.field {
 	#popup-installment-checkout .selection-car__preferences,
 	#popup-installment-checkout .selection-car__result-search {
 		width: 100%;
+	}
+	#popup-installment-checkout .btn-style-3 {
+		position: relative;
+		width: 100%;
+		right: 0;
+		bottom: 0;
 	}
 }
 @media only screen and (max-width: 479px) {

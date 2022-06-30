@@ -34,6 +34,8 @@ $(document).ready(function () {
 		setEqualHeight($(".article__swiper .swiper-slide"));
 		setEqualHeight($(".happy-customers__swiper .swiper-slide"));
 		setEqualHeight($(".favorite__main .item-loop__link"));
+		setEqualHeight($(".item-loop .il-price"));
+
 	});
 });
 
