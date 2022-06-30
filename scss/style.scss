@@ -820,6 +820,7 @@ input {
 }
 .il-price__full {
 	@extend %h1;
+	font-size: 28px;
 	color: $color-f;
 	margin-right: 4px;
 }

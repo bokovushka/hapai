@@ -1821,6 +1821,7 @@ input {
 }
 
 .il-price__full {
+  font-size: 28px;
   color: #6667ab;
   margin-right: 4px;
 }
