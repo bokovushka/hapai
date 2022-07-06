@@ -4833,7 +4833,7 @@ input.field {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #f5f6f8;
+	background-color: #6667ab;
 	width: 40px;
 	height: 40px;
 	text-align: center;
@@ -4851,13 +4851,13 @@ input.field {
 }
 #button_top:hover {
 	cursor: pointer;
-	background-color: rgba(102, 103, 171, 0.15);
+	background-color: #4f4599;
 }
 #button_top:hover #arrow_up {
 	fill: #ffffff;
 }
 #button_top:active {
-	background-color: #73ff8d;
+	background-color: #4f4599;
 }
 #button_top.show {
 	opacity: 1;
