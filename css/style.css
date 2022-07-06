@@ -813,7 +813,7 @@ select:-webkit-autofill:focus {
   line-height: 28px;
 }
 
-.txt-big, .nav-menu__item .nav-menu__link, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register .title,
+.txt-big, input, .choice-help__b p, .item-h2, .ic-excerpt p, .icq-head, .feature-row, .geo-title, .auction-card, .card-sold .title, .ch-car-brand__info p, .how-works__item p, .documents-sale-car__item p, .choice-help__sell-car-info p span, .about-h__info p, #accordion .accordion__info p, #register .title,
 #login .title,
 #password-recovery .title,
 #popup-test-drive .title,
@@ -930,7 +930,7 @@ img,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 34px;
+  margin: 0 24px;
 }
 
 .nav-menu__item {
@@ -938,7 +938,7 @@ img,
 }
 
 .nav-menu__item .language__ch {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   font-weight: 600;
 }
@@ -955,6 +955,7 @@ img,
   font-weight: 600;
   padding: 16px;
   z-index: 3;
+  font-size: 15px;
 }
 
 .nav-menu__item ul {
@@ -2450,9 +2451,7 @@ input {
           flex-direction: column;
   margin: 8px;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc(33% - 16px);
-          flex: 1 1 calc(33% - 16px);
+  width: calc((100% - 48px) / 3);
   overflow: hidden;
   min-width: 160px;
 }
@@ -6957,11 +6956,18 @@ input.field {
 /* button top end */
 /* mobile */
 @media only screen and (max-width: 1279px) {
+  .nav-menu {
+    margin: 0 12px;
+  }
   .nav-menu__item {
     margin: 0 4px;
   }
   .nav-menu__item .nav-menu__link {
+    font-size: 14px;
     padding: 12px;
+  }
+  .nav-menu__item .language__ch {
+    font-size: 14px;
   }
   .ic-top {
     -webkit-box-orient: vertical;
@@ -7137,6 +7143,17 @@ input.field {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav-menu__item .nav-menu__link,
+  .nav-menu__item .language__ch,
+  .nav-menu__item ul li {
+    font-size: 13px;
+  }
+  .equ-col {
+    width: calc((100% - 32px) / 2);
   }
 }
 
@@ -7508,6 +7525,9 @@ input.field {
     font-size: 32px;
     line-height: 44px;
     padding-left: 0;
+  }
+  .equ-col {
+    width: calc((100% - 48px) / 3);
   }
 }
 
@@ -8289,6 +8309,9 @@ input.field {
     right: 0;
     bottom: 0;
   }
+  .equ-col {
+    width: calc((100% - 32px) / 2);
+  }
 }
 
 @media only screen and (max-width: 479px) {
@@ -8326,6 +8349,9 @@ input.field {
   }
   .popup-auction .popup__body {
     padding: 30px 0;
+  }
+  .equ-col {
+    width: 100%;
   }
 }
 

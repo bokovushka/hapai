@@ -112,12 +112,12 @@ p {
 .nav-menu {
 	display: flex;
 	align-items: center;
-	margin: 0 34px;
+	margin: 0 24px;
 }
 .nav-menu__item {
 	margin: 0 8px;
 	.language__ch {
-		font-size: $fz16;
+		font-size: 15px;
 		line-height: 22px;
 		font-weight: $fw600;
 	}
@@ -125,11 +125,11 @@ p {
 		display: flex;
 		align-items: center;
 		color: $color-b;
-		@extend %txt-big;
 		line-height: 22px;
 		font-weight: $fw600;
 		padding: 16px;
 		z-index: 3;
+		font-size: 15px;
 	}
 	ul {
 		display: none;
@@ -1313,7 +1313,7 @@ input {
 	flex-direction: column;
 	margin: 8px;
 	position: relative;
-	flex: 1 1 calc(33% - 16px);
+	width: calc((100% - 48px) / 3);
 	overflow: hidden;
 	min-width: 160px;
 	.equ-head {
@@ -4868,10 +4868,17 @@ input.field {
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {
+	.nav-menu {
+		margin: 0 12px;
+	}
 	.nav-menu__item {
 		margin: 0 4px;
 		.nav-menu__link {
+			font-size: $fz14;
 			padding: 12px;
+		}
+		.language__ch {
+			font-size: $fz14;
 		}
 	}
 	.ic-top {
@@ -5023,6 +5030,18 @@ input.field {
 		margin-bottom: 40px;
 	}
 }
+@media only screen and (max-width: 1023px) {
+	.nav-menu__item {
+		.nav-menu__link,
+		.language__ch,
+		ul li {
+			font-size: 13px;
+		}
+	}
+	.equ-col {
+		width: calc((100% - 32px) / 2);
+	}
+}
 @media only screen and (min-width: 993px) {
 	.ic-content,
 	.ic-img-loop {
@@ -5059,6 +5078,7 @@ input.field {
 		}
 	}
 }
+
 @media only screen and (width: 992px) {
 	.loop-wrap {
 		grid-template-columns: repeat(3, 1fr);
@@ -5349,6 +5369,9 @@ input.field {
 			line-height: 44px;
 			padding-left: 0;
 		}
+	}
+	.equ-col {
+		width: calc((100% - 48px) / 3);
 	}
 }
 @media only screen and (max-width: 991px) {
@@ -6055,6 +6078,9 @@ input.field {
 		right: 0;
 		bottom: 0;
 	}
+	.equ-col {
+		width: calc((100% - 32px) / 2);
+	}
 }
 @media only screen and (max-width: 479px) {
 	.header-search {
@@ -6093,6 +6119,9 @@ input.field {
 		.popup__body {
 			padding: 30px 0;
 		}
+	}
+	.equ-col {
+		width: 100%;
 	}
 }
 
