@@ -5874,6 +5874,10 @@ input.field {
   gap: 40px;
 }
 
+.faq-item__main {
+  width: 100%;
+}
+
 .faq-item__sidebar {
   max-width: 256px;
   width: 100%;
