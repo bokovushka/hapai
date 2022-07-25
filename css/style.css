@@ -7481,6 +7481,9 @@ input.field {
     max-height: 400px;
     gap: 0;
   }
+  .ic-img-loop .ic-img:nth-last-child(-n + 2) {
+    display: none;
+  }
   .ic-gallery {
     max-width: 100%;
     margin: 0 auto;
