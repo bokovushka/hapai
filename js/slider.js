@@ -50,10 +50,15 @@ if (window.innerWidth < 993) {
 	var mySwiper2 = new Swiper('.ic-gallery', {
 		direction: 'horizontal',
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 20,
 		navigation: {
 			prevEl: ".ic-gallery .item-gallery-button .btn__swiper-prev",
 			nextEl: ".ic-gallery .item-gallery-button .btn__swiper-next"
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 2,
+			}
 		},
 	});
 }
