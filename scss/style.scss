@@ -4186,13 +4186,13 @@ input.field {
 }
 .installment-payment {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	background: $color-f;
 	border-radius: 12px;
-	padding: 16px 20px;
+	padding: 20px;
 	margin-top: 20px;
-	margin-left: 20px;
 	.icon {
 		display: block;
 		font-size: 24px;
@@ -4211,6 +4211,8 @@ input.field {
 .installment-payment__b {
 	display: flex;
 	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
 }
 .installment-payment__price-m {
 	@extend %h1;
@@ -4866,6 +4868,39 @@ input.field {
 }
 /* button top end */
 
+//item-off page
+.start-price {
+	border: 2px solid #e5e5e5;
+	border-radius: 12px;
+	padding: 20px;
+	margin-top: 20px;
+	.start-price__wrap {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	.start-price__head {
+		font-size: 16px;
+		line-height: 24px;
+		color: #a9a9a9;
+	}
+	.strart-price__price {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 44px;
+		color: $color-f;
+	}
+	.start-price__icon {
+		background-color: #7f81d4;
+		width: max-content;
+		border-radius: 12px;
+		padding: 14px;
+		margin-right: 20px;
+		img {
+			max-width: 24px;
+		}
+	}
+}
 //.............................................................................................
 /* mobile */
 @media only screen and (max-width: 1279px) {

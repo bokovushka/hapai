@@ -6096,6 +6096,10 @@ input.field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6104,9 +6108,8 @@ input.field {
           justify-content: space-between;
   background: #6667ab;
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 20px;
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .installment-payment .icon {
@@ -6136,6 +6139,8 @@ input.field {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .installment-payment__price-m {
@@ -6955,6 +6960,50 @@ input.field {
 }
 
 /* button top end */
+.start-price {
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.start-price .start-price__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.start-price .start-price__head {
+  font-size: 16px;
+  line-height: 24px;
+  color: #a9a9a9;
+}
+
+.start-price .strart-price__price {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #6667ab;
+}
+
+.start-price .start-price__icon {
+  background-color: #7f81d4;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 12px;
+  padding: 14px;
+  margin-right: 20px;
+}
+
+.start-price .start-price__icon img {
+  max-width: 24px;
+}
+
 /* mobile */
 @media only screen and (max-width: 1279px) {
   .nav-menu {
