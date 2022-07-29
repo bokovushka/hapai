@@ -36,13 +36,34 @@ $(document).ready(function () {
 	let filterBtn = document.querySelector('.btn-filter');
 	let sidebar = document.querySelector('.a-sidebar');
 	let filterClose = document.querySelector('.filter-close');
+	let body_lock = document.querySelector('body');
+	let popup_bg_body = document.querySelector('.popup-bg-body');
 	filterBtn.addEventListener('click', function () {
-		this.classList.toggle('active');
+		this.classList.add('active');
 		sidebar.classList.add("active");
+		body_lock.classList.add("lock");
+		popup_bg_body.classList.add("open");
 	})
 	filterClose.addEventListener('click', function () {
+		filterBtn.classList.remove("active");
 		sidebar.classList.remove("active");
+		body_lock.classList.remove("lock");
+		popup_bg_body.classList.remove("open");
+
 	})
+});
+
+//закрытые фильтра вне области
+$(document).mouseup(function (e) {// обрабатываем клик в любой точке 
+	if (jQuery(e.target).closest(".a-sidebar.active").length > 0) { // проверка , произошел ли клик вне элемента, который надо по этому клику скрыть
+		return false; // клик по элементу игнорируем 
+	}
+	else // клик вне элемента
+		$('.popup-bg-body').removeClass("open");
+	$('.lock').removeClass("lock");
+	$('.a-sidebar.active').removeClass("active");
+
+	clickCount = 1;
 });
 
 // фильтр
