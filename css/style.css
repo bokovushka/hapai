@@ -6110,6 +6110,7 @@ input.field {
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
+  border: 2px solid #6667ab;
 }
 
 .installment-payment .icon {
