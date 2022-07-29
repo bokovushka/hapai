@@ -4193,7 +4193,6 @@ input.field {
 	border-radius: 12px;
 	padding: 20px;
 	margin-top: 20px;
-	border: 2px solid #6667ab;
 	.icon {
 		display: block;
 		font-size: 24px;
@@ -4214,6 +4213,7 @@ input.field {
 	align-items: center;
 	width: 100%;
 	margin-bottom: 20px;
+	margin-top: 2px;
 }
 .installment-payment__price-m {
 	@extend %h1;
