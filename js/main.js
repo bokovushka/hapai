@@ -33,7 +33,7 @@ $(document).ready(function () {
 		setEqualHeight($(".item-loop__txtblock .heading"));
 		setEqualHeight($(".article__swiper .swiper-slide"));
 		setEqualHeight($(".happy-customers__swiper .swiper-slide"));
-		setEqualHeight($(".favorite__main .item-loop__link"));
+		setEqualHeight($(".favorite__main .item-loop"));
 		setEqualHeight($(".item-loop .il-price"));
 
 	});
